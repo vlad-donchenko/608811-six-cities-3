@@ -4,9 +4,9 @@ import App from "./components/app/app.jsx";
 import {getRandomInteger} from "./utils/utils";
 import {generatePlaceCards} from "./mock/place-card";
 
-const PLACE_CARD_COUNT = 5;
 const offerCount = getRandomInteger(0, 500);
-const placeCards = generatePlaceCards(PLACE_CARD_COUNT);
+const placeCards = generatePlaceCards();
+console.log(placeCards);
 
 const root = document.querySelector(`#root`);
 ReactDOM.render(<App offerCount={offerCount} placeCards={placeCards}/>, root);

@@ -88,7 +88,7 @@ const Main = (props) => {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 {placeCards.map((card) => (
-                  <article key={card.id} className="cities__place-card place-card">
+                  <article key={card.index} className="cities__place-card place-card">
                     <div className="place-card__mark">
                       <span>Premium</span>
                     </div>
@@ -137,7 +137,7 @@ const Main = (props) => {
 
 Main.propTypes = {
   offerCount: PropTypes.number.isRequired,
-  placeCards: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.string.isRequired, name: PropTypes.string.isRequired})).isRequired,
+  placeCards: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
 };
 
 export default Main;
