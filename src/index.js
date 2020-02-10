@@ -6,7 +6,6 @@ import {generatePlaceCards} from "./mock/place-card";
 
 const offerCount = getRandomInteger(0, 500);
 const placeCards = generatePlaceCards();
-console.log(placeCards);
 
 const root = document.querySelector(`#root`);
 ReactDOM.render(<App offerCount={offerCount} placeCards={placeCards}/>, root);
