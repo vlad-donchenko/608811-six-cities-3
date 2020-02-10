@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Main = (props) => {
   const {offerCount, placeCards} = props;
@@ -257,6 +258,11 @@ const Main = (props) => {
       </main>
     </div>
   );
+};
+
+Main.propTypes = {
+  offerCount: PropTypes.number.isRequired,
+  placeCards: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.string.isRequired, name: PropTypes.string.isRequired})).isRequired,
 };
 
 export default Main;

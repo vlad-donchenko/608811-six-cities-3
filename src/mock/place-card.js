@@ -13,9 +13,9 @@ const placeCardNames = [
   `Wood and stone place`
 ];
 
-const generatePlaceCard = (index) => {
+const generatePlaceCard = () => {
   const name = generateRandomArrayElement(placeCardNames);
-  const id = name + index;
+  const id = `f${(~~(Math.random() * 1e8)).toString(16)}`;
 
   return {
     id,
@@ -26,8 +26,8 @@ const generatePlaceCard = (index) => {
 const generatePlaceCards = (count) => {
   return new Array(count)
     .fill(``)
-    .map((element, i) => {
-      return generatePlaceCard(i);
+    .map(() => {
+      return generatePlaceCard();
     });
 };
 
