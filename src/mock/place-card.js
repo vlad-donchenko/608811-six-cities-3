@@ -1,10 +1,3 @@
-import {getRandomInteger} from "../utils/utils";
-
-const generateRandomArrayElement = (elements) => {
-  const element = elements[getRandomInteger(0, elements.length - 1)];
-  return element;
-};
-
 const placeCardNames = [
   `Beautiful & luxurious apartment at great location`,
   `Wood and stone place`,
@@ -13,22 +6,13 @@ const placeCardNames = [
   `Wood and stone place`
 ];
 
-const generatePlaceCard = () => {
-  const name = generateRandomArrayElement(placeCardNames);
-  const id = `f${(~~(Math.random() * 1e8)).toString(16)}`;
-
-  return {
-    id,
-    name,
-  };
-};
-
-const generatePlaceCards = (count) => {
-  return new Array(count)
-    .fill(``)
-    .map(() => {
-      return generatePlaceCard();
-    });
+const generatePlaceCards = () => {
+  return placeCardNames.map((name, index) => {
+    return {
+      name,
+      index
+    };
+  });
 };
 
 export {generatePlaceCards};
