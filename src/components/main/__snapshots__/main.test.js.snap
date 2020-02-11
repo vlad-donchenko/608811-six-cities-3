@@ -314,6 +314,7 @@ exports[`Render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Place 1
                   </a>
@@ -415,6 +416,7 @@ exports[`Render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Place 2
                   </a>
@@ -516,6 +518,7 @@ exports[`Render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Place 2
                   </a>
@@ -617,6 +620,7 @@ exports[`Render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Place 2
                   </a>
@@ -718,6 +722,7 @@ exports[`Render Main 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Place 2
                   </a>

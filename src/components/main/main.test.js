@@ -30,7 +30,10 @@ const placeCards = [
 it(`Render Main`, () => {
   const tree = renderer
     .create(<Main
-      offerCount={offerCount} placeCards={placeCards}
+      offerCount={offerCount}
+      placeCards={placeCards}
+      onTitleClick={() => {
+      }}
     />)
     .toJSON();
 

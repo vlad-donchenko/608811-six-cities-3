@@ -137,10 +137,7 @@ const Main = (props) => {
 
 Main.propTypes = {
   offerCount: PropTypes.number.isRequired,
-  placeCards: PropTypes.arrayOf(PropTypes.shape({
-    index: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
-  })).isRequired,
+  placeCards: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
 

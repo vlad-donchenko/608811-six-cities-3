@@ -28,7 +28,10 @@ const placeCards = [
 it(`Render App`, () => {
   const tree = renderer
     .create(<App
-      offerCount={10} placeCards={placeCards}
+      offerCount={10}
+      placeCards={placeCards}
+      onTitleClick={() => {
+      }}
     />)
     .toJSON();
 
