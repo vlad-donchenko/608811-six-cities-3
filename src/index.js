@@ -7,5 +7,7 @@ import {generatePlaceCards} from "./mock/place-card";
 const offerCount = getRandomInteger(0, 500);
 const placeCards = generatePlaceCards();
 
+const onTitleClick = () => {};
+
 const root = document.querySelector(`#root`);
-ReactDOM.render(<App offerCount={offerCount} placeCards={placeCards}/>, root);
+ReactDOM.render(<App offerCount={offerCount} placeCards={placeCards} onTitleClick={onTitleClick}/>, root);

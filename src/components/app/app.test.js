@@ -2,8 +2,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 import App from "./app.jsx";
 
-const offerCount = 10;
-
 const placeCards = [
   {
     name: `Place 1`,
@@ -30,7 +28,7 @@ const placeCards = [
 it(`Render App`, () => {
   const tree = renderer
     .create(<App
-      offerCount={offerCount} placeCards={placeCards}
+      offerCount={10} placeCards={placeCards}
     />)
     .toJSON();
 
