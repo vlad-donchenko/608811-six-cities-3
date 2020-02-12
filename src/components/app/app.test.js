@@ -30,8 +30,6 @@ it(`Render App`, () => {
     .create(<App
       offerCount={10}
       placeCards={placeCards}
-      onTitleClick={() => {
-      }}
     />)
     .toJSON();
 

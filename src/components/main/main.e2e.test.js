@@ -26,15 +26,14 @@ const placeCards = [
 ];
 
 it(`Should title be pressed`, () => {
-  const onTitleClick = jest.fn();
+  const titleClickHandler = jest.fn();
 
-  const main = shallow(<Main offerCount={10} placeCards={placeCards} onTitleClick={onTitleClick}/>);
-
+  const main = shallow(<Main offerCount={10} placeCards={placeCards} onTitleClick={titleClickHandler}/>);
   const titles = main.find(`.place-card__name a`);
 
   titles.forEach((title) => {
     title.simulate(`click`);
   });
 
-  expect(onTitleClick.mock.calls.length).toBe(5);
+  expect(titleClickHandler.mock.calls.length).toBe(5);
 });
