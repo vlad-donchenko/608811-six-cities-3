@@ -4,7 +4,7 @@ import Main from "./main.jsx";
 
 const offerCount = 10;
 
-const placeCards = [
+const offers = [
   {
     name: `Place 1`,
     index: 0,
@@ -31,7 +31,7 @@ it(`Render Main`, () => {
   const tree = renderer
     .create(<Main
       offerCount={offerCount}
-      placeCards={placeCards}
+      offers={offers}
       onTitleClick={() => {
       }}
     />)

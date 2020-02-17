@@ -5,16 +5,16 @@ import PropTypes from "prop-types";
 const handleTitleClick = () => {};
 
 const App = (props) => {
-  const {offerCount, placeCards} = props;
+  const {offerCount, offers} = props;
 
   return (
-    <Main offerCount={offerCount} placeCards={placeCards} onTitleClick={handleTitleClick}/>
+    <Main offerCount={offerCount} offers={offers} onTitleClick={handleTitleClick}/>
   );
 };
 
 App.propTypes = {
   offerCount: PropTypes.number.isRequired,
-  placeCards: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
+  offers: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
 };
 
 export default App;

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Main = (props) => {
-  const {offerCount, placeCards, onTitleClick} = props;
+  const {offerCount, offers, onTitleClick} = props;
 
   return (
     <div className="page page--gray page--main">
@@ -87,7 +87,7 @@ const Main = (props) => {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {placeCards.map((card) => (
+                {offers.map((card) => (
                   <article key={card.index} className="cities__place-card place-card">
                     <div className="place-card__mark">
                       <span>Premium</span>
@@ -137,7 +137,7 @@ const Main = (props) => {
 
 Main.propTypes = {
   offerCount: PropTypes.number.isRequired,
-  placeCards: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
+  offers: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
 

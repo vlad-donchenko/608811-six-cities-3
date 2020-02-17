@@ -2,7 +2,7 @@ import React from "react";
 import {shallow} from "enzyme";
 import Main from "./main";
 
-const placeCards = [
+const offers = [
   {
     name: `Place 1`,
     index: 0,
@@ -27,7 +27,7 @@ const placeCards = [
 
 it(`Should title be pressed`, () => {
   const handleTitleClick = jest.fn();
-  const main = shallow(<Main offerCount={10} placeCards={placeCards} onTitleClick={handleTitleClick}/>);
+  const main = shallow(<Main offerCount={10} placeCards={offers} onTitleClick={handleTitleClick}/>);
   const titles = main.find(`.place-card__name a`);
 
   titles.forEach((title) => {
