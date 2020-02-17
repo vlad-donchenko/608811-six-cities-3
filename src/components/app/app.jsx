@@ -2,13 +2,13 @@ import React from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const handleTitleClick = () => {};
+const onOfferHover = () => {};
 
 const App = (props) => {
   const {offerCount, offers} = props;
 
   return (
-    <Main offerCount={offerCount} offers={offers} onTitleClick={handleTitleClick}/>
+    <Main offerCount={offerCount} offers={offers} onOfferHover={onOfferHover}/>
   );
 };
 

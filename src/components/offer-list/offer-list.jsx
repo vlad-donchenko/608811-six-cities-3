@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import OfferCad from "../offer-card/offer-cad";
+import OfferCad from "../offer-card/offer-cad.jsx";
 
 class OfferList extends PureComponent {
   constructor(props) {
@@ -9,12 +9,12 @@ class OfferList extends PureComponent {
   }
 
   render() {
-    const {offers, onGetActiveMouseOver} = this.props;
+    const {offers, onOfferHover} = this.props;
     return (
       <div className="cities__places-list places__list tabs__content">
         {
-          offers.map((offer, i) => {
-            return (<OfferCad key={`offers.name-${i + 1}`} offer={offer} onGetActiveMouseOver={onGetActiveMouseOver}/>);
+          offers.map((offer) => {
+            return (<OfferCad key={`${offer.index}`} offer={offer} onOfferHover={onOfferHover}/>);
           })
         }
       </div>
@@ -23,7 +23,7 @@ class OfferList extends PureComponent {
 }
 
 OfferList.propTypes = {
-  onGetActiveMouseOver: PropTypes.func.isRequired,
+  onOfferHover: PropTypes.func.isRequired,
   offers: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,

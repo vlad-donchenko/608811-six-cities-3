@@ -7,9 +7,8 @@ class OfferCad extends PureComponent {
   }
 
   render() {
-    const {offer, onGetActiveMouseOver} = this.props;
+    const {offer, onOfferHover} = this.props;
     const {name, image, price, type, rating, isBookmark, isPremium} = offer;
-
     const markTemplate = (
       <div className="place-card__mark">
         <span>Premium</span>
@@ -19,11 +18,11 @@ class OfferCad extends PureComponent {
     const markElement = isPremium ? markTemplate : ``;
 
     return (
-      <article className="cities__place-card place-card" onMouseOver={onGetActiveMouseOver}>
+      <article className="cities__place-card place-card" onMouseOver={onOfferHover}>
         {markElement}
         <div className="cities__image-wrapper place-card__image-wrapper">
           <a href="#">
-            <img className="place-card__image" src={`img/${image}`} width="260" height="200" alt="Place image"/>
+            <img className="place-card__image" src={`img/${image}`} width="260" height="200" alt={name}/>
           </a>
         </div>
         <div className="place-card__info">
@@ -43,7 +42,7 @@ class OfferCad extends PureComponent {
           </div>
           <div className="place-card__rating rating">
             <div className="place-card__stars rating__stars">
-              <span style={{width: `${rating * 2 * 10}`}}></span>
+              <span style={{width: `${rating * 2 * 10}%`}}></span>
               <span className="visually-hidden">Rating</span>
             </div>
           </div>
@@ -58,7 +57,7 @@ class OfferCad extends PureComponent {
 }
 
 OfferCad.propTypes = {
-  onGetActiveMouseOver: PropTypes.func.isRequired,
+  onOfferHover: PropTypes.func.isRequired,
   offer: PropTypes.shape({
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,

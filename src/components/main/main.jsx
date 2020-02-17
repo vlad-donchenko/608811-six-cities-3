@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import OfferList from "../offer-list/offer-list.jsx";
 
 const Main = (props) => {
-  const {offerCount, offers, onTitleClick} = props;
+  const {offerCount, offers, onOfferHover} = props;
 
   return (
     <div className="page page--gray page--main">
@@ -86,44 +87,7 @@ const Main = (props) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                {offers.map((card) => (
-                  <article key={card.index} className="cities__place-card place-card">
-                    <div className="place-card__mark">
-                      <span>Premium</span>
-                    </div>
-                    <div className="cities__image-wrapper place-card__image-wrapper">
-                      <a href="#">
-                        <img className="place-card__image" src="img/apartment-01.jpg" width="260" height="200" alt="Place image"/>
-                      </a>
-                    </div>
-                    <div className="place-card__info">
-                      <div className="place-card__price-wrapper">
-                        <div className="place-card__price">
-                          <b className="place-card__price-value">€120</b>
-                          <span className="place-card__price-text">/&nbsp;night</span>
-                        </div>
-                        <button className="place-card__bookmark-button button" type="button">
-                          <svg className="place-card__bookmark-icon" width="18" height="19">
-                            <use xlinkHref="#icon-bookmark"></use>
-                          </svg>
-                          <span className="visually-hidden">To bookmarks</span>
-                        </button>
-                      </div>
-                      <div className="place-card__rating rating">
-                        <div className="place-card__stars rating__stars">
-                          <span style={{width: `80%`}}></span>
-                          <span className="visually-hidden">Rating</span>
-                        </div>
-                      </div>
-                      <h2 className="place-card__name">
-                        <a href="#" onClick={onTitleClick}>{card.name}</a>
-                      </h2>
-                      <p className="place-card__type">Apartment</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
+              <OfferList offers={offers} onOfferHover={onOfferHover}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
@@ -137,8 +101,16 @@ const Main = (props) => {
 
 Main.propTypes = {
   offerCount: PropTypes.number.isRequired,
-  offers: PropTypes.arrayOf(PropTypes.shape({index: PropTypes.number.isRequired, name: PropTypes.string.isRequired})).isRequired,
-  onTitleClick: PropTypes.func.isRequired,
+  offers: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    isBookmark: PropTypes.bool.isRequired,
+    isPremium: PropTypes.bool.isRequired,
+  })).isRequired,
+  onOfferHover: PropTypes.func.isRequired,
 };
 
 export default Main;
