@@ -58,7 +58,6 @@ const offers = [
 it(`Render App`, () => {
   const tree = renderer
     .create(<App
-      offerCount={10}
       offers={offers}
     />)
     .toJSON();
