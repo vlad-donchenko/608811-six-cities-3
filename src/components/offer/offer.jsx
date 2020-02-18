@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 
-class OfferCad extends PureComponent {
+class Offer extends PureComponent {
   constructor(props) {
     super(props);
   }
@@ -56,7 +56,7 @@ class OfferCad extends PureComponent {
   }
 }
 
-OfferCad.propTypes = {
+Offer.propTypes = {
   onTitleClick: PropTypes.func.isRequired,
   onOfferHover: PropTypes.func.isRequired,
   offer: PropTypes.shape({
@@ -70,4 +70,4 @@ OfferCad.propTypes = {
   }).isRequired,
 };
 
-export default OfferCad;
+export default Offer;

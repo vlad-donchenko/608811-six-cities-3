@@ -1,6 +1,6 @@
 import React from "react";
 import {shallow} from "enzyme";
-import OfferCad from "./offer-cad.jsx";
+import Offer from "./offer.jsx";
 
 const offer = {
   name: `Place 2`,
@@ -15,7 +15,7 @@ const offer = {
 
 it(`Should title be pressed`, () => {
   const onTitleClick = jest.fn();
-  const main = shallow(<OfferCad offer={offer} onOfferHover={() => {}} onTitleClick={onTitleClick}/>);
+  const main = shallow(<Offer offer={offer} onOfferHover={() => {}} onTitleClick={onTitleClick}/>);
   const title = main.find(`.place-card__name a`);
   title.simulate(`click`);
 
@@ -24,7 +24,7 @@ it(`Should title be pressed`, () => {
 
 it(`Should offer be hover`, () => {
   const onOfferHover = jest.fn();
-  const main = shallow(<OfferCad offer={offer} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
+  const main = shallow(<Offer offer={offer} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
 
   main.simulate(`mouseover`);
 
