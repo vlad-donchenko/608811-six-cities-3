@@ -2,8 +2,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
 
-const offerCount = 10;
-
 const offers = [
   {
     name: `Place 2`,
@@ -60,7 +58,6 @@ const offers = [
 it(`Render Main`, () => {
   const tree = renderer
     .create(<Main
-      offerCount={offerCount}
       offers={offers}
       onTitleClick={() => {}}
     />)
