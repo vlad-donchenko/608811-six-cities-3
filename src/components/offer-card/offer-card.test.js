@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Offer from "./offer.jsx";
+import OfferCard from "./offer-card.jsx";
 
 const offer = {
   name: `Place 2`,
@@ -14,7 +14,7 @@ const offer = {
 };
 
 it(`Render OfferCad`, () => {
-  const tree = renderer.create(<Offer offer={offer} onOfferHover={() => {}} onTitleClick={() => {}}/>).toJSON();
+  const tree = renderer.create(<OfferCard offer={offer} onOfferHover={() => {}} onTitleClick={() => {}}/>).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Offer = (props) => {
+const OfferCard = (props) => {
   const {offer, onOfferHover, onTitleClick} = props;
   const {name, image, price, type, rating, isBookmark, isPremium} = offer;
   const markTemplate = (
@@ -50,7 +50,7 @@ const Offer = (props) => {
   );
 };
 
-Offer.propTypes = {
+OfferCard.propTypes = {
   onTitleClick: PropTypes.func.isRequired,
   onOfferHover: PropTypes.func.isRequired,
   offer: PropTypes.shape({
@@ -64,4 +64,4 @@ Offer.propTypes = {
   }).isRequired,
 };
 
-export default Offer;
+export default OfferCard;

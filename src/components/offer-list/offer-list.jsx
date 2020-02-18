@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import Offer from "../offer/offer.jsx";
+import OfferCard from "../offer-card/offer-card.jsx";
 
 class OfferList extends PureComponent {
   constructor(props) {
@@ -15,7 +15,7 @@ class OfferList extends PureComponent {
       <div className="cities__places-list places__list tabs__content">
         {
           offers.map((offer) => {
-            return (<Offer key={`${offer.index}`} offer={offer} onOfferHover={this._handleOfferHover} onTitleClick={onTitleClick}/>);
+            return (<OfferCard key={`${offer.index}`} offer={offer} onOfferHover={this._handleOfferHover} onTitleClick={onTitleClick}/>);
           })
         }
       </div>
