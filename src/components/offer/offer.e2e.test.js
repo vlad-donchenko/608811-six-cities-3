@@ -22,7 +22,7 @@ it(`Should title be pressed`, () => {
   expect(onTitleClick.mock.calls.length).toBe(1);
 });
 
-it(`Should offer be hover`, () => {
+it(`Should offer hover`, () => {
   const onOfferHover = jest.fn();
   const main = shallow(<Offer offer={offer} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
 
