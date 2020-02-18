@@ -31,4 +31,4 @@ const generateOffers = () => {
   });
 };
 
-export {generateOffers};
+export const offers =  generateOffers();
