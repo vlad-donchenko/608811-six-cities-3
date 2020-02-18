@@ -7,7 +7,7 @@ class OfferCad extends PureComponent {
   }
 
   render() {
-    const {offer, onOfferHover} = this.props;
+    const {offer, onOfferHover, onTitleClick} = this.props;
     const {name, image, price, type, rating, isBookmark, isPremium} = offer;
     const markTemplate = (
       <div className="place-card__mark">
@@ -18,7 +18,7 @@ class OfferCad extends PureComponent {
     const markElement = isPremium ? markTemplate : ``;
 
     return (
-      <article className="cities__place-card place-card" onMouseOver={onOfferHover}>
+      <article className="cities__place-card place-card" onMouseOver={() => (onOfferHover(offer))}>
         {markElement}
         <div className="cities__image-wrapper place-card__image-wrapper">
           <a href="#">
@@ -47,7 +47,7 @@ class OfferCad extends PureComponent {
             </div>
           </div>
           <h2 className="place-card__name">
-            <a href="#">{name}</a>
+            <a href="#" onClick={onTitleClick}>{name}</a>
           </h2>
           <p className="place-card__type">{type}</p>
         </div>
@@ -57,6 +57,7 @@ class OfferCad extends PureComponent {
 }
 
 OfferCad.propTypes = {
+  onTitleClick: PropTypes.func.isRequired,
   onOfferHover: PropTypes.func.isRequired,
   offer: PropTypes.shape({
     name: PropTypes.string.isRequired,

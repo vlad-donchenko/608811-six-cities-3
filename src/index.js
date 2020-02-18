@@ -6,7 +6,6 @@ import {generateOffers} from "./mock/offers.js";
 
 const offerCount = getRandomInteger(0, 500);
 const offers = generateOffers();
-console.log(offers);
 
 const root = document.querySelector(`#root`);
 ReactDOM.render(<App offerCount={offerCount} offers={offers}/>, root);

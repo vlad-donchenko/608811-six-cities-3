@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import OfferList from "../offer-list/offer-list.jsx";
 
 const Main = (props) => {
-  const {offerCount, offers, onOfferHover} = props;
+  const {offerCount, offers, onTitleClick} = props;
 
   return (
     <div className="page page--gray page--main">
@@ -87,7 +87,7 @@ const Main = (props) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OfferList offers={offers} onOfferHover={onOfferHover}/>
+              <OfferList offers={offers} onTitleClick={() => {}}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
@@ -110,7 +110,7 @@ Main.propTypes = {
     isBookmark: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
   })).isRequired,
-  onOfferHover: PropTypes.func.isRequired,
+  onTitleClick: PropTypes.func.isRequired,
 };
 
 export default Main;
