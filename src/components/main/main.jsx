@@ -102,12 +102,20 @@ const Main = (props) => {
 Main.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    images: PropTypes.array.isRequired,
     price: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
+    room: PropTypes.number.isRequired,
+    adults: PropTypes.number.isRequired,
+    features: PropTypes.array.isRequired,
     isBookmark: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
+    host: PropTypes.shape({
+      nameUser: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      description: PropTypes.array.isRequired,
+    }).isRequired,
   })).isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
