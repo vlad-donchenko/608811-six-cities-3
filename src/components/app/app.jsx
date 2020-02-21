@@ -4,9 +4,6 @@ import {Switch, Route, BrowserRouter} from "react-router-dom";
 import PropTypes from "prop-types";
 import DetailsInfoAboutOffer from "../details-info-about-offer/details-info-about-offer.jsx";
 
-const handleTitleClick = () => {
-};
-
 class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -28,7 +25,6 @@ class App extends PureComponent {
   }
 
   _handleTitleClick(values) {
-    console.log(`was click`);
     this.setState({
       currentOffer: values,
     });
