@@ -5,7 +5,7 @@ const DetailsInfoAboutOffer = (props) => {
   const {offer} = props;
   const {name, images, price, type, rating, room, adults, features, isBookmark, isPremium, host} = offer;
   const {nameUser, avatar, description} = host;
-
+  console.log(name);
   const markTemplate = (
     <div className="property__mark">
       <span>Premium</span>
@@ -309,23 +309,23 @@ const DetailsInfoAboutOffer = (props) => {
 
 DetailsInfoAboutOffer.propTypes = {
   offer: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    images: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    room: PropTypes.number.isRequired,
-    adults: PropTypes.number.isRequired,
-    features: PropTypes.array.isRequired,
-    isBookmark: PropTypes.bool.isRequired,
-    isPremium: PropTypes.bool.isRequired,
+    name: PropTypes.string,
+    index: PropTypes.number,
+    images: PropTypes.array,
+    price: PropTypes.number,
+    type: PropTypes.string,
+    rating: PropTypes.number,
+    room: PropTypes.number,
+    adults: PropTypes.number,
+    features: PropTypes.array,
+    isBookmark: PropTypes.bool,
+    isPremium: PropTypes.bool,
     host: PropTypes.shape({
-      nameUser: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      description: PropTypes.array.isRequired,
-    }).isRequired,
-  }).isRequired,
+      nameUser: PropTypes.string,
+      avatar: PropTypes.string,
+      description: PropTypes.array,
+    }),
+  })
 };
 
 export default DetailsInfoAboutOffer;
