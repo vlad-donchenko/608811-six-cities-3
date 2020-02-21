@@ -5,7 +5,6 @@ const DetailsInfoAboutOffer = (props) => {
   const {offer} = props;
   const {name, images, price, type, rating, room, adults, features, isBookmark, isPremium, host} = offer;
   const {nameUser, avatar, description} = host;
-  console.log(name);
   const markTemplate = (
     <div className="property__mark">
       <span>Premium</span>
