@@ -4,13 +4,23 @@ import OfferCard from "./offer-card.jsx";
 
 const offer = {
   name: `Place 2`,
-  index: 0,
-  image: `apartment-02.jpg`,
-  price: 400,
-  type: `Private room`,
-  rating: 4,
-  isBookmark: true,
+  index: 4,
+  images: [`apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `room.jpg`],
+  price: 100,
+  type: `Apartment`,
+  rating: 0,
+  room: 4,
+  adults: 8,
+  features: [`Wi-Fi`, `Washing machine`, `Towels`, `Baby seat`, `Cabel TV`],
+  isBookmark: false,
   isPremium: false,
+  host: {
+    nameUser: `Sam`,
+    avatar: `avatar-max.jpg`,
+    description: [
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    ],
+  }
 };
 
 it(`Should title be pressed`, () => {
