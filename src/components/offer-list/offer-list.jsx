@@ -31,6 +31,7 @@ class OfferList extends PureComponent {
 OfferList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
     images: PropTypes.array.isRequired,
     price: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired,
