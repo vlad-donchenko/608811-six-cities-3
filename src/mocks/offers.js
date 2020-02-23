@@ -47,17 +47,9 @@ const descriptions = [
   `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century`
 ];
 
-const getFeatures = () => {
-  return features.filter(() => {
-    return Math.random() > 0.5;
-  });
-};
+const getFeatures = () => features.filter(() => Math.random() > 0.5);
 
-const getDescription = () => {
-  return descriptions.filter(() => {
-    return Math.random() > 0.5;
-  });
-};
+const getDescription = () => descriptions.filter(() => Math.random() > 0.5);
 
 const generateOffers = () => {
   return placeCardNames.map((name, index) => {
