@@ -1,4 +1,5 @@
 import {getRandomInteger} from "../utils/utils";
+const CHECK_INDICATOR = 0.5;
 
 const placeCardNames = [
   `Beautiful & luxurious apartment at great location`,
@@ -47,9 +48,9 @@ const descriptions = [
   `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century`
 ];
 
-const getFeatures = () => features.filter(() => Math.random() > 0.5);
+const getFeatures = () => features.filter(() => Math.random() > CHECK_INDICATOR);
 
-const getDescription = () => descriptions.filter(() => Math.random() > 0.5);
+const getDescription = () => descriptions.filter(() => Math.random() > CHECK_INDICATOR);
 
 const generateOffers = () => {
   return placeCardNames.map((name, index) => {
@@ -58,13 +59,13 @@ const generateOffers = () => {
       index,
       images,
       price: getRandomInteger(100, 500),
-      type: Math.random() > 0.5 ? `Private room` : `Apartment`,
+      type: Math.random() > CHECK_INDICATOR ? `Private room` : `Apartment`,
       rating: getRandomInteger(0, 5),
       room: getRandomInteger(1, 7),
       adults: getRandomInteger(1, 7),
       features: getFeatures(),
-      isBookmark: Math.random() > 0.5,
-      isPremium: Math.random() > 0.5,
+      isBookmark: Math.random() > CHECK_INDICATOR,
+      isPremium: Math.random() > CHECK_INDICATOR,
       host: {
         nameUser: hostNames[index],
         avatar: avatars[getRandomInteger(0, avatars.length - 1)],
