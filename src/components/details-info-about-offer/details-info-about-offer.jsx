@@ -43,10 +43,10 @@ const DetailsInfoAboutOffer = (props) => {
         <section className="property">
           <div className="property__gallery-container container">
             <div className="property__gallery">
-              {images.map((image, i) => {
+              {images.map((path) => {
                 return (
-                  <div key={`${image}-${i}`} className="property__image-wrapper">
-                    <img className="property__image" src={`img/${image}`} alt="Photo studio"/>
+                  <div key={`${path}`} className="property__image-wrapper">
+                    <img className="property__image" src={`img/${path}`} alt="Photo studio"/>
                   </div>
                 );
               })}
