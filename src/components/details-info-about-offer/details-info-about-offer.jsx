@@ -59,7 +59,9 @@ const DetailsInfoAboutOffer = (props) => {
                 <h1 className="property__name">
                   {name}
                 </h1>
-                <button className={`property__bookmark-button button ${isBookmark ? `property__bookmark-button--active` : ``}`} type="button">
+                <button
+                  className={`property__bookmark-button button ${isBookmark ? `property__bookmark-button--active` : ``}`}
+                  type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
                     <use xlinkHref="#icon-bookmark"></use>
                   </svg>
@@ -104,7 +106,8 @@ const DetailsInfoAboutOffer = (props) => {
                 <h2 className="property__host-title">Meet the host</h2>
                 <div className="property__host-user user">
                   <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                    <img className="property__avatar user__avatar" src={`img/${avatar}`} width="74" height="74" alt="Host avatar"/>
+                    <img className="property__avatar user__avatar" src={`img/${avatar}`} width="74" height="74"
+                         alt="Host avatar"/>
                   </div>
                   <span className="property__user-name">
                     {nameUser}
@@ -126,7 +129,8 @@ const DetailsInfoAboutOffer = (props) => {
                   <li className="reviews__item">
                     <div className="reviews__user user">
                       <div className="reviews__avatar-wrapper user__avatar-wrapper">
-                        <img className="reviews__avatar user__avatar" src="img/avatar-max.jpg" width="54" height="54" alt="Reviews avatar"/>
+                        <img className="reviews__avatar user__avatar" src="img/avatar-max.jpg" width="54" height="54"
+                             alt="Reviews avatar"/>
                       </div>
                       <span className="reviews__user-name">
                         Max
@@ -150,42 +154,48 @@ const DetailsInfoAboutOffer = (props) => {
                 <form className="reviews__form form" action="#" method="post">
                   <label className="reviews__label form__label" htmlFor="review">Your review</label>
                   <div className="reviews__rating-form form__rating">
-                    <input className="form__rating-input visually-hidden" name="rating" value="5" id="5-stars" type="radio"/>
+                    <input className="form__rating-input visually-hidden" name="rating" value="5" id="5-stars"
+                           type="radio"/>
                     <label htmlFor="5-stars" className="reviews__rating-label form__rating-label" title="perfect">
                       <svg className="form__star-image" width="37" height="33">
                         <use xlinkHref="#icon-star"></use>
                       </svg>
                     </label>
 
-                    <input className="form__rating-input visually-hidden" name="rating" value="4" id="4-stars" type="radio"/>
+                    <input className="form__rating-input visually-hidden" name="rating" value="4" id="4-stars"
+                           type="radio"/>
                     <label htmlFor="4-stars" className="reviews__rating-label form__rating-label" title="good">
                       <svg className="form__star-image" width="37" height="33">
                         <use xlinkHref="#icon-star"></use>
                       </svg>
                     </label>
 
-                    <input className="form__rating-input visually-hidden" name="rating" value="3" id="3-stars" type="radio"/>
+                    <input className="form__rating-input visually-hidden" name="rating" value="3" id="3-stars"
+                           type="radio"/>
                     <label htmlFor="3-stars" className="reviews__rating-label form__rating-label" title="not bad">
                       <svg className="form__star-image" width="37" height="33">
                         <use xlinkHref="#icon-star"></use>
                       </svg>
                     </label>
 
-                    <input className="form__rating-input visually-hidden" name="rating" value="2" id="2-stars" type="radio"/>
+                    <input className="form__rating-input visually-hidden" name="rating" value="2" id="2-stars"
+                           type="radio"/>
                     <label htmlFor="2-stars" className="reviews__rating-label form__rating-label" title="badly">
                       <svg className="form__star-image" width="37" height="33">
                         <use xlinkHref="#icon-star"></use>
                       </svg>
                     </label>
 
-                    <input className="form__rating-input visually-hidden" name="rating" value="1" id="1-star" type="radio"/>
+                    <input className="form__rating-input visually-hidden" name="rating" value="1" id="1-star"
+                           type="radio"/>
                     <label htmlFor="1-star" className="reviews__rating-label form__rating-label" title="terribly">
                       <svg className="form__star-image" width="37" height="33">
                         <use xlinkHref="#icon-star"></use>
                       </svg>
                     </label>
                   </div>
-                  <textarea className="reviews__textarea form__textarea" id="review" name="review" placeholder="Tell how was your stay, what you like and what can be improved"/>
+                  <textarea className="reviews__textarea form__textarea" id="review" name="review"
+                            placeholder="Tell how was your stay, what you like and what can be improved"/>
                   <div className="reviews__button-wrapper">
                     <p className="reviews__help">
                       To submit review please make sure to set <span className="reviews__star">rating</span> and
@@ -215,7 +225,8 @@ const DetailsInfoAboutOffer = (props) => {
                       <b className="place-card__price-value">€80</b>
                       <span className="place-card__price-text">/&nbsp;night</span>
                     </div>
-                    <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
+                    <button className="place-card__bookmark-button place-card__bookmark-button--active button"
+                            type="button">
                       <svg className="place-card__bookmark-icon" width="18" height="19">
                         <use xlinkHref="#icon-bookmark"></use>
                       </svg>
@@ -238,7 +249,8 @@ const DetailsInfoAboutOffer = (props) => {
               <article className="near-places__card place-card">
                 <div className="near-places__image-wrapper place-card__image-wrapper">
                   <a href="#">
-                    <img className="place-card__image" src="img/apartment-02.jpg" width="260" height="200" alt="Place image"/>
+                    <img className="place-card__image" src="img/apartment-02.jpg" width="260" height="200"
+                         alt="Place image"/>
                   </a>
                 </div>
                 <div className="place-card__info">
@@ -270,7 +282,8 @@ const DetailsInfoAboutOffer = (props) => {
               <article className="near-places__card place-card">
                 <div className="near-places__image-wrapper place-card__image-wrapper">
                   <a href="#">
-                    <img className="place-card__image" src="img/apartment-03.jpg" width="260" height="200" alt="Place image"/>
+                    <img className="place-card__image" src="img/apartment-03.jpg" width="260" height="200"
+                         alt="Place image"/>
                   </a>
                 </div>
                 <div className="place-card__info">
@@ -308,23 +321,23 @@ const DetailsInfoAboutOffer = (props) => {
 
 DetailsInfoAboutOffer.propTypes = {
   offer: PropTypes.shape({
-    name: PropTypes.string,
-    index: PropTypes.number,
-    images: PropTypes.array,
-    price: PropTypes.number,
-    type: PropTypes.string,
-    rating: PropTypes.number,
-    room: PropTypes.number,
-    adults: PropTypes.number,
-    features: PropTypes.array,
-    isBookmark: PropTypes.bool,
-    isPremium: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    images: PropTypes.array.isRequired,
+    price: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    room: PropTypes.number.isRequired,
+    adults: PropTypes.number.isRequired,
+    features: PropTypes.array.isRequired,
+    isBookmark: PropTypes.bool.isRequired,
+    isPremium: PropTypes.bool.isRequired,
     host: PropTypes.shape({
-      nameUser: PropTypes.string,
-      avatar: PropTypes.string,
-      description: PropTypes.array,
-    }),
-  })
+      nameUser: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      description: PropTypes.array.isRequired,
+    }).isRequired,
+  }).isRequired
 };
 
 export default DetailsInfoAboutOffer;
