@@ -39,6 +39,8 @@ OfferList.propTypes = {
     room: PropTypes.number.isRequired,
     adults: PropTypes.number.isRequired,
     features: PropTypes.array.isRequired,
+    city: PropTypes.array.isRequired,
+    coordinates: PropTypes.array.isRequired,
     isBookmark: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
     host: PropTypes.shape({

@@ -13,6 +13,8 @@ const offers = [
     room: 7,
     adults: 10,
     features: [`Wi-Fi`, `Heating`, `Kitchen`, `Fridge`, `Washing machine`, `Coffee machine`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    city: [52.38333, 4.9],
+    coordinates: [52.3709553943508, 4.85309666406198],
     isBookmark: true,
     isPremium: false,
     host: {
@@ -34,6 +36,8 @@ const offers = [
     room: 10,
     adults: 20,
     features: [`Washing machine`, `Coffee machine`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    city: [52.38333, 4.9],
+    coordinates: [52.3309553943508, 4.85309666406198],
     isBookmark: true,
     isPremium: true,
     host: {
@@ -56,6 +60,8 @@ const offers = [
     room: 6,
     adults: 12,
     features: [`Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    city: [52.38333, 4.9],
+    coordinates: [52.3719553943508, 4.85309666406198],
     isBookmark: false,
     isPremium: false,
     host: {
@@ -76,6 +82,8 @@ const offers = [
     room: 1,
     adults: 2,
     features: [`Wi-Fi`, `Heating`, `Kitchen`, `Fridge`, `Washing machine`, `Towels`, `Baby seat`, `Cabel TV`],
+    city: [52.38333, 4.9],
+    coordinates: [52.3419553943508, 4.85309666406198],
     isBookmark: false,
     isPremium: false,
     host: {
@@ -100,6 +108,8 @@ const offers = [
     room: 4,
     adults: 8,
     features: [`Wi-Fi`, `Washing machine`, `Towels`, `Baby seat`, `Cabel TV`],
+    city: [52.38333, 4.9],
+    coordinates: [52.3999553943508, 4.85309666406198],
     isBookmark: false,
     isPremium: false,
     host: {
