@@ -52,7 +52,8 @@ const coordinates = [
   [52.3909553943508, 4.85309666406198],
   [52.369553943508, 4.85309666406198],
   [52.3909553943508, 4.929309666406198],
-  [52.3809553943508, 4.939309666406198]
+  [52.3809553943508, 4.939309666406198],
+  [52.3709553943508, 4.979309666406198]
 ];
 
 const getFeatures = () => features.filter(() => Math.random() > INDICATOR);
@@ -71,6 +72,7 @@ const generateOffers = () => {
       room: getRandomInteger(1, 7),
       adults: getRandomInteger(1, 7),
       features: getFeatures(),
+      city: [52.38333, 4.9],
       coordinates: coordinates[index],
       isBookmark: Math.random() > INDICATOR,
       isPremium: Math.random() > INDICATOR,
