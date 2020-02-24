@@ -19,7 +19,7 @@ exports[`Render OfferList 1`] = `
           alt="Place 2"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="img/apartment-01.jpg"
           width="260"
         />
       </a>
@@ -123,7 +123,7 @@ exports[`Render OfferList 1`] = `
           alt="Place 2"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="img/apartment-01.jpg"
           width="260"
         />
       </a>
@@ -221,7 +221,7 @@ exports[`Render OfferList 1`] = `
           alt="Place 2"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="img/apartment-01.jpg"
           width="260"
         />
       </a>
@@ -319,7 +319,7 @@ exports[`Render OfferList 1`] = `
           alt="Place 2"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="img/apartment-01.jpg"
           width="260"
         />
       </a>
@@ -417,7 +417,7 @@ exports[`Render OfferList 1`] = `
           alt="Place 2"
           className="place-card__image"
           height="200"
-          src="img/apartment-02.jpg"
+          src="img/apartment-01.jpg"
           width="260"
         />
       </a>

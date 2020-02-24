@@ -16,7 +16,7 @@ exports[`Render OfferCad 1`] = `
         alt="Place 2"
         className="place-card__image"
         height="200"
-        src="img/apartment-02.jpg"
+        src="img/apartment-01.jpg"
         width="260"
       />
     </a>
@@ -34,7 +34,7 @@ exports[`Render OfferCad 1`] = `
           className="place-card__price-value"
         >
           €
-          400
+          100
         </b>
         <span
           className="place-card__price-text"
@@ -43,7 +43,7 @@ exports[`Render OfferCad 1`] = `
         </span>
       </div>
       <button
-        className="place-card__bookmark-button button place-card__bookmark-button--active"
+        className="place-card__bookmark-button button "
         type="button"
       >
         <svg
@@ -71,7 +71,7 @@ exports[`Render OfferCad 1`] = `
         <span
           style={
             Object {
-              "width": "80%",
+              "width": "0%",
             }
           }
         />
@@ -95,7 +95,7 @@ exports[`Render OfferCad 1`] = `
     <p
       className="place-card__type"
     >
-      Private room
+      Apartment
     </p>
   </div>
 </article>
