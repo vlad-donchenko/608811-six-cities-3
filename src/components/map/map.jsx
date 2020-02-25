@@ -20,9 +20,8 @@ class Map extends PureComponent {
   componentDidMount() {
     const {offers} = this.props;
     const {city} = offers[0];
-    const {id} = this.mapRef.current;
 
-    this._map = leaflet.map(id, {
+    this._map = leaflet.map(`map`, {
       center: city,
       zoom: ZOOM,
       zoomControl: false,
@@ -52,26 +51,7 @@ class Map extends PureComponent {
 }
 
 Map.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    images: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    room: PropTypes.number.isRequired,
-    adults: PropTypes.number.isRequired,
-    features: PropTypes.array.isRequired,
-    city: PropTypes.array.isRequired,
-    coordinates: PropTypes.array.isRequired,
-    isBookmark: PropTypes.bool.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    host: PropTypes.shape({
-      nameUser: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      description: PropTypes.array.isRequired,
-    }).isRequired,
-  })).isRequired,
+  offers: PropTypes.array.isRequired
 };
 
 export default Map;
