@@ -18,6 +18,20 @@ class Map extends PureComponent {
   }
 
   componentDidMount() {
+    this._initMap();
+  }
+
+  componentWillUnmount() {
+    this._map.remove();
+  }
+
+  render() {
+    return (
+      <section className="cities__map map" ref={this.mapRef}></section>
+    );
+  }
+
+  _initMap() {
     const {offers} = this.props;
     const {city} = offers[0];
 
@@ -37,16 +51,6 @@ class Map extends PureComponent {
     offers.forEach((offer) => {
       leaflet.marker(offer.coordinates, {icon}).addTo(this._map);
     });
-  }
-
-  componentWillUnmount() {
-    this._map.remove();
-  }
-
-  render() {
-    return (
-      <section className="cities__map map" id="map" ref={this.mapRef}></section>
-    );
   }
 }
 
