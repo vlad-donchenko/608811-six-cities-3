@@ -122,7 +122,7 @@ const offers = [
   }
 ];
 
-it(`Render OfferList`, () => {
+it(`Should render <OfferList/>`, () => {
   const tree = renderer.create(<OfferList offers={offers} onTitleClick={() => {
   }}/>).toJSON();
 

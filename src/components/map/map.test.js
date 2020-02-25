@@ -1,7 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Map from "./map.jsx";
-import {leaflet} from "../../__mocks__/leaflet";
 
 const offers = [
   {
@@ -123,9 +122,7 @@ const offers = [
   }
 ];
 
-it(`Render Map`, () => {
-  const tree = renderer
-    .create(<Map offers={offers}/>).toJSON();
-
+it(`should render <Map/>`, () => {
+  const tree = renderer.create(<Map offers={offers}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });

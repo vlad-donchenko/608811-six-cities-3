@@ -122,7 +122,7 @@ const offers = [
   }
 ];
 
-it(`Render Main`, () => {
+it(`Should render <Main/>`, () => {
   const tree = renderer
     .create(<Main
       offers={offers}

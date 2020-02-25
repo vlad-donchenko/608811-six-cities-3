@@ -25,7 +25,7 @@ const offer = {
   }
 };
 
-it(`Render OfferCad`, () => {
+it(`Should render <OfferCad/>`, () => {
   const tree = renderer.create(<OfferCard offer={offer} onOfferHover={() => {}} onTitleClick={() => {}}/>).toJSON();
 
   expect(tree).toMatchSnapshot();

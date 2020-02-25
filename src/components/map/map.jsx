@@ -19,8 +19,8 @@ class Map extends PureComponent {
 
   componentDidMount() {
     const {offers} = this.props;
-    const {id} = this.mapRef.current;
     const {city} = offers[0];
+    const {id} = this.mapRef.current;
 
     this._map = leaflet.map(id, {
       center: city,
