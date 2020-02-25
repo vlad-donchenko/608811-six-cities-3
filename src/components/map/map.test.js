@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Main from "./main.jsx";
+import Map from "./map.jsx";
 
 const offers = [
   {
@@ -122,14 +122,7 @@ const offers = [
   }
 ];
 
-it(`Should render <Main/>`, () => {
-  const tree = renderer
-    .create(<Main
-      offers={offers}
-      onTitleClick={() => {
-      }}
-    />)
-    .toJSON();
-
+it(`should render <Map/>`, () => {
+  const tree = renderer.create(<Map offers={offers}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });

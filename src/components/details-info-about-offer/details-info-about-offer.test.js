@@ -24,7 +24,7 @@ const offer = {
   }
 };
 
-it(`Render DetailsInfoAboutOffer`, () => {
+it(`Should render <DetailsInfoAboutOffer/>`, () => {
   const tree = renderer.create(<DetailsInfoAboutOffer offer={offer}/>).toJSON();
 
   expect(tree).toMatchSnapshot();
