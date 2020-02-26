@@ -1,4 +1,5 @@
-import {getRandomInteger} from "../utils/utils";
+import {getRandomInteger, randomDate} from "../utils/utils";
+
 const INDICATOR = 0.5;
 
 const placeCardNames = [
@@ -29,7 +30,7 @@ const features = [
   `Cabel TV`
 ];
 
-const hostNames = [
+const names = [
   `Angelina`,
   `Max`,
   `Sam`,
@@ -60,6 +61,21 @@ const getFeatures = () => features.filter(() => Math.random() > INDICATOR);
 
 const getDescription = () => descriptions.filter(() => Math.random() > INDICATOR);
 
+const generateReviews = () => {
+  return names.map((name, index) => {
+    return {
+      name,
+      index,
+      rating: getRandomInteger(0, 5),
+      avatar: avatars[getRandomInteger(0, avatars.length - 1)],
+      comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
+      date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date()),
+    };
+  });
+};
+
+const getReviews = () => generateReviews().filter(() => Math.random() > INDICATOR);
+
 const generateOffers = () => {
   return placeCardNames.map((name, index) => {
     return {
@@ -74,10 +90,11 @@ const generateOffers = () => {
       features: getFeatures(),
       city: [52.38333, 4.9],
       coordinates: coordinates[index],
+      reviews: getReviews(),
       isBookmark: Math.random() > INDICATOR,
       isPremium: Math.random() > INDICATOR,
       host: {
-        nameUser: hostNames[index],
+        nameUser: names[index],
         avatar: avatars[getRandomInteger(0, avatars.length - 1)],
         description: getDescription(),
       }
