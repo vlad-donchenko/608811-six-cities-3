@@ -3,5 +3,6 @@
 exports[`should render <Map/> 1`] = `
 <section
   className="cities__map map"
+  id="map"
 />
 `;

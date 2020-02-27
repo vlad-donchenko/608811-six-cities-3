@@ -1,0 +1,5 @@
+const ZOOM = 12;
+const MAIN_PAGE_MAP_PREFIX = `cities`;
+const DETAILS_INFO_MAP_PREFIX = `property`;
+
+export {ZOOM, MAIN_PAGE_MAP_PREFIX, DETAILS_INFO_MAP_PREFIX};
