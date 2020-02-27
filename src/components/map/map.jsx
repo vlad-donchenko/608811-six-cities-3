@@ -1,8 +1,7 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import leaflet from 'leaflet';
-
-const ZOOM = 12;
+import {ZOOM} from "../../const";
 
 const icon = leaflet.icon({
   iconUrl: `img/pin.svg`,
@@ -26,8 +25,10 @@ class Map extends PureComponent {
   }
 
   render() {
+    const {prefix} = this.props;
+
     return (
-      <section className="cities__map map" id="map" ref={this.mapRef}></section>
+      <section className={`${prefix}__map map`} id="map" ref={this.mapRef}></section>
     );
   }
 
@@ -55,7 +56,8 @@ class Map extends PureComponent {
 }
 
 Map.propTypes = {
-  offers: PropTypes.array.isRequired
+  prefix: PropTypes.string.isRequired,
+  offers: PropTypes.array.isRequired,
 };
 
 export default Map;

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
+import {MAIN_PAGE_MAP_PREFIX} from "../../const";
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
@@ -91,7 +92,7 @@ const Main = (props) => {
               <OfferList offers={offers} onTitleClick={onTitleClick}/>
             </section>
             <div className="cities__right-section">
-              <Map offers={offers}/>
+              <Map offers={offers} prefix={MAIN_PAGE_MAP_PREFIX}/>
             </div>
           </div>
         </div>
