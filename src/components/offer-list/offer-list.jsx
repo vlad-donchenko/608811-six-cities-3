@@ -10,9 +10,10 @@ class OfferList extends PureComponent {
   }
 
   render() {
-    const {offers, onTitleClick} = this.props;
+    const {offers, onTitleClick, isMainPage} = this.props;
+    const className = isMainPage ? `cities__places-list tabs__content` : `near-places__list`;
     return (
-      <div className="cities__places-list places__list tabs__content">
+      <div className={`${className} places__list`}>
         {
           offers.map((offer) => {
             return (<OfferCard key={`${offer.index}`} offer={offer} onOfferHover={this._handleOfferHover} onTitleClick={onTitleClick}/>);
@@ -21,6 +22,7 @@ class OfferList extends PureComponent {
       </div>
     );
   }
+
   _handleOfferHover(values) {
     this.setState({
       active: values
@@ -48,6 +50,7 @@ OfferList.propTypes = {
     }).isRequired,
   })).isRequired,
   onTitleClick: PropTypes.func.isRequired,
+  isMainPage: PropTypes.bool.isRequired,
 };
 
 export default OfferList;

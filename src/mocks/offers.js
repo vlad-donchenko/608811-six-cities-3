@@ -76,30 +76,44 @@ const generateReviews = () => {
 
 const getReviews = () => generateReviews().filter(() => Math.random() > INDICATOR);
 
-const generateOffers = () => {
-  return placeCardNames.map((name, index) => {
-    return {
-      name,
-      index,
-      images,
-      price: getRandomInteger(100, 500),
-      type: Math.random() > INDICATOR ? `Private room` : `Apartment`,
-      rating: getRandomInteger(0, 5),
-      room: getRandomInteger(1, 7),
-      adults: getRandomInteger(1, 7),
-      features: getFeatures(),
-      city: [52.38333, 4.9],
-      coordinates: coordinates[index],
-      reviews: getReviews(),
-      isBookmark: Math.random() > INDICATOR,
-      isPremium: Math.random() > INDICATOR,
-      host: {
-        nameUser: names[index],
-        avatar: avatars[getRandomInteger(0, avatars.length - 1)],
-        description: getDescription(),
-      }
-    };
+const generateOffer = (name, index) => {
+  return {
+    name,
+    index,
+    images,
+    price: getRandomInteger(100, 500),
+    type: Math.random() > INDICATOR ? `Private room` : `Apartment`,
+    rating: getRandomInteger(0, 5),
+    room: getRandomInteger(1, 7),
+    adults: getRandomInteger(1, 7),
+    features: getFeatures(),
+    city: [52.38333, 4.9],
+    coordinates: coordinates[index],
+    reviews: getReviews(),
+    isBookmark: Math.random() > INDICATOR,
+    isPremium: Math.random() > INDICATOR,
+    host: {
+      nameUser: names[index],
+      avatar: avatars[getRandomInteger(0, avatars.length - 1)],
+      description: getDescription(),
+    }
+  };
+};
+
+const generateNeighbourhoodOffers = () => {
+  return placeCardNames.slice(0, 3).map((name, index) => {
+    return generateOffer(name, index);
   });
 };
 
-export const offers = generateOffers();
+const generateOffers = () => {
+  return placeCardNames.slice().map((name, index) => {
+    const offer = generateOffer(name, index);
+    offer.neighbourhoodOffers = generateNeighbourhoodOffers();
+    return offer;
+  });
+};
+
+const offers = generateOffers();
+
+export {offers};
