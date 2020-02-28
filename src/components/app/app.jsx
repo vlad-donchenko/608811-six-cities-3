@@ -18,7 +18,7 @@ class App extends PureComponent {
     const {offers} = this.props;
     const {currentOffer} = this.state;
 
-    return currentOffer ? <DetailsInfoAboutOffer offer={currentOffer}/> :
+    return currentOffer ? <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={currentOffer}/> :
       <Main offers={offers} onTitleClick={this._handleTitleClick}/>;
   }
 
@@ -38,7 +38,7 @@ class App extends PureComponent {
             {this._renderApp()}
           </Route>
           <Route exact path="/details-info-about-offer">
-            <DetailsInfoAboutOffer offer={offers[0]}/>
+            <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={offers[0]}/>
           </Route>
         </Switch>
       </BrowserRouter>
