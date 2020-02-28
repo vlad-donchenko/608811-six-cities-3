@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
-import {MAIN_PAGE_MAP_PREFIX} from "../../const";
+import {MapPrefix} from "../../const";
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
@@ -89,10 +89,10 @@ const Main = (props) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OfferList offers={offers} onTitleClick={onTitleClick}/>
+              <OfferList offers={offers} onTitleClick={onTitleClick} isMainPage={true}/>
             </section>
             <div className="cities__right-section">
-              <Map offers={offers} prefix={MAIN_PAGE_MAP_PREFIX}/>
+              <Map offers={offers} prefix={MapPrefix.MAIN_PAGE_MAP_PREFIX}/>
             </div>
           </div>
         </div>
