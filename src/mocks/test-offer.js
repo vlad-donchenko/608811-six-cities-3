@@ -1,5 +1,3 @@
-import {getRandomInteger, randomDate} from "../utils/utils";
-
 const offers = [
   {
     name: `Place 2`,
