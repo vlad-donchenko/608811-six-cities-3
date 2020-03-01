@@ -6,7 +6,7 @@ import {OfferPrefix} from "../../const";
 
 it(`Should title be pressed`, () => {
   const onTitleClick = jest.fn();
-  const main = shallow(<OfferCard prefix={OfferPrefix.MAIN_PAGE_OFFER_PREFIX} offer={offers[0]} onOfferHover={() => {}} onTitleClick={onTitleClick}/>);
+  const main = shallow(<OfferCard additionalClass={OfferPrefix.MAIN_PAGE_OFFER_PREFIX} offer={offers[0]} onOfferHover={() => {}} onTitleClick={onTitleClick}/>);
   const title = main.find(`.place-card__name a`);
   title.simulate(`click`);
 
@@ -15,7 +15,7 @@ it(`Should title be pressed`, () => {
 
 it(`Should offer hover`, () => {
   const onOfferHover = jest.fn();
-  const main = shallow(<OfferCard prefix={OfferPrefix.MAIN_PAGE_OFFER_PREFIX} offer={offers[0]} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
+  const main = shallow(<OfferCard additionalClass={OfferPrefix.MAIN_PAGE_OFFER_PREFIX} offer={offers[0]} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
 
   main.simulate(`mouseover`);
 

@@ -4,9 +4,10 @@ import OfferNeighbourhood from "./offer-neighbourhood";
 import {offers} from "../../mocks/test-offer";
 import {OfferPrefix} from "../../const";
 
-it(`Should render <OfferList/>`, () => {
-  const tree = renderer.create(<OfferNeighbourhood prefix={OfferPrefix.DETAILS_INFO_OFFER_PREFIX} neighbourhoodOffers={offers[0].neighbourhoodOffers} onTitleClick={() => {
+it(`Should render <OfferNeighbourhood/>`, () => {
+  const tree = renderer.create(<OfferNeighbourhood additionalClass={OfferPrefix.DETAILS_INFO_OFFER_PREFIX} renderOffer={() => {}} offers={offers} onTitleClick={() => {
   }}/>).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
+
