@@ -1,34 +1,15 @@
-import React, {PureComponent} from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import OfferCard from "../offer-card/offer-card.jsx";
 
-class OfferList extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {active: null};
-    this._handleOfferHover = this._handleOfferHover.bind(this);
-  }
-
-  render() {
-    const {offers, onTitleClick, isMainPage} = this.props;
-    const className = isMainPage ? `cities__places-list tabs__content` : `near-places__list`;
-    return (
-      <div className={`${className} places__list`}>
-        {
-          offers.map((offer) => {
-            return (<OfferCard key={`${offer.index}`} offer={offer} onOfferHover={this._handleOfferHover} onTitleClick={onTitleClick}/>);
-          })
-        }
-      </div>
-    );
-  }
-
-  _handleOfferHover(values) {
-    this.setState({
-      active: values
-    });
-  }
-}
+const OfferList = ({offers, onTitleClick, additionalClass, renderOffer}) => {
+  return (
+    <div className="cities__places-list places__list tabs__content">
+      {offers.map((offer) => {
+        return renderOffer(offer, additionalClass, onTitleClick);
+      })}
+    </div>
+  );
+};
 
 OfferList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
@@ -50,7 +31,8 @@ OfferList.propTypes = {
     }).isRequired,
   })).isRequired,
   onTitleClick: PropTypes.func.isRequired,
-  isMainPage: PropTypes.bool.isRequired,
+  additionalClass: PropTypes.string.isRequired,
+  renderOffer: PropTypes.func.isRequired,
 };
 
 export default OfferList;

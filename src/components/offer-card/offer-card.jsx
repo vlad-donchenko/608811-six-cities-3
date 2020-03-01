@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const OfferCard = (props) => {
-  const {offer, onOfferHover, onTitleClick} = props;
+  const {offer, onOfferHover, onTitleClick, additionalClass} = props;
   const {name, images, price, type, rating, isBookmark, isPremium} = offer;
 
   const markTemplate = (
@@ -14,9 +14,9 @@ const OfferCard = (props) => {
   const premiumStatusElement = isPremium ? markTemplate : ``;
 
   return (
-    <article className="cities__place-card place-card" onMouseOver={() => (onOfferHover(offer))}>
+    <article className={`${additionalClass} place-card`} onMouseOver={() => (onOfferHover(offer))}>
       {premiumStatusElement}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${additionalClass}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
           <img className="place-card__image" src={`img/${images[0]}`} width="260" height="200" alt={name}/>
         </a>
@@ -72,6 +72,7 @@ OfferCard.propTypes = {
       description: PropTypes.array.isRequired,
     }).isRequired,
   }).isRequired,
+  additionalClass: PropTypes.string.isRequired,
 };
 
 export default OfferCard;

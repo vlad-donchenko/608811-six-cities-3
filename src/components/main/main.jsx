@@ -2,10 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
-import {MapPrefix} from "../../const";
+import withOffer from "../hocs/with-offers-list/with-offer-list";
+import {MapPrefix, OfferPrefix} from "../../const";
+
+const OfferListWrapped = withOffer(OfferList);
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
+  const additionalClass = OfferPrefix.MAIN_PAGE_OFFER_PREFIX;
 
   return (
     <div className="page page--gray page--main">
@@ -89,7 +93,7 @@ const Main = (props) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OfferList offers={offers} onTitleClick={onTitleClick} isMainPage={true}/>
+              <OfferListWrapped offers={offers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>
             </section>
             <div className="cities__right-section">
               <Map offers={offers} prefix={MapPrefix.MAIN_PAGE_MAP_PREFIX}/>

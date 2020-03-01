@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import OfferList from "../offer-list/offer-list.jsx";
 
-const OfferNeighbourhood = ({neighbourhoodOffers, onTitleClick, isMainPage}) => {
+const OfferNeighbourhood = ({neighbourhoodOffers, onTitleClick, additionalClass, renderOffer}) => {
   return (
     <section className="near-places places">
       <h2 className="near-places__title">Other places in the neighbourhood</h2>
-      <OfferList offers={neighbourhoodOffers} onTitleClick={onTitleClick} isMainPage={isMainPage}/>
+      <div className="near-places__list places__list">
+        {neighbourhoodOffers.map((offer) => {
+          return renderOffer(offer, additionalClass, onTitleClick);
+        })}
+      </div>
     </section>
   );
 };
@@ -29,9 +32,10 @@ OfferNeighbourhood.propTypes = {
       avatar: PropTypes.string.isRequired,
       description: PropTypes.array.isRequired,
     }).isRequired,
-  })).isRequired,
+  })),
   onTitleClick: PropTypes.func.isRequired,
-  isMainPage: PropTypes.bool.isRequired,
+  renderOffer: PropTypes.func.isRequired,
+  additionalClass: PropTypes.string.isRequired,
 };
 
 export default OfferNeighbourhood;
