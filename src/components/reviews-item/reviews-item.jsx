@@ -5,7 +5,6 @@ import {formatDate, formatDateTime} from "../../utils/utils";
 const ReviewsItem = (props) => {
   const {review} = props;
   const {name, rating, avatar, comment} = review;
-
   const date = formatDate(review.date);
   const dateTime = formatDateTime(review.date);
 

@@ -20,7 +20,7 @@ const offers = [
         rating: 4,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 10, 15)
       }
     ],
     isBookmark: true,
@@ -53,7 +53,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 6, 15)
           }
         ],
         isBookmark: true,
@@ -86,7 +86,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 11, 15)
           },
           {
             name: `Jack`,
@@ -94,7 +94,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 4, 15)
           },
           {
             name: `Jane`,
@@ -102,7 +102,7 @@ const offers = [
             rating: 1,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 4, 19)
           }
         ],
         isBookmark: true,
@@ -134,7 +134,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 10)
           },
           {
             name: `Jack`,
@@ -142,7 +142,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 11, 10)
           }
         ],
         isBookmark: false,
@@ -176,7 +176,7 @@ const offers = [
         rating: 4,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 6, 6)
       },
       {
         name: `Jack`,
@@ -184,7 +184,7 @@ const offers = [
         rating: 5,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 6, 29)
       },
       {
         name: `Jane`,
@@ -192,7 +192,7 @@ const offers = [
         rating: 1,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 6, 24)
       }
     ],
     isBookmark: true,
@@ -226,7 +226,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 20)
           }
         ],
         isBookmark: true,
@@ -259,7 +259,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 26)
           },
           {
             name: `Jack`,
@@ -267,7 +267,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 26)
           },
           {
             name: `Jane`,
@@ -275,7 +275,7 @@ const offers = [
             rating: 1,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 16)
           }
         ],
         isBookmark: true,
@@ -307,7 +307,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 6, 26)
           },
           {
             name: `Jack`,
@@ -315,7 +315,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 29)
           }
         ],
         isBookmark: false,
@@ -349,7 +349,7 @@ const offers = [
         rating: 4,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 9, 26)
       },
       {
         name: `Jack`,
@@ -357,7 +357,7 @@ const offers = [
         rating: 5,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 10, 19)
       }
     ],
     isBookmark: false,
@@ -389,7 +389,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 28)
           }
         ],
         isBookmark: true,
@@ -422,7 +422,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 3, 26)
           },
           {
             name: `Jack`,
@@ -430,7 +430,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 19)
           },
           {
             name: `Jane`,
@@ -438,7 +438,7 @@ const offers = [
             rating: 1,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 23)
           }
         ],
         isBookmark: true,
@@ -470,7 +470,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 3)
           },
           {
             name: `Jack`,
@@ -478,7 +478,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 3, 9)
           }
         ],
         isBookmark: false,
@@ -512,7 +512,7 @@ const offers = [
         rating: 4,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 4, 29)
       },
       {
         name: `Jane`,
@@ -520,7 +520,7 @@ const offers = [
         rating: 1,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 5, 21)
       }
     ],
     isBookmark: false,
@@ -556,7 +556,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 21)
           }
         ],
         isBookmark: true,
@@ -589,7 +589,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 7, 14)
           },
           {
             name: `Jack`,
@@ -597,7 +597,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 14)
           },
           {
             name: `Jane`,
@@ -605,7 +605,7 @@ const offers = [
             rating: 1,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 2, 27)
           }
         ],
         isBookmark: true,
@@ -637,7 +637,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 8, 27)
           },
           {
             name: `Jack`,
@@ -645,7 +645,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 14)
           }
         ],
         isBookmark: false,
@@ -679,7 +679,7 @@ const offers = [
         rating: 4,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 9, 19)
       },
       {
         name: `Jane`,
@@ -687,7 +687,7 @@ const offers = [
         rating: 1,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 9, 4)
       },
       {
         name: `Jim`,
@@ -695,7 +695,7 @@ const offers = [
         rating: 5,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 9, 18)
       },
       {
         name: `Nick`,
@@ -703,7 +703,7 @@ const offers = [
         rating: 5,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 9, 10)
       },
       {
         name: `Sam`,
@@ -711,7 +711,7 @@ const offers = [
         rating: 3,
         avatar: `avatar-max.jpg`,
         comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-        date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+        date: new Date(2019, 9, 14)
       }
     ],
     isBookmark: false,
@@ -743,7 +743,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 10, 14)
           }
         ],
         isBookmark: true,
@@ -776,7 +776,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 18)
           },
           {
             name: `Jack`,
@@ -784,7 +784,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 10, 14)
           },
           {
             name: `Jane`,
@@ -792,7 +792,7 @@ const offers = [
             rating: 1,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 5, 14)
           }
         ],
         isBookmark: true,
@@ -824,7 +824,7 @@ const offers = [
             rating: 4,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 23)
           },
           {
             name: `Jack`,
@@ -832,7 +832,7 @@ const offers = [
             rating: 5,
             avatar: `avatar-max.jpg`,
             comment: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019`,
-            date: randomDate(new Date(2019, getRandomInteger(0, 11), getRandomInteger(1, 30)), new Date())
+            date: new Date(2019, 9, 27)
           }
         ],
         isBookmark: false,
