@@ -2,11 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
 import OfferNeighbourhood from "../offer-neighbourhood/offer-neighbourhood.jsx";
+import MapNeighbourhood from "../map-neighbourhood/map-neighbourhood.jsx";
+import {MapPrefix} from "../../const";
 
 const DetailsInfoAboutOffer = (props) => {
   const {offer, onTitleClick} = props;
   const {name, images, price, type, rating, room, adults, features, isBookmark, isPremium, host, reviews, neighbourhoodOffers} = offer;
   const {nameUser, avatar, description} = host;
+  const mapPrefix = MapPrefix.DETAILS_INFO_MAP_PREFIX;
 
   const markTemplate = (
     <div className="property__mark">
@@ -127,7 +130,7 @@ const DetailsInfoAboutOffer = (props) => {
               <ReviewsList reviews={reviews}/>
             </div>
           </div>
-          <section className="property__map map"></section>
+          <MapNeighbourhood prefix={mapPrefix} offers={neighbourhoodOffers}/>
         </section>
         <div className="container">
           <OfferNeighbourhood neighbourhoodOffers={neighbourhoodOffers} onTitleClick={onTitleClick} isMainPage={false}/>
@@ -149,7 +152,7 @@ DetailsInfoAboutOffer.propTypes = {
     adults: PropTypes.number.isRequired,
     features: PropTypes.array.isRequired,
     reviews: PropTypes.array,
-    offersNeighbourhood: PropTypes.array,
+    neighbourhoodOffers: PropTypes.array,
     isBookmark: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
     host: PropTypes.shape({
