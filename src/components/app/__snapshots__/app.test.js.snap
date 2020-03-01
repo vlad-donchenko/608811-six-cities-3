@@ -230,7 +230,7 @@ exports[`Render App 1`] = `
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="cities__place-card__image-wrapper place-card__image-wrapper"
               >
                 <a
                   href="#"
@@ -334,7 +334,7 @@ exports[`Render App 1`] = `
                 </span>
               </div>
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="cities__place-card__image-wrapper place-card__image-wrapper"
               >
                 <a
                   href="#"
@@ -432,7 +432,7 @@ exports[`Render App 1`] = `
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="cities__place-card__image-wrapper place-card__image-wrapper"
               >
                 <a
                   href="#"
@@ -530,7 +530,7 @@ exports[`Render App 1`] = `
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="cities__place-card__image-wrapper place-card__image-wrapper"
               >
                 <a
                   href="#"
@@ -628,7 +628,7 @@ exports[`Render App 1`] = `
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="cities__place-card__image-wrapper place-card__image-wrapper"
               >
                 <a
                   href="#"

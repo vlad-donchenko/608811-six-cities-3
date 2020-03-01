@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import ReviewsList from "./reviews-list";
+import ReviewsList from "./reviews-list.jsx";
 import {offers} from "../../mocks/test-offer";
 
 it(`Should render <ReviewsItem/>`, () => {

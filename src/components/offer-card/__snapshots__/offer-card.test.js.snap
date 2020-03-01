@@ -7,7 +7,7 @@ exports[`Should render <OfferCad/> 1`] = `
 >
   
   <div
-    className="cities__image-wrapper place-card__image-wrapper"
+    className="cities__place-card__image-wrapper place-card__image-wrapper"
   >
     <a
       href="#"
@@ -34,7 +34,7 @@ exports[`Should render <OfferCad/> 1`] = `
           className="place-card__price-value"
         >
           €
-          100
+          400
         </b>
         <span
           className="place-card__price-text"
@@ -43,7 +43,7 @@ exports[`Should render <OfferCad/> 1`] = `
         </span>
       </div>
       <button
-        className="place-card__bookmark-button button "
+        className="place-card__bookmark-button button place-card__bookmark-button--active"
         type="button"
       >
         <svg
@@ -71,7 +71,7 @@ exports[`Should render <OfferCad/> 1`] = `
         <span
           style={
             Object {
-              "width": "0%",
+              "width": "80%",
             }
           }
         />
@@ -95,7 +95,7 @@ exports[`Should render <OfferCad/> 1`] = `
     <p
       className="place-card__type"
     >
-      Apartment
+      Private room
     </p>
   </div>
 </article>
