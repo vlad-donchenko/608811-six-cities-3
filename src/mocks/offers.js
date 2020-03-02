@@ -1,4 +1,4 @@
-import {getRandomInteger, randomDate} from "../utils";
+import {getRandomInteger, randomDate} from "../utils/index";
 import {MAX_NEIGHBOURHOOD_OFFERS} from "../const";
 
 const INDICATOR = 0.5;

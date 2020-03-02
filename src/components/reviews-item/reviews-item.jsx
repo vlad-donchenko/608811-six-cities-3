@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {formatDate, formatDateTime} from "../../utils";
+import {formatDate, formatDateTime} from "../../utils/index";
 
 const ReviewsItem = (props) => {
   const {review} = props;
