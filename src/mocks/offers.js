@@ -1,4 +1,5 @@
 import {getRandomInteger, randomDate} from "../utils/utils";
+import {MAX_NEIGHBOURHOOD_OFFERS} from "../const";
 
 const INDICATOR = 0.5;
 
@@ -101,7 +102,7 @@ const generateOffer = (name, index) => {
 };
 
 const generateNeighbourhoodOffers = () => {
-  return placeCardNames.slice(0, 3).map((name, index) => {
+  return placeCardNames.slice(0, MAX_NEIGHBOURHOOD_OFFERS).map((name, index) => {
     return generateOffer(name, index);
   });
 };

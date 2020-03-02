@@ -1,5 +1,7 @@
 const ZOOM = 12;
 
+const MAX_NEIGHBOURHOOD_OFFERS = 3;
+
 const MapPrefix = {
   MAIN_PAGE_MAP_PREFIX: `cities`,
   DETAILS_INFO_MAP_PREFIX: `property`,
@@ -10,4 +12,4 @@ const OfferPrefix = {
   DETAILS_INFO_OFFER_PREFIX: `near-places__card`,
 };
 
-export {ZOOM, MapPrefix, OfferPrefix};
+export {ZOOM, MAX_NEIGHBOURHOOD_OFFERS, MapPrefix, OfferPrefix};
