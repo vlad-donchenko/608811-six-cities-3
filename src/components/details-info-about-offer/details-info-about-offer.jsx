@@ -137,7 +137,8 @@ const DetailsInfoAboutOffer = (props) => {
           {neighbourhoodOffers && (<MapNeighbourhood prefix={mapPrefix} offers={neighbourhoodOffers}/>)}
         </section>
         <div className="container">
-          {neighbourhoodOffers && (<OfferNeighbourhoodWrapped neighbourhoodOffers={neighbourhoodOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
+          {neighbourhoodOffers && (
+            <OfferNeighbourhoodWrapped neighbourhoodOffers={neighbourhoodOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
         </div>
       </main>
     </div>
@@ -163,7 +164,33 @@ DetailsInfoAboutOffer.propTypes = {
       comment: PropTypes.string,
       date: PropTypes.object,
     })),
-    neighbourhoodOffers: PropTypes.array,
+    neighbourhoodOffers: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      index: PropTypes.number,
+      images: PropTypes.array,
+      price: PropTypes.number,
+      type: PropTypes.string,
+      rating: PropTypes.number,
+      room: PropTypes.number,
+      adults: PropTypes.number,
+      features: PropTypes.array,
+      reviews: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        index: PropTypes.number,
+        rating: PropTypes.number,
+        avatar: PropTypes.string,
+        comment: PropTypes.string,
+        date: PropTypes.object,
+      })),
+      neighbourhoodOffers: PropTypes.array,
+      isBookmark: PropTypes.bool.isRequired,
+      isPremium: PropTypes.bool.isRequired,
+      host: PropTypes.shape({
+        nameUser: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        description: PropTypes.array.isRequired,
+      }).isRequired,
+    })),
     isBookmark: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
     host: PropTypes.shape({
