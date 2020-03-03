@@ -108,33 +108,7 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    images: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    room: PropTypes.number.isRequired,
-    adults: PropTypes.number.isRequired,
-    features: PropTypes.array.isRequired,
-    reviews: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string,
-      index: PropTypes.number,
-      rating: PropTypes.number,
-      avatar: PropTypes.string,
-      comment: PropTypes.string,
-      date: PropTypes.object,
-    })),
-    neighbourhoodOffers: PropTypes.array,
-    isBookmark: PropTypes.bool.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    host: PropTypes.shape({
-      nameUser: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      description: PropTypes.array.isRequired,
-    }).isRequired,
-  })).isRequired,
+  offers: PropTypes.array.isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
 
