@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
 import withOffer from "../hocs/with-offers-list/with-offer-list";
-import {MapPrefix, OfferPrefix} from "../../const";
+import {OfferPrefix} from "../../const";
 
 const OfferListWrapped = withOffer(OfferList);
 
@@ -96,7 +96,9 @@ const Main = (props) => {
               <OfferListWrapped offers={offers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>
             </section>
             <div className="cities__right-section">
-              <Map offers={offers} prefix={MapPrefix.MAIN_PAGE_MAP_PREFIX}/>
+              <section className="cities__map map">
+                <Map offers={offers}/>
+              </section>
             </div>
           </div>
         </div>
@@ -116,6 +118,15 @@ Main.propTypes = {
     room: PropTypes.number.isRequired,
     adults: PropTypes.number.isRequired,
     features: PropTypes.array.isRequired,
+    reviews: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      index: PropTypes.number,
+      rating: PropTypes.number,
+      avatar: PropTypes.string,
+      comment: PropTypes.string,
+      date: PropTypes.object,
+    })),
+    neighbourhoodOffers: PropTypes.array,
     isBookmark: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
     host: PropTypes.shape({

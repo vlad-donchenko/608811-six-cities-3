@@ -25,10 +25,8 @@ class Map extends PureComponent {
   }
 
   render() {
-    const {prefix} = this.props;
-
     return (
-      <section className={`${prefix}__map map`} id="map" ref={this.mapRef}></section>
+      <div id="map" className="map__content" ref={this.mapRef}></div>
     );
   }
 
@@ -56,7 +54,6 @@ class Map extends PureComponent {
 }
 
 Map.propTypes = {
-  prefix: PropTypes.string.isRequired,
   offers: PropTypes.array.isRequired,
 };
 

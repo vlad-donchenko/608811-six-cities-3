@@ -91,6 +91,7 @@ const generateOffer = (name, index) => {
     city: [52.38333, 4.9],
     coordinates: coordinates[index],
     reviews: getReviews(),
+    neighbourhoodOffers: [],
     isBookmark: Math.random() > INDICATOR,
     isPremium: Math.random() > INDICATOR,
     host: {

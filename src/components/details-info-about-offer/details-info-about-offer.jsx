@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
 import OfferNeighbourhood from "../offer-neighbourhood/offer-neighbourhood.jsx";
-import MapNeighbourhood from "../map-neighbourhood/map-neighbourhood.jsx";
+import Map from "../map/map.jsx";
 import withOffer from "../hocs/with-offers-list/with-offer-list";
-import {MapPrefix, OfferPrefix} from "../../const";
+import {OfferPrefix} from "../../const";
 
 const OfferNeighbourhoodWrapped = withOffer(OfferNeighbourhood);
 
@@ -12,7 +12,6 @@ const DetailsInfoAboutOffer = (props) => {
   const {offer, onTitleClick} = props;
   const {name, images, price, type, rating, room, adults, features, isBookmark, isPremium, host, reviews, neighbourhoodOffers} = offer;
   const {nameUser, avatar, description} = host;
-  const mapPrefix = MapPrefix.DETAILS_INFO_MAP_PREFIX;
   const additionalClass = OfferPrefix.DETAILS_INFO_OFFER_PREFIX;
 
   const markTemplate = (
@@ -134,10 +133,14 @@ const DetailsInfoAboutOffer = (props) => {
               <ReviewsList reviews={reviews}/>
             </div>
           </div>
-          {neighbourhoodOffers && (<MapNeighbourhood prefix={mapPrefix} offers={neighbourhoodOffers}/>)}
+          {(neighbourhoodOffers.length !== 0) && (
+            <section className="property__map map">
+              <Map offers={neighbourhoodOffers}/>
+            </section>
+          )}
         </section>
         <div className="container">
-          {neighbourhoodOffers && (
+          {(neighbourhoodOffers.length !== 0) && (
             <OfferNeighbourhoodWrapped neighbourhoodOffers={neighbourhoodOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
         </div>
       </main>
