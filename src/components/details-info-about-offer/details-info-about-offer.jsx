@@ -12,7 +12,8 @@ const DetailsInfoAboutOffer = (props) => {
   const {offer, onTitleClick} = props;
   const {name, images, price, type, rating, room, adults, features, isBookmark, isPremium, host, reviews, neighbourhoodOffers} = offer;
   const {nameUser, avatar, description} = host;
-  const additionalClass = OfferPrefix.DETAILS_INFO_OFFER_PREFIX;
+  const additionalClass = OfferPrefix.DETAILS_PAGE;
+  const isNeighbourhoodOffers = neighbourhoodOffers.length !== 0;
 
   const markTemplate = (
     <div className="property__mark">
@@ -133,14 +134,14 @@ const DetailsInfoAboutOffer = (props) => {
               <ReviewsList reviews={reviews}/>
             </div>
           </div>
-          {(neighbourhoodOffers.length !== 0) && (
+          {(isNeighbourhoodOffers) && (
             <section className="property__map map">
               <Map offers={neighbourhoodOffers}/>
             </section>
           )}
         </section>
         <div className="container">
-          {(neighbourhoodOffers.length !== 0) && (
+          {(isNeighbourhoodOffers) && (
             <OfferNeighbourhoodWrapped neighbourhoodOffers={neighbourhoodOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
         </div>
       </main>
