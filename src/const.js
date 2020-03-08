@@ -18,8 +18,8 @@ const monthMap = {
 };
 
 const OfferPrefix = {
-  MAIN: `cities__place-card`,
-  DETAILS: `near-places__card`,
+  CITIES_PLACE_CARD: `cities__place-card`,
+  NEAR_PLACES_CARD: `near-places__card`,
 };
 
 export {ZOOM, MAX_NEIGHBOURHOOD_OFFERS, OfferPrefix, monthMap};

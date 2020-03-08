@@ -13,9 +13,9 @@ const OfferNeighbourhoodWrapped = withOffer(OfferNeighbourhood);
 
 const DetailsInfoAboutOffer = (props) => {
   const {offer, onTitleClick} = props;
-  const {title, images, price, type, rating, bedrooms, maxAdults, goods, isFavorite, isPremium, host, description} = offer;
+  const {title, images, price, type, rating, bedrooms, maxAdults, goods: items, isFavorite, isPremium, host, description} = offer;
   const {avatarUrl, name} = host;
-  const additionalClass = OfferPrefix.DETAILS;
+  const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
   const nearbyOffers = offers.slice(0, MAX_NEIGHBOURHOOD_OFFERS);
   const isNearbyOffers = nearbyOffers.length !== 0;
 
@@ -106,10 +106,10 @@ const DetailsInfoAboutOffer = (props) => {
               <div className="property__inside">
                 <h2 className="property__inside-title">What&rsquo;s inside</h2>
                 <ul className="property__inside-list">
-                  {goods.map((it) => {
+                  {items.map((item) => {
                     return (
-                      <li key={`${it}`} className="property__inside-item">
-                        {it}
+                      <li key={`${item}`} className="property__inside-item">
+                        {item}
                       </li>
                     );
                   })}

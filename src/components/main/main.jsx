@@ -9,7 +9,7 @@ const OfferListWrapped = withOffer(OfferList);
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
-  const additionalClass = OfferPrefix.DETAILS;
+  const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
 
   return (
     <div className="page page--gray page--main">
