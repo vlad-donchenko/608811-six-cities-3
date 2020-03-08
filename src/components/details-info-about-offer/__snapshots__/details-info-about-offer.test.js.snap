@@ -129,10 +129,10 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <h1
               className="property__name"
             >
-              Beautiful & luxurious apartment at great location
+              Beautiful & luxurious studio at great location - 1
             </h1>
             <button
-              className="property__bookmark-button button property__bookmark-button--active"
+              className="property__bookmark-button button "
               type="button"
             >
               <svg
@@ -160,7 +160,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <span
                 style={
                   Object {
-                    "width": "80%",
+                    "width": "96%",
                   }
                 }
               />
@@ -173,7 +173,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <span
               className="property__rating-value rating__value"
             >
-              4
+              4.8
             </span>
           </div>
           <ul
@@ -182,19 +182,19 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <li
               className="property__feature property__feature--entire"
             >
-              Apartment
+              apartment
             </li>
             <li
               className="property__feature property__feature--bedrooms"
             >
-              5
+              3
                Bedrooms
             </li>
             <li
               className="property__feature property__feature--adults"
             >
               Max 
-              3
+              4
                adults
             </li>
           </ul>
@@ -205,7 +205,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               className="property__price-value"
             >
               €
-              274
+              120
             </b>
             <span
               className="property__price-text"
@@ -224,6 +224,11 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <ul
               className="property__inside-list"
             >
+              <li
+                className="property__inside-item"
+              >
+                good
+              </li>
               <li
                 className="property__inside-item"
               >
@@ -285,7 +290,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <p
                 className="property__text"
               >
-                A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century
+                A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
               </p>
             </div>
           </div>
@@ -631,7 +636,13 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             className="near-places__card place-card"
             onMouseOver={[Function]}
           >
-            
+            <div
+              className="place-card__mark"
+            >
+              <span>
+                Premium
+              </span>
+            </div>
             <div
               className="near-places__card__image-wrapper place-card__image-wrapper"
             >
@@ -660,7 +671,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                     className="place-card__price-value"
                   >
                     €
-                    274
+                    494
                   </b>
                   <span
                     className="place-card__price-text"
@@ -697,7 +708,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "80%",
+                        "width": "100%",
                       }
                     }
                   />
@@ -721,7 +732,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <p
                 className="place-card__type"
               >
-                Apartment
+                Private room
               </p>
             </div>
           </article>
@@ -740,7 +751,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   alt="Wood and stone place"
                   className="place-card__image"
                   height="200"
-                  src="img/apartment-03.jpg"
+                  src="img/apartment-01.jpg"
                   width="260"
                 />
               </a>
@@ -758,105 +769,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                     className="place-card__price-value"
                   >
                     €
-                    329
-                  </b>
-                  <span
-                    className="place-card__price-text"
-                  >
-                    / night
-                  </span>
-                </div>
-                <button
-                  className="place-card__bookmark-button button "
-                  type="button"
-                >
-                  <svg
-                    className="place-card__bookmark-icon"
-                    height="19"
-                    width="18"
-                  >
-                    <use
-                      xlinkHref="#icon-bookmark"
-                    />
-                  </svg>
-                  <span
-                    className="visually-hidden"
-                  >
-                    To bookmarks
-                  </span>
-                </button>
-              </div>
-              <div
-                className="place-card__rating rating"
-              >
-                <div
-                  className="place-card__stars rating__stars"
-                >
-                  <span
-                    style={
-                      Object {
-                        "width": "0%",
-                      }
-                    }
-                  />
-                  <span
-                    className="visually-hidden"
-                  >
-                    Rating
-                  </span>
-                </div>
-              </div>
-              <h2
-                className="place-card__name"
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                >
-                  Wood and stone place
-                </a>
-              </h2>
-              <p
-                className="place-card__type"
-              >
-                Apartment
-              </p>
-            </div>
-          </article>
-          <article
-            className="near-places__card place-card"
-            onMouseOver={[Function]}
-          >
-            
-            <div
-              className="near-places__card__image-wrapper place-card__image-wrapper"
-            >
-              <a
-                href="#"
-              >
-                <img
-                  alt="Canal View Prinsengracht"
-                  className="place-card__image"
-                  height="200"
-                  src="img/apartment-03.jpg"
-                  width="260"
-                />
-              </a>
-            </div>
-            <div
-              className="place-card__info"
-            >
-              <div
-                className="place-card__price-wrapper"
-              >
-                <div
-                  className="place-card__price"
-                >
-                  <b
-                    className="place-card__price-value"
-                  >
-                    €
-                    107
+                    264
                   </b>
                   <span
                     className="place-card__price-text"
@@ -894,6 +807,104 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                     style={
                       Object {
                         "width": "20%",
+                      }
+                    }
+                  />
+                  <span
+                    className="visually-hidden"
+                  >
+                    Rating
+                  </span>
+                </div>
+              </div>
+              <h2
+                className="place-card__name"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Wood and stone place
+                </a>
+              </h2>
+              <p
+                className="place-card__type"
+              >
+                Private room
+              </p>
+            </div>
+          </article>
+          <article
+            className="near-places__card place-card"
+            onMouseOver={[Function]}
+          >
+            
+            <div
+              className="near-places__card__image-wrapper place-card__image-wrapper"
+            >
+              <a
+                href="#"
+              >
+                <img
+                  alt="Canal View Prinsengracht"
+                  className="place-card__image"
+                  height="200"
+                  src="img/apartment-02.jpg"
+                  width="260"
+                />
+              </a>
+            </div>
+            <div
+              className="place-card__info"
+            >
+              <div
+                className="place-card__price-wrapper"
+              >
+                <div
+                  className="place-card__price"
+                >
+                  <b
+                    className="place-card__price-value"
+                  >
+                    €
+                    418
+                  </b>
+                  <span
+                    className="place-card__price-text"
+                  >
+                    / night
+                  </span>
+                </div>
+                <button
+                  className="place-card__bookmark-button button place-card__bookmark-button--active"
+                  type="button"
+                >
+                  <svg
+                    className="place-card__bookmark-icon"
+                    height="19"
+                    width="18"
+                  >
+                    <use
+                      xlinkHref="#icon-bookmark"
+                    />
+                  </svg>
+                  <span
+                    className="visually-hidden"
+                  >
+                    To bookmarks
+                  </span>
+                </button>
+              </div>
+              <div
+                className="place-card__rating rating"
+              >
+                <div
+                  className="place-card__stars rating__stars"
+                >
+                  <span
+                    style={
+                      Object {
+                        "width": "100%",
                       }
                     }
                   />
