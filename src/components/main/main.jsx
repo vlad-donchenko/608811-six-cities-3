@@ -9,7 +9,7 @@ const OfferListWrapped = withOffer(OfferList);
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
-  const additionalClass = OfferPrefix.DETAILS_PAGE;
+  const additionalClass = OfferPrefix.DETAILS;
 
   return (
     <div className="page page--gray page--main">

@@ -5,7 +5,7 @@ import {OfferPrefix} from "../../const";
 import {offers} from "../../mocks/test-offer";
 
 it(`Should render <OfferCad/>`, () => {
-  const tree = renderer.create(<OfferCard additionalClass={OfferPrefix.MAIN_PAGE} offer={offers[0]} onOfferHover={() => {}} onTitleClick={() => {}}/>).toJSON();
+  const tree = renderer.create(<OfferCard additionalClass={OfferPrefix.MAIN} offer={offers[0]} onOfferHover={() => {}} onTitleClick={() => {}}/>).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

@@ -227,32 +227,32 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <li
                 className="property__inside-item"
               >
-                good
+                Heating
               </li>
               <li
                 className="property__inside-item"
               >
-                good
+                Kitchen
               </li>
               <li
                 className="property__inside-item"
               >
-                good
+                Cable TV
               </li>
               <li
                 className="property__inside-item"
               >
-                good
+                Washing machine
               </li>
               <li
                 className="property__inside-item"
               >
-                good
+                Coffee machine
               </li>
               <li
                 className="property__inside-item"
               >
-                good
+                Dishwasher
               </li>
             </ul>
           </div>

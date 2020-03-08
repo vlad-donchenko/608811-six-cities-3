@@ -16,7 +16,7 @@ class App extends PureComponent {
 
   _renderApp() {
     const {offers} = this.props;
-    const index = this._getCurrentOfferId(offers);
+    const index = this._getCurrentOfferIndex(offers);
 
     return index !== -1 ? <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={offers[index]}/> :
       <Main offers={offers} onTitleClick={this._handleTitleClick}/>;
@@ -28,7 +28,7 @@ class App extends PureComponent {
     });
   }
 
-  _getCurrentOfferId(offers) {
+  _getCurrentOfferIndex(offers) {
     const {currentOfferId} = this.state;
 
     return offers.findIndex((offer) => {
