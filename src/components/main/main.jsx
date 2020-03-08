@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {offersType, onTitleClickType} from "../../types/index";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
 import withOffer from "../hocs/with-offers-list/with-offer-list";
@@ -9,7 +9,7 @@ const OfferListWrapped = withOffer(OfferList);
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
-  const additionalClass = OfferPrefix.MAIN_PAGE_OFFER_PREFIX;
+  const additionalClass = OfferPrefix.DETAILS_PAGE;
 
   return (
     <div className="page page--gray page--main">
@@ -108,8 +108,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  offers: PropTypes.array.isRequired,
-  onTitleClick: PropTypes.func.isRequired,
+  offers: offersType,
+  onTitleClick: onTitleClickType
 };
 
 export default Main;

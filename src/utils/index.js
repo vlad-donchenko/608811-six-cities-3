@@ -19,24 +19,22 @@ const getRandomInteger = (min, max) => {
   return Math.floor(rand);
 };
 
-const randomDate = (start, end) => {
-  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-};
-
 const formatDate = (date) => {
-  const day = date.getDate();
-  const year = date.getFullYear();
-  const month = monthMap[date.getMonth()];
+  const dateFormat = new Date(date);
+  const day = dateFormat.getDate();
+  const year = dateFormat.getFullYear();
+  const month = monthMap[dateFormat.getMonth()];
 
   return `${month} ${day} ${year}`;
 };
 
 const formatDateTime = (date) => {
-  const day = date.getDate() < 10 ? `0${date.getDate()}` : `${date.getDate()}`;
-  const year = date.getFullYear();
-  const month = date.getMonth() < 10 ? `0${date.getMonth()}` : `${date.getMonth()}`;
+  const dateFormat = new Date(date);
+  const day = dateFormat.getDate() < 10 ? `0${dateFormat.getDate()}` : `${dateFormat.getDate()}`;
+  const year = dateFormat.getFullYear();
+  const month = dateFormat.getMonth() < 10 ? `0${dateFormat.getMonth()}` : `${dateFormat.getMonth()}`;
 
   return `${year}-${month}-${day}`;
 };
 
-export {getRandomInteger, randomDate, formatDate, formatDateTime};
+export {getRandomInteger, formatDate, formatDateTime};

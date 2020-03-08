@@ -75,7 +75,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <img
               alt="Photo studio"
               className="property__image"
-              src="img/apartment-01.jpg"
+              src="img/room.jpg"
             />
           </div>
           <div
@@ -102,7 +102,16 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <img
               alt="Photo studio"
               className="property__image"
-              src="img/room.jpg"
+              src="img/apartment-01.jpg"
+            />
+          </div>
+          <div
+            className="property__image-wrapper"
+          >
+            <img
+              alt="Photo studio"
+              className="property__image"
+              src="img/apartment-01.jpg"
             />
           </div>
         </div>
@@ -120,10 +129,10 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <h1
               className="property__name"
             >
-              Place 2
+              Beautiful & luxurious studio at great location - 1
             </h1>
             <button
-              className="property__bookmark-button button property__bookmark-button--active"
+              className="property__bookmark-button button "
               type="button"
             >
               <svg
@@ -151,7 +160,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <span
                 style={
                   Object {
-                    "width": "80%",
+                    "width": "96%",
                   }
                 }
               />
@@ -164,7 +173,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <span
               className="property__rating-value rating__value"
             >
-              4
+              4.8
             </span>
           </div>
           <ul
@@ -173,19 +182,19 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             <li
               className="property__feature property__feature--entire"
             >
-              Private room
+              apartment
             </li>
             <li
               className="property__feature property__feature--bedrooms"
             >
-              7
+              3
                Bedrooms
             </li>
             <li
               className="property__feature property__feature--adults"
             >
               Max 
-              10
+              4
                adults
             </li>
           </ul>
@@ -196,7 +205,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               className="property__price-value"
             >
               €
-              400
+              120
             </b>
             <span
               className="property__price-text"
@@ -218,62 +227,32 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <li
                 className="property__inside-item"
               >
-                $
-                Wi-Fi
+                good
               </li>
               <li
                 className="property__inside-item"
               >
-                $
-                Heating
+                good
               </li>
               <li
                 className="property__inside-item"
               >
-                $
-                Kitchen
+                good
               </li>
               <li
                 className="property__inside-item"
               >
-                $
-                Fridge
+                good
               </li>
               <li
                 className="property__inside-item"
               >
-                $
-                Washing machine
+                good
               </li>
               <li
                 className="property__inside-item"
               >
-                $
-                Coffee machine
-              </li>
-              <li
-                className="property__inside-item"
-              >
-                $
-                Dishwasher
-              </li>
-              <li
-                className="property__inside-item"
-              >
-                $
-                Towels
-              </li>
-              <li
-                className="property__inside-item"
-              >
-                $
-                Baby seat
-              </li>
-              <li
-                className="property__inside-item"
-              >
-                $
-                Cabel TV
+                good
               </li>
             </ul>
           </div>
@@ -295,14 +274,14 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   alt="Host avatar"
                   className="property__avatar user__avatar"
                   height="74"
-                  src="img/avatar-max.jpg"
+                  src="img/avatar-angelina.jpg"
                   width="74"
                 />
               </div>
               <span
                 className="property__user-name"
               >
-                Sam
+                Angelina
               </span>
             </div>
             <div
@@ -311,12 +290,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <p
                 className="property__text"
               >
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p
-                className="property__text"
-              >
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
               </p>
             </div>
           </div>
@@ -330,7 +304,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
               <span
                 className="reviews__amount"
               >
-                1
+                5
               </span>
             </h2>
             <ul
@@ -371,6 +345,242 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                       <span
                         style={
                           Object {
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        5
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-09-08"
+                  >
+                    October 8 2019
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-max.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Max
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
+                            "width": "40%",
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        2
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-09-08"
+                  >
+                    October 8 2019
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-max.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Max
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
+                            "width": "20%",
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        1
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-08-08"
+                  >
+                    September 8 2019
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-angelina.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Angelina
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <span
+                        className="visually-hidden"
+                      >
+                        5
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="reviews__text"
+                  >
+                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
+                  </p>
+                  <time
+                    className="reviews__time"
+                    dateTime="2019-05-08"
+                  >
+                    June 8 2019
+                  </time>
+                </div>
+              </li>
+              <li
+                className="reviews__item"
+              >
+                <div
+                  className="reviews__user user"
+                >
+                  <div
+                    className="reviews__avatar-wrapper user__avatar-wrapper"
+                  >
+                    <img
+                      alt="Reviews avatar"
+                      className="reviews__avatar user__avatar"
+                      height="54"
+                      src="img/avatar-max.jpg"
+                      width="54"
+                    />
+                  </div>
+                  <span
+                    className="reviews__user-name"
+                  >
+                    Max
+                  </span>
+                </div>
+                <div
+                  className="reviews__info"
+                >
+                  <div
+                    className="reviews__rating rating"
+                  >
+                    <div
+                      className="reviews__stars rating__stars"
+                    >
+                      <span
+                        style={
+                          Object {
                             "width": "80%",
                           }
                         }
@@ -385,13 +595,13 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   <p
                     className="reviews__text"
                   >
-                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019
+                    A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
                   </p>
                   <time
                     className="reviews__time"
-                    dateTime="2019-10-15"
+                    dateTime="2019-04-08"
                   >
-                    November 15 2019
+                    May 8 2019
                   </time>
                 </div>
               </li>
@@ -426,7 +636,13 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
             className="near-places__card place-card"
             onMouseOver={[Function]}
           >
-            
+            <div
+              className="place-card__mark"
+            >
+              <span>
+                Premium
+              </span>
+            </div>
             <div
               className="near-places__card__image-wrapper place-card__image-wrapper"
             >
@@ -434,7 +650,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                 href="#"
               >
                 <img
-                  alt="Place 2"
+                  alt="Beautiful & luxurious apartment at great location"
                   className="place-card__image"
                   height="200"
                   src="img/apartment-01.jpg"
@@ -455,7 +671,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                     className="place-card__price-value"
                   >
                     €
-                    400
+                    100
                   </b>
                   <span
                     className="place-card__price-text"
@@ -492,7 +708,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "80%",
+                        "width": "0%",
                       }
                     }
                   />
@@ -510,7 +726,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   href="#"
                   onClick={[Function]}
                 >
-                  Place 2
+                  Beautiful & luxurious apartment at great location
                 </a>
               </h2>
               <p
@@ -538,10 +754,10 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                 href="#"
               >
                 <img
-                  alt="Place 2"
+                  alt="Wood and stone place"
                   className="place-card__image"
                   height="200"
-                  src="img/apartment-01.jpg"
+                  src="img/apartment-02.jpg"
                   width="260"
                 />
               </a>
@@ -559,105 +775,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                     className="place-card__price-value"
                   >
                     €
-                    200
-                  </b>
-                  <span
-                    className="place-card__price-text"
-                  >
-                    / night
-                  </span>
-                </div>
-                <button
-                  className="place-card__bookmark-button button place-card__bookmark-button--active"
-                  type="button"
-                >
-                  <svg
-                    className="place-card__bookmark-icon"
-                    height="19"
-                    width="18"
-                  >
-                    <use
-                      xlinkHref="#icon-bookmark"
-                    />
-                  </svg>
-                  <span
-                    className="visually-hidden"
-                  >
-                    To bookmarks
-                  </span>
-                </button>
-              </div>
-              <div
-                className="place-card__rating rating"
-              >
-                <div
-                  className="place-card__stars rating__stars"
-                >
-                  <span
-                    style={
-                      Object {
-                        "width": "40%",
-                      }
-                    }
-                  />
-                  <span
-                    className="visually-hidden"
-                  >
-                    Rating
-                  </span>
-                </div>
-              </div>
-              <h2
-                className="place-card__name"
-              >
-                <a
-                  href="#"
-                  onClick={[Function]}
-                >
-                  Place 2
-                </a>
-              </h2>
-              <p
-                className="place-card__type"
-              >
-                Apartment
-              </p>
-            </div>
-          </article>
-          <article
-            className="near-places__card place-card"
-            onMouseOver={[Function]}
-          >
-            
-            <div
-              className="near-places__card__image-wrapper place-card__image-wrapper"
-            >
-              <a
-                href="#"
-              >
-                <img
-                  alt="Place 2"
-                  className="place-card__image"
-                  height="200"
-                  src="img/apartment-01.jpg"
-                  width="260"
-                />
-              </a>
-            </div>
-            <div
-              className="place-card__info"
-            >
-              <div
-                className="place-card__price-wrapper"
-              >
-                <div
-                  className="place-card__price"
-                >
-                  <b
-                    className="place-card__price-value"
-                  >
-                    €
-                    300
+                    238
                   </b>
                   <span
                     className="place-card__price-text"
@@ -694,7 +812,7 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "100%",
+                        "width": "20%",
                       }
                     }
                   />
@@ -712,7 +830,111 @@ exports[`Should render <DetailsInfoAboutOffer/> 1`] = `
                   href="#"
                   onClick={[Function]}
                 >
-                  Place 2
+                  Wood and stone place
+                </a>
+              </h2>
+              <p
+                className="place-card__type"
+              >
+                Private room
+              </p>
+            </div>
+          </article>
+          <article
+            className="near-places__card place-card"
+            onMouseOver={[Function]}
+          >
+            <div
+              className="place-card__mark"
+            >
+              <span>
+                Premium
+              </span>
+            </div>
+            <div
+              className="near-places__card__image-wrapper place-card__image-wrapper"
+            >
+              <a
+                href="#"
+              >
+                <img
+                  alt="Canal View Prinsengracht"
+                  className="place-card__image"
+                  height="200"
+                  src="img/apartment-02.jpg"
+                  width="260"
+                />
+              </a>
+            </div>
+            <div
+              className="place-card__info"
+            >
+              <div
+                className="place-card__price-wrapper"
+              >
+                <div
+                  className="place-card__price"
+                >
+                  <b
+                    className="place-card__price-value"
+                  >
+                    €
+                    375
+                  </b>
+                  <span
+                    className="place-card__price-text"
+                  >
+                    / night
+                  </span>
+                </div>
+                <button
+                  className="place-card__bookmark-button button place-card__bookmark-button--active"
+                  type="button"
+                >
+                  <svg
+                    className="place-card__bookmark-icon"
+                    height="19"
+                    width="18"
+                  >
+                    <use
+                      xlinkHref="#icon-bookmark"
+                    />
+                  </svg>
+                  <span
+                    className="visually-hidden"
+                  >
+                    To bookmarks
+                  </span>
+                </button>
+              </div>
+              <div
+                className="place-card__rating rating"
+              >
+                <div
+                  className="place-card__stars rating__stars"
+                >
+                  <span
+                    style={
+                      Object {
+                        "width": "20%",
+                      }
+                    }
+                  />
+                  <span
+                    className="visually-hidden"
+                  >
+                    Rating
+                  </span>
+                </div>
+              </div>
+              <h2
+                className="place-card__name"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Canal View Prinsengracht
                 </a>
               </h2>
               <p

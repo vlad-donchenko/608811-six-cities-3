@@ -1,19 +1,23 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {offerType, onTitleClickType} from "../../types/index";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
 import OfferNeighbourhood from "../offer-neighbourhood/offer-neighbourhood.jsx";
 import Map from "../map/map.jsx";
 import withOffer from "../hocs/with-offers-list/with-offer-list";
 import {OfferPrefix} from "../../const";
+import {offers} from "../../mocks/offers";
+import {reviews} from "../../mocks/reviews";
+import {MAX_NEIGHBOURHOOD_OFFERS} from "../../const";
 
 const OfferNeighbourhoodWrapped = withOffer(OfferNeighbourhood);
 
 const DetailsInfoAboutOffer = (props) => {
   const {offer, onTitleClick} = props;
-  const {name, images, price, type, rating, room, adults, features, isBookmark, isPremium, host, reviews, neighbourhoodOffers} = offer;
-  const {nameUser, avatar, description} = host;
+  const {title, images, price, type, rating, bedrooms, maxAdults, goods, isFavorite, isPremium, host, description} = offer;
+  const {avatarUrl, name} = host;
   const additionalClass = OfferPrefix.DETAILS_PAGE;
-  const isNeighbourhoodOffers = neighbourhoodOffers.length !== 0;
+  const nearbyOffers = offers.slice(0, MAX_NEIGHBOURHOOD_OFFERS);
+  const isNearbyOffers = nearbyOffers.length !== 0;
 
   const markTemplate = (
     <div className="property__mark">
@@ -52,9 +56,9 @@ const DetailsInfoAboutOffer = (props) => {
         <section className="property">
           <div className="property__gallery-container container">
             <div className="property__gallery">
-              {images.map((path) => {
+              {images.map((path, index) => {
                 return (
-                  <div key={`${path}`} className="property__image-wrapper">
+                  <div key={`${path}-${index}`} className="property__image-wrapper">
                     <img className="property__image" src={`img/${path}`} alt="Photo studio"/>
                   </div>
                 );
@@ -66,10 +70,10 @@ const DetailsInfoAboutOffer = (props) => {
               {premiumStatusElement}
               <div className="property__name-wrapper">
                 <h1 className="property__name">
-                  {name}
+                  {title}
                 </h1>
                 <button
-                  className={`property__bookmark-button button ${isBookmark ? `property__bookmark-button--active` : ``}`}
+                  className={`property__bookmark-button button ${isFavorite ? `property__bookmark-button--active` : ``}`}
                   type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
                     <use xlinkHref="#icon-bookmark"></use>
@@ -89,10 +93,10 @@ const DetailsInfoAboutOffer = (props) => {
                   {type}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
-                  {room} Bedrooms
+                  {bedrooms} Bedrooms
                 </li>
                 <li className="property__feature property__feature--adults">
-                  Max {adults} adults
+                  Max {maxAdults} adults
                 </li>
               </ul>
               <div className="property__price">
@@ -102,10 +106,10 @@ const DetailsInfoAboutOffer = (props) => {
               <div className="property__inside">
                 <h2 className="property__inside-title">What&rsquo;s inside</h2>
                 <ul className="property__inside-list">
-                  {features.map((feature, i) => {
+                  {goods.map((good) => {
                     return (
-                      <li key={`${feature}-${i}`} className="property__inside-item">
-                        ${feature}
+                      <li key={`${good}`} className="property__inside-item">
+                        good
                       </li>
                     );
                   })}
@@ -115,34 +119,30 @@ const DetailsInfoAboutOffer = (props) => {
                 <h2 className="property__host-title">Meet the host</h2>
                 <div className="property__host-user user">
                   <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                    <img className="property__avatar user__avatar" src={`img/${avatar}`} width="74" height="74" alt="Host avatar"/>
+                    <img className="property__avatar user__avatar" src={`img/${avatarUrl}`} width="74" height="74" alt="Host avatar"/>
                   </div>
                   <span className="property__user-name">
-                    {nameUser}
+                    {name}
                   </span>
                 </div>
                 <div className="property__description">
-                  {description.map((it, i) => {
-                    return (
-                      <p key={`${it}-${i}`} className="property__text">
-                        {it}
-                      </p>
-                    );
-                  })}
+                  <p className="property__text">
+                    {description}
+                  </p>
                 </div>
               </div>
               <ReviewsList reviews={reviews}/>
             </div>
           </div>
-          {(isNeighbourhoodOffers) && (
+          {(isNearbyOffers) && (
             <section className="property__map map">
-              <Map offers={neighbourhoodOffers}/>
+              <Map offers={nearbyOffers}/>
             </section>
           )}
         </section>
         <div className="container">
-          {(isNeighbourhoodOffers) && (
-            <OfferNeighbourhoodWrapped neighbourhoodOffers={neighbourhoodOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
+          {(isNearbyOffers) && (
+            <OfferNeighbourhoodWrapped offers={nearbyOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
         </div>
       </main>
     </div>
@@ -150,27 +150,8 @@ const DetailsInfoAboutOffer = (props) => {
 };
 
 DetailsInfoAboutOffer.propTypes = {
-  offer: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    images: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    room: PropTypes.number.isRequired,
-    adults: PropTypes.number.isRequired,
-    features: PropTypes.array.isRequired,
-    reviews: PropTypes.array.isRequired,
-    neighbourhoodOffers: PropTypes.array.isRequired,
-    isBookmark: PropTypes.bool.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    host: PropTypes.shape({
-      nameUser: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      description: PropTypes.array.isRequired,
-    }).isRequired,
-  }).isRequired,
-  onTitleClick: PropTypes.func.isRequired,
+  offer: offerType,
+  onTitleClick: onTitleClickType
 };
 
 export default DetailsInfoAboutOffer;

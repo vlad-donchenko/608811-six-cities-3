@@ -12,7 +12,7 @@ const withOffer = (Component) => {
     render() {
       return (
         <Component {...this.props} renderOffer={(offer, additionalClass, onTitleClick) => {
-          return (<OfferCard key={`${offer.index}`} additionalClass={additionalClass} offer={offer} onOfferHover={this._handleOfferHover} onTitleClick={onTitleClick}/>);
+          return (<OfferCard key={`${offer.id}`} additionalClass={additionalClass} offer={offer} onOfferHover={this._handleOfferHover} onTitleClick={onTitleClick}/>);
         }}/>
       );
     }

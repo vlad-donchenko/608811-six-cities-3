@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import PropTypes from "prop-types";
+import {reviewsType} from "../../types/index";
 import ReviewsItem from "../reviews-item/reviews-item.jsx";
 
 class ReviewsList extends PureComponent {
@@ -17,7 +17,7 @@ class ReviewsList extends PureComponent {
         <ul className="reviews__list">
           {reviews.map((review) => {
             return (
-              <ReviewsItem key={review.index} review={review}/>
+              <ReviewsItem key={review.id} review={review}/>
             );
           })}
         </ul>
@@ -29,13 +29,13 @@ class ReviewsList extends PureComponent {
     const {reviews} = this.props;
 
     return reviews.sort((a, b) => {
-      return Number(b.date) - Number(a.date);
+      return Number(new Date(b.date)) - Number(new Date(a.date));
     });
   }
 }
 
 ReviewsList.propTypes = {
-  reviews: PropTypes.array.isRequired,
+  reviews: reviewsType
 };
 
 export default ReviewsList;

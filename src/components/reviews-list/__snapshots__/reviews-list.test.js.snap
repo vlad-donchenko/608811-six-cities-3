@@ -11,7 +11,7 @@ exports[`Should render <ReviewsItem/> 1`] = `
     <span
       className="reviews__amount"
     >
-      1
+      5
     </span>
   </h2>
   <ul
@@ -52,6 +52,124 @@ exports[`Should render <ReviewsItem/> 1`] = `
             <span
               style={
                 Object {
+                  "width": "40%",
+                }
+              }
+            />
+            <span
+              className="visually-hidden"
+            >
+              2
+            </span>
+          </div>
+        </div>
+        <p
+          className="reviews__text"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+        <time
+          className="reviews__time"
+          dateTime="2019-10-08"
+        >
+          November 8 2019
+        </time>
+      </div>
+    </li>
+    <li
+      className="reviews__item"
+    >
+      <div
+        className="reviews__user user"
+      >
+        <div
+          className="reviews__avatar-wrapper user__avatar-wrapper"
+        >
+          <img
+            alt="Reviews avatar"
+            className="reviews__avatar user__avatar"
+            height="54"
+            src="img/avatar-max.jpg"
+            width="54"
+          />
+        </div>
+        <span
+          className="reviews__user-name"
+        >
+          Max
+        </span>
+      </div>
+      <div
+        className="reviews__info"
+      >
+        <div
+          className="reviews__rating rating"
+        >
+          <div
+            className="reviews__stars rating__stars"
+          >
+            <span
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            />
+            <span
+              className="visually-hidden"
+            >
+              5
+            </span>
+          </div>
+        </div>
+        <p
+          className="reviews__text"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+        <time
+          className="reviews__time"
+          dateTime="2019-07-08"
+        >
+          August 8 2019
+        </time>
+      </div>
+    </li>
+    <li
+      className="reviews__item"
+    >
+      <div
+        className="reviews__user user"
+      >
+        <div
+          className="reviews__avatar-wrapper user__avatar-wrapper"
+        >
+          <img
+            alt="Reviews avatar"
+            className="reviews__avatar user__avatar"
+            height="54"
+            src="img/avatar-angelina.jpg"
+            width="54"
+          />
+        </div>
+        <span
+          className="reviews__user-name"
+        >
+          Angelina
+        </span>
+      </div>
+      <div
+        className="reviews__info"
+      >
+        <div
+          className="reviews__rating rating"
+        >
+          <div
+            className="reviews__stars rating__stars"
+          >
+            <span
+              style={
+                Object {
                   "width": "80%",
                 }
               }
@@ -66,13 +184,131 @@ exports[`Should render <ReviewsItem/> 1`] = `
         <p
           className="reviews__text"
         >
-          A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.April 2019
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
         <time
           className="reviews__time"
-          dateTime="2019-10-15"
+          dateTime="2019-05-03"
         >
-          November 15 2019
+          June 3 2019
+        </time>
+      </div>
+    </li>
+    <li
+      className="reviews__item"
+    >
+      <div
+        className="reviews__user user"
+      >
+        <div
+          className="reviews__avatar-wrapper user__avatar-wrapper"
+        >
+          <img
+            alt="Reviews avatar"
+            className="reviews__avatar user__avatar"
+            height="54"
+            src="img/avatar-max.jpg"
+            width="54"
+          />
+        </div>
+        <span
+          className="reviews__user-name"
+        >
+          Max
+        </span>
+      </div>
+      <div
+        className="reviews__info"
+      >
+        <div
+          className="reviews__rating rating"
+        >
+          <div
+            className="reviews__stars rating__stars"
+          >
+            <span
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            />
+            <span
+              className="visually-hidden"
+            >
+              2
+            </span>
+          </div>
+        </div>
+        <p
+          className="reviews__text"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+        <time
+          className="reviews__time"
+          dateTime="2019-05-01"
+        >
+          June 1 2019
+        </time>
+      </div>
+    </li>
+    <li
+      className="reviews__item"
+    >
+      <div
+        className="reviews__user user"
+      >
+        <div
+          className="reviews__avatar-wrapper user__avatar-wrapper"
+        >
+          <img
+            alt="Reviews avatar"
+            className="reviews__avatar user__avatar"
+            height="54"
+            src="img/avatar-max.jpg"
+            width="54"
+          />
+        </div>
+        <span
+          className="reviews__user-name"
+        >
+          Max
+        </span>
+      </div>
+      <div
+        className="reviews__info"
+      >
+        <div
+          className="reviews__rating rating"
+        >
+          <div
+            className="reviews__stars rating__stars"
+          >
+            <span
+              style={
+                Object {
+                  "width": "80%",
+                }
+              }
+            />
+            <span
+              className="visually-hidden"
+            >
+              4
+            </span>
+          </div>
+        </div>
+        <p
+          className="reviews__text"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+        <time
+          className="reviews__time"
+          dateTime="2019-00-08"
+        >
+          January 8 2019
         </time>
       </div>
     </li>

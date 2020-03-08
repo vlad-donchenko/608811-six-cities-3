@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import PropTypes from "prop-types";
+import {offersType} from "../../types/index";
 import leaflet from 'leaflet';
 import {ZOOM} from "../../const";
 
@@ -33,28 +33,29 @@ class Map extends PureComponent {
   _initMap() {
     const {offers} = this.props;
     const {city} = offers[0];
-
+    const mapView = [city.location.latitude, city.location.longitude];
     this._map = leaflet.map(`map`, {
-      center: city,
+      center: mapView,
       zoom: ZOOM,
       zoomControl: false,
       marker: true,
     });
 
-    this._map.setView(city, ZOOM);
+    this._map.setView(mapView, ZOOM);
 
     leaflet.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`, {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
     }).addTo(this._map);
 
     offers.forEach((offer) => {
-      leaflet.marker(offer.coordinates, {icon}).addTo(this._map);
+      const offerCords = [offer.location.latitude, offer.location.longitude];
+      leaflet.marker(offerCords, {icon}).addTo(this._map);
     });
   }
 }
 
 Map.propTypes = {
-  offers: PropTypes.array.isRequired,
+  offers: offersType,
 };
 
 export default Map;

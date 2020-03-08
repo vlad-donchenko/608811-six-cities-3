@@ -13,10 +13,10 @@ exports[`Should render <OfferCad/> 1`] = `
       href="#"
     >
       <img
-        alt="Place 2"
+        alt="Beautiful & luxurious studio at great location - 1"
         className="place-card__image"
         height="200"
-        src="img/apartment-01.jpg"
+        src="img/apartment-02.jpg"
         width="260"
       />
     </a>
@@ -34,7 +34,7 @@ exports[`Should render <OfferCad/> 1`] = `
           className="place-card__price-value"
         >
           €
-          400
+          120
         </b>
         <span
           className="place-card__price-text"
@@ -43,7 +43,7 @@ exports[`Should render <OfferCad/> 1`] = `
         </span>
       </div>
       <button
-        className="place-card__bookmark-button button place-card__bookmark-button--active"
+        className="place-card__bookmark-button button "
         type="button"
       >
         <svg
@@ -71,7 +71,7 @@ exports[`Should render <OfferCad/> 1`] = `
         <span
           style={
             Object {
-              "width": "80%",
+              "width": "96%",
             }
           }
         />
@@ -89,13 +89,13 @@ exports[`Should render <OfferCad/> 1`] = `
         href="#"
         onClick={[Function]}
       >
-        Place 2
+        Beautiful & luxurious studio at great location - 1
       </a>
     </h2>
     <p
       className="place-card__type"
     >
-      Private room
+      apartment
     </p>
   </div>
 </article>

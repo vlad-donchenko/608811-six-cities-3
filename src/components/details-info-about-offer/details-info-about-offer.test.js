@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import DetailsInfoAboutOffer from "./details-info-about-offer";
+import DetailsInfoAboutOffer from "./details-info-about-offer.jsx";
 import {offers} from "../../mocks/test-offer";
 
 it(`Should render <DetailsInfoAboutOffer/>`, () => {
