@@ -1,9 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {offerType, onOfferHoverType, onTitleClickType, additionalClassType} from "../../types/index";
 
 const OfferCard = (props) => {
-  const {offer, onOfferHover, onTitleClick} = props;
-  const {name, images, price, type, rating, isBookmark, isPremium} = offer;
+  const {offer, onOfferHover, onTitleClick, additionalClass} = props;
+  const {title, id, previewImage, price, type, rating, isFavorite, isPremium} = offer;
 
   const markTemplate = (
     <div className="place-card__mark">
@@ -14,11 +14,11 @@ const OfferCard = (props) => {
   const premiumStatusElement = isPremium ? markTemplate : ``;
 
   return (
-    <article className="cities__place-card place-card" onMouseOver={() => (onOfferHover(offer))}>
+    <article className={`${additionalClass} place-card`} onMouseOver={() => (onOfferHover(offer))}>
       {premiumStatusElement}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${additionalClass}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
-          <img className="place-card__image" src={`img/${images[0]}`} width="260" height="200" alt={name}/>
+          <img className="place-card__image" src={`img/${previewImage}`} width="260" height="200" alt={title}/>
         </a>
       </div>
       <div className="place-card__info">
@@ -28,7 +28,7 @@ const OfferCard = (props) => {
             <span className="place-card__price-text">/&nbsp;night</span>
           </div>
           <button
-            className={`place-card__bookmark-button button ${isBookmark ? `place-card__bookmark-button--active` : ``}`}
+            className={`place-card__bookmark-button button ${isFavorite ? `place-card__bookmark-button--active` : ``}`}
             type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
               <use xlinkHref="#icon-bookmark"></use>
@@ -43,7 +43,7 @@ const OfferCard = (props) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#" onClick={() => (onTitleClick(offer))}>{name}</a>
+          <a href="#" onClick={() => (onTitleClick(id))}>{title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
@@ -52,26 +52,10 @@ const OfferCard = (props) => {
 };
 
 OfferCard.propTypes = {
-  onTitleClick: PropTypes.func.isRequired,
-  onOfferHover: PropTypes.func.isRequired,
-  offer: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    images: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    room: PropTypes.number.isRequired,
-    adults: PropTypes.number.isRequired,
-    features: PropTypes.array.isRequired,
-    isBookmark: PropTypes.bool.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    host: PropTypes.shape({
-      nameUser: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      description: PropTypes.array.isRequired,
-    }).isRequired,
-  }).isRequired,
+  onTitleClick: onOfferHoverType,
+  onOfferHover: onTitleClickType,
+  offer: offerType,
+  additionalClass: additionalClassType,
 };
 
 export default OfferCard;

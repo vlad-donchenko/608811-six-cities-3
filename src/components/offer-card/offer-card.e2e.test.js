@@ -1,33 +1,12 @@
 import React from "react";
 import {shallow} from "enzyme";
 import OfferCard from "./offer-card.jsx";
-
-const offer = {
-  name: `Place 2`,
-  index: 4,
-  images: [`apartment-01.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `room.jpg`],
-  price: 100,
-  type: `Apartment`,
-  rating: 0,
-  room: 4,
-  adults: 8,
-  features: [`Wi-Fi`, `Washing machine`, `Towels`, `Baby seat`, `Cabel TV`],
-  city: [52.38333, 4.9],
-  coordinates: [52.3309553943508, 4.85309666406198],
-  isBookmark: false,
-  isPremium: false,
-  host: {
-    nameUser: `Sam`,
-    avatar: `avatar-max.jpg`,
-    description: [
-      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    ],
-  }
-};
+import {offers} from "../../mocks/test-offer";
+import {OfferPrefix} from "../../const";
 
 it(`Should title be pressed`, () => {
   const onTitleClick = jest.fn();
-  const main = shallow(<OfferCard offer={offer} onOfferHover={() => {}} onTitleClick={onTitleClick}/>);
+  const main = shallow(<OfferCard additionalClass={OfferPrefix.CITIES_PLACE_CARD} offer={offers[0]} onOfferHover={() => {}} onTitleClick={onTitleClick}/>);
   const title = main.find(`.place-card__name a`);
   title.simulate(`click`);
 
@@ -36,7 +15,7 @@ it(`Should title be pressed`, () => {
 
 it(`Should offer hover`, () => {
   const onOfferHover = jest.fn();
-  const main = shallow(<OfferCard offer={offer} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
+  const main = shallow(<OfferCard additionalClass={OfferPrefix.CITIES_PLACE_CARD} offer={offers[0]} onOfferHover={onOfferHover} onTitleClick={() => {}}/>);
 
   main.simulate(`mouseover`);
 

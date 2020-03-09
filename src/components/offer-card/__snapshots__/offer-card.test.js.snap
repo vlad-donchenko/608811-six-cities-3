@@ -7,16 +7,16 @@ exports[`Should render <OfferCad/> 1`] = `
 >
   
   <div
-    className="cities__image-wrapper place-card__image-wrapper"
+    className="cities__place-card__image-wrapper place-card__image-wrapper"
   >
     <a
       href="#"
     >
       <img
-        alt="Place 2"
+        alt="Beautiful & luxurious studio at great location - 1"
         className="place-card__image"
         height="200"
-        src="img/apartment-01.jpg"
+        src="img/apartment-02.jpg"
         width="260"
       />
     </a>
@@ -34,7 +34,7 @@ exports[`Should render <OfferCad/> 1`] = `
           className="place-card__price-value"
         >
           €
-          100
+          120
         </b>
         <span
           className="place-card__price-text"
@@ -71,7 +71,7 @@ exports[`Should render <OfferCad/> 1`] = `
         <span
           style={
             Object {
-              "width": "0%",
+              "width": "96%",
             }
           }
         />
@@ -89,13 +89,13 @@ exports[`Should render <OfferCad/> 1`] = `
         href="#"
         onClick={[Function]}
       >
-        Place 2
+        Beautiful & luxurious studio at great location - 1
       </a>
     </h2>
     <p
       className="place-card__type"
     >
-      Apartment
+      apartment
     </p>
   </div>
 </article>

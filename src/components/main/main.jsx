@@ -1,10 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {offersType, onTitleClickType} from "../../types/index";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
+import withOffer from "../hocs/with-offers-list/with-offer-list";
+import {OfferPrefix} from "../../const";
+
+const OfferListWrapped = withOffer(OfferList);
 
 const Main = (props) => {
   const {offers, onTitleClick} = props;
+  const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
 
   return (
     <div className="page page--gray page--main">
@@ -88,10 +93,12 @@ const Main = (props) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OfferList offers={offers} onTitleClick={onTitleClick}/>
+              <OfferListWrapped offers={offers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>
             </section>
             <div className="cities__right-section">
-              <Map offers={offers}/>
+              <section className="cities__map map">
+                <Map offers={offers}/>
+              </section>
             </div>
           </div>
         </div>
@@ -101,25 +108,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    images: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    room: PropTypes.number.isRequired,
-    adults: PropTypes.number.isRequired,
-    features: PropTypes.array.isRequired,
-    isBookmark: PropTypes.bool.isRequired,
-    isPremium: PropTypes.bool.isRequired,
-    host: PropTypes.shape({
-      nameUser: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      description: PropTypes.array.isRequired,
-    }).isRequired,
-  })).isRequired,
-  onTitleClick: PropTypes.func.isRequired,
+  offers: offersType,
+  onTitleClick: onTitleClickType
 };
 
 export default Main;

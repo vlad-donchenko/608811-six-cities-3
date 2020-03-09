@@ -1,14 +1,14 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
+import {offersType} from "../../types/index";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import PropTypes from "prop-types";
 import DetailsInfoAboutOffer from "../details-info-about-offer/details-info-about-offer.jsx";
 
 class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      currentOffer: null,
+      currentOfferId: null,
     };
 
     this._handleTitleClick = this._handleTitleClick.bind(this);
@@ -16,15 +16,23 @@ class App extends PureComponent {
 
   _renderApp() {
     const {offers} = this.props;
-    const {currentOffer} = this.state;
+    const index = this._getCurrentOfferIndex(offers);
 
-    return currentOffer ? <DetailsInfoAboutOffer offer={currentOffer}/> :
+    return index !== -1 ? <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={offers[index]}/> :
       <Main offers={offers} onTitleClick={this._handleTitleClick}/>;
   }
 
-  _handleTitleClick(values) {
+  _handleTitleClick(id) {
     this.setState({
-      currentOffer: values,
+      currentOfferId: id
+    });
+  }
+
+  _getCurrentOfferIndex(offers) {
+    const {currentOfferId} = this.state;
+
+    return offers.findIndex((offer) => {
+      return offer.id === currentOfferId;
     });
   }
 
@@ -38,7 +46,7 @@ class App extends PureComponent {
             {this._renderApp()}
           </Route>
           <Route exact path="/details-info-about-offer">
-            <DetailsInfoAboutOffer offer={offers[0]}/>
+            <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={offers[0]}/>
           </Route>
         </Switch>
       </BrowserRouter>
@@ -47,10 +55,7 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    index: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
-  })).isRequired,
+  offers: offersType
 };
 
 export default App;
