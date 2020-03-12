@@ -18,4 +18,14 @@ const formatDateTime = (date) => {
   return `${year}-${month}-${day}`;
 };
 
-export {formatDate, formatDateTime};
+const extend = (a, b) => {
+  return Object.assign({}, a, b);
+};
+
+const getOfferList = (offers, city) => {
+  return offers.slice().filter((offer) => {
+    return offer.city.name === city;
+  });
+};
+
+export {formatDate, formatDateTime, extend, getOfferList};

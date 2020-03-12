@@ -1,43 +1,30 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
-import {offersType} from "../../types/index";
+import {offersType, onTitleClickType, onCityClickType, currentOfferIdType, activeCityType} from "../../types/index";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
+import {connect} from "react-redux";
+import {ActionCreator} from "../../reducer.js";
 import DetailsInfoAboutOffer from "../details-info-about-offer/details-info-about-offer.jsx";
+import {getOfferList} from "../../utils";
 
 class App extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentOfferId: null,
-    };
-
-    this._handleTitleClick = this._handleTitleClick.bind(this);
-  }
-
   _renderApp() {
-    const {offers} = this.props;
-    const index = this._getCurrentOfferIndex(offers);
+    const {offers, currentOfferId, activeCity, onTitleClick, onCityClick} = this.props;
 
-    return index !== -1 ? <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={offers[index]}/> :
-      <Main offers={offers} onTitleClick={this._handleTitleClick}/>;
+    const offersList = getOfferList(offers, activeCity);
+    const offer = this._getCurrentOffer(offers, currentOfferId);
+    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer}/> :
+      <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick}/>;
   }
 
-  _handleTitleClick(id) {
-    this.setState({
-      currentOfferId: id
-    });
-  }
-
-  _getCurrentOfferIndex(offers) {
-    const {currentOfferId} = this.state;
-
-    return offers.findIndex((offer) => {
-      return offer.id === currentOfferId;
+  _getCurrentOffer(offers, id) {
+    return offers.find((offer) => {
+      return offer.id === id;
     });
   }
 
   render() {
-    const {offers} = this.props;
+    const {offers, onTitleClick} = this.props;
 
     return (
       <BrowserRouter>
@@ -46,7 +33,7 @@ class App extends PureComponent {
             {this._renderApp()}
           </Route>
           <Route exact path="/details-info-about-offer">
-            <DetailsInfoAboutOffer onTitleClick={this._handleTitleClick} offer={offers[0]}/>
+            <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offers[0]}/>
           </Route>
         </Switch>
       </BrowserRouter>
@@ -55,7 +42,26 @@ class App extends PureComponent {
 }
 
 App.propTypes = {
-  offers: offersType
+  offers: offersType,
+  onTitleClick: onTitleClickType,
+  onCityClick: onCityClickType,
+  currentOfferId: currentOfferIdType,
+  activeCity: activeCityType
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  activeCity: state.activeCity,
+  currentOfferId: state.currentOfferId
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onCityClick(city) {
+    dispatch(ActionCreator.changeCity(city));
+  },
+  onTitleClick(currentOfferId) {
+    dispatch(ActionCreator.changeOfferId(currentOfferId));
+  }
+});
+
+export {App};
+export default connect(mapStateToProps, mapDispatchToProps)(App);

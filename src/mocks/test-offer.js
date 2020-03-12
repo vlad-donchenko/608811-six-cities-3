@@ -168,6 +168,40 @@ const offers = [
     rating: 4,
     title: `Beautiful & luxurious studio at great location - 5`,
     type: `apartment`
+  },
+  {
+    bedrooms: 4,
+    city: {
+      location: {
+        latitude: 51.227738,
+        longitude: 6.793251,
+        zoom: 10
+      },
+      name: `Dusseldorf`
+    },
+    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    host: {
+      avatarUrl: `avatar-max.jpg`,
+      id: 6,
+      isPro: false,
+      name: `Max`
+    },
+    id: 6,
+    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
+    isFavorite: false,
+    isPremium: false,
+    location: {
+      latitude: 51.220447,
+      longitude: 6.789114,
+      zoom: 8
+    },
+    maxAdults: 8,
+    previewImage: `apartment-02.jpg`,
+    price: 160,
+    rating: 4,
+    title: `Hotel Düsseldorf City by Tulip Inn`,
+    type: `Apartment`
   }
 ];
 
