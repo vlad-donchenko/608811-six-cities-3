@@ -1,7 +1,6 @@
 import React, {PureComponent} from "react";
 import {offersType} from "../../types/index";
 import leaflet from 'leaflet';
-import {ZOOM} from "../../const";
 
 const icon = leaflet.icon({
   iconUrl: `img/pin.svg`,
@@ -20,7 +19,12 @@ class Map extends PureComponent {
     this._initMap();
   }
 
+  componentDidUpdate() {
+    this._initMap();
+  }
+
   componentWillUnmount() {
+    this._map.off();
     this._map.remove();
   }
 
@@ -33,15 +37,21 @@ class Map extends PureComponent {
   _initMap() {
     const {offers} = this.props;
     const {city} = offers[0];
+    const zoom = city.location.zoom;
+    if (this._map) {
+      this._map.remove();
+      this.map = null;
+    }
+
     const mapView = [city.location.latitude, city.location.longitude];
     this._map = leaflet.map(`map`, {
       center: mapView,
-      zoom: ZOOM,
+      zoom,
       zoomControl: false,
       marker: true,
     });
 
-    this._map.setView(mapView, ZOOM);
+    this._map.setView(mapView, zoom);
 
     leaflet.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`, {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`

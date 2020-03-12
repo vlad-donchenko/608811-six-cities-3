@@ -2,6 +2,15 @@ const ZOOM = 12;
 
 const MAX_NEIGHBOURHOOD_OFFERS = 3;
 
+const CITIES = [
+  `Paris`,
+  `Cologne`,
+  `Brussels`,
+  `Amsterdam`,
+  `Hamburg`,
+  `Dusseldorf`
+];
+
 const monthMap = {
   "0": `January`,
   "1": `February`,
@@ -22,4 +31,4 @@ const OfferPrefix = {
   NEAR_PLACES_CARD: `near-places__card`,
 };
 
-export {ZOOM, MAX_NEIGHBOURHOOD_OFFERS, OfferPrefix, monthMap};
+export {ZOOM, MAX_NEIGHBOURHOOD_OFFERS, CITIES, OfferPrefix, monthMap};
