@@ -3,7 +3,7 @@ import {offerType, onTitleClickType} from "../../types/index";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
 import OfferNeighbourhood from "../offer-neighbourhood/offer-neighbourhood.jsx";
 import Map from "../map/map.jsx";
-import withOffer from "../hocs/with-offers-list/with-offer-list";
+import withOffer from "../../hocs/with-offers-list/with-offer-list";
 import {OfferPrefix} from "../../const";
 import {offers} from "../../mocks/offers";
 import {reviews} from "../../mocks/reviews";

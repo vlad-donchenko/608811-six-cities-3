@@ -2,7 +2,7 @@ import React from "react";
 import {activeCityType, offersType, onTitleClickType, onCityClickType} from "../../types/index";
 import OfferList from "../offer-list/offer-list.jsx";
 import Map from "../map/map.jsx";
-import withOffer from "../hocs/with-offers-list/with-offer-list";
+import withOffer from "../../hocs/with-offers-list/with-offer-list";
 import {OfferPrefix} from "../../const";
 import CityList from "../city-list/city-list.jsx";
 import SortingOptions from "../sorting-options/sorting-options.jsx";
