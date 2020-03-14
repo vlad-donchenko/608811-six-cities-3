@@ -10,7 +10,7 @@ import SortingOptions from "../sorting-options/sorting-options.jsx";
 const OfferListWrapped = withOffer(OfferList);
 
 const Main = (props) => {
-  const {offers, activeCity, onTitleClick, onCityClick} = props;
+  const {offers, activeCity, onTitleClick, onCityClick, onSortTypeClick, activeSortType} = props;
   const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
 
   return (
@@ -45,7 +45,7 @@ const Main = (props) => {
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
               <b className="places__found">{offers.length} places to stay in {activeCity}</b>
-              <SortingOptions/>
+              <SortingOptions onSortTypeClick={onSortTypeClick} activeSortType={activeSortType}/>
               <OfferListWrapped offers={offers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>
             </section>
             <div className="cities__right-section">

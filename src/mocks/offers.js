@@ -97,7 +97,7 @@ const offers = [
     maxAdults: 2,
     previewImage: `apartment-02.jpg`,
     price: 418,
-    rating: 5,
+    rating: 4,
     title: `Canal View Prinsengracht`,
     type: `Private room`
   },
@@ -131,7 +131,7 @@ const offers = [
     maxAdults: 7,
     previewImage: `apartment-03.jpg`,
     price: 358,
-    rating: 5,
+    rating: 3,
     title: `Nice, cozy, warm big bed apartment`,
     type: `Private room`
   },
@@ -165,7 +165,7 @@ const offers = [
     maxAdults: 4,
     previewImage: `apartment-02.jpg`,
     price: 402,
-    rating: 5,
+    rating: 2,
     title: `Wood and stone place`,
     type: `Apartment`
   },
@@ -445,8 +445,8 @@ const offers = [
     bedrooms: 4,
     city: {
       location: {
-        latitude: 50.946639,
-        longitude: 6.961174,
+        latitude: 50.848587,
+        longitude: 4.342344,
         zoom: 10
       },
       name: `Brussels`

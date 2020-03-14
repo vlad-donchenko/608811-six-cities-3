@@ -4,6 +4,7 @@ const onTitleClickType = PropTypes.func.isRequired;
 const onOfferHoverType = PropTypes.func.isRequired;
 const onCityClickType = PropTypes.func.isRequired;
 const renderOfferType = PropTypes.func.isRequired;
+const onSortTypeClickType = PropTypes.func.isRequired;
 
 const additionalClassType = PropTypes.string.isRequired;
 const currentOfferIdType = PropTypes.number.isRequired;
@@ -68,5 +69,6 @@ export {
   renderOfferType,
   onCityClickType,
   currentOfferIdType,
-  activeCityType
+  activeCityType,
+  onSortTypeClickType
 };

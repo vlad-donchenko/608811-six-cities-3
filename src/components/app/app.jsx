@@ -1,20 +1,22 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
-import {offersType, onTitleClickType, onCityClickType, currentOfferIdType, activeCityType} from "../../types/index";
+import {offersType, onTitleClickType, onCityClickType, currentOfferIdType, activeCityType, onSortTypeClickType} from "../../types/index";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer.js";
 import DetailsInfoAboutOffer from "../details-info-about-offer/details-info-about-offer.jsx";
-import {getOfferList} from "../../utils";
+import {getOfferList, sortingOffers} from "../../utils";
 
 class App extends PureComponent {
   _renderApp() {
-    const {offers, currentOfferId, activeCity, onTitleClick, onCityClick} = this.props;
+    const {offers, currentOfferId, activeCity, onTitleClick, onCityClick, onSortTypeClick, activeSortType} = this.props;
 
     const offersList = getOfferList(offers, activeCity);
+    const sortedOfferList = sortingOffers(activeSortType, offersList);
+
     const offer = this._getCurrentOffer(offers, currentOfferId);
     return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer}/> :
-      <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick}/>;
+      <Main offers={sortedOfferList} activeCity={activeCity} onTitleClick={onTitleClick} activeSortType={activeSortType} onSortTypeClick={onSortTypeClick} onCityClick={onCityClick}/>;
   }
 
   _getCurrentOffer(offers, id) {
@@ -46,12 +48,14 @@ App.propTypes = {
   onTitleClick: onTitleClickType,
   onCityClick: onCityClickType,
   currentOfferId: currentOfferIdType,
-  activeCity: activeCityType
+  activeCity: activeCityType,
+  onSortTypeClick: onSortTypeClickType
 };
 
 const mapStateToProps = (state) => ({
   activeCity: state.activeCity,
-  currentOfferId: state.currentOfferId
+  currentOfferId: state.currentOfferId,
+  activeSortType: state.activeSortType
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -60,7 +64,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   onTitleClick(currentOfferId) {
     dispatch(ActionCreator.changeOfferId(currentOfferId));
-  }
+  },
+  onSortTypeClick(activeSortType) {
+    dispatch(ActionCreator.changeSortType(activeSortType));
+  },
 });
 
 export {App};

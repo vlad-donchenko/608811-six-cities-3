@@ -9,12 +9,21 @@ const CITIES = [
   `Dusseldorf`
 ];
 
-const SORT_TYPES = [
-  `Popular`,
-  `Price: low to high`,
-  `Price: high to low`,
-  `Top rated first`
-];
+const DEFAULT_SORT_TYPE = `popular`;
+
+const sortTypeMap = {
+  "popular": `Popular`,
+  "to-high": `Price: low to high`,
+  "to-low": `Price: high to low`,
+  "top-rated": `Top rated first`
+};
+
+const sortType = {
+  popular: `popular`,
+  toHigh: `to-high`,
+  toLow: `to-low`,
+  topRated: `top-rated`
+};
 
 const monthMap = {
   "0": `January`,
@@ -36,4 +45,4 @@ const OfferPrefix = {
   NEAR_PLACES_CARD: `near-places__card`,
 };
 
-export {MAX_NEIGHBOURHOOD_OFFERS, SORT_TYPES, CITIES, OfferPrefix, monthMap};
+export {MAX_NEIGHBOURHOOD_OFFERS, DEFAULT_SORT_TYPE, sortTypeMap, sortType, CITIES, OfferPrefix, monthMap};
