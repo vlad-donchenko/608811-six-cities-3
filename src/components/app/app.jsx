@@ -49,13 +49,13 @@ App.propTypes = {
   onCityClick: onCityClickType,
   currentOfferId: currentOfferIdType,
   activeCity: activeCityType,
-  onSortTypeClick: onSortTypeClickType
+  onSortTypeClick: onSortTypeClickType,
 };
 
 const mapStateToProps = (state) => ({
   activeCity: state.activeCity,
   currentOfferId: state.currentOfferId,
-  activeSortType: state.activeSortType
+  activeSortType: state.activeSortType,
 });
 
 const mapDispatchToProps = (dispatch) => ({

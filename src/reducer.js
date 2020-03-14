@@ -4,13 +4,14 @@ import {extend} from "./utils";
 const initialState = {
   activeCity: CITIES[3],
   currentOfferId: -1,
-  activeSortType: DEFAULT_SORT_TYPE
+  activeSortType: DEFAULT_SORT_TYPE,
 };
 
 const ActionType = {
   CHANGE_ACTIVE_CITY: `CHANGE_ACTIVE_CITY`,
   CHANGE_OFFER_ID: `CHANGE_OFFER_ID`,
-  CHANGE_SORT_TYPE: `CHANGE_SORT_TYPE`
+  CHANGE_SORT_TYPE: `CHANGE_SORT_TYPE`,
+  CHANGE_HOVER_OFFER: `CHANGE_HOVER_OFFER`
 };
 
 const ActionCreator = {
@@ -25,7 +26,7 @@ const ActionCreator = {
   changeSortType: (activeSortType) => ({
     type: ActionType.CHANGE_SORT_TYPE,
     payload: activeSortType
-  })
+  }),
 };
 
 const reducer = (state = initialState, action) => {

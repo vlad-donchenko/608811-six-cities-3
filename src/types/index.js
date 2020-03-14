@@ -70,5 +70,5 @@ export {
   onCityClickType,
   currentOfferIdType,
   activeCityType,
-  onSortTypeClickType
+  onSortTypeClickType,
 };
