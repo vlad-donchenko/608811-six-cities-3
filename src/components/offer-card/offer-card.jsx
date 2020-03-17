@@ -1,8 +1,8 @@
 import React from "react";
-import {offerType, onOfferHoverType, onTitleClickType, additionalClassType} from "../../types/index";
+import {offerType, additionalClassType, onTitleClickType, onOfferMouseLeaveType, onOfferMouseEnterType} from "../../types/index";
 
 const OfferCard = (props) => {
-  const {offer, onOfferHover, onTitleClick, additionalClass} = props;
+  const {offer, onTitleClick, additionalClass, onOfferMouseLeave, onOfferMouseEnter} = props;
   const {title, id, previewImage, price, type, rating, isFavorite, isPremium} = offer;
 
   const markTemplate = (
@@ -14,7 +14,7 @@ const OfferCard = (props) => {
   const premiumStatusElement = isPremium ? markTemplate : ``;
 
   return (
-    <article className={`${additionalClass} place-card`} onMouseOver={() => (onOfferHover(offer))}>
+    <article className={`${additionalClass} place-card`} onMouseLeave={() => (onOfferMouseLeave())} onMouseEnter={() => (onOfferMouseEnter(id))}>
       {premiumStatusElement}
       <div className={`${additionalClass}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
@@ -52,10 +52,11 @@ const OfferCard = (props) => {
 };
 
 OfferCard.propTypes = {
-  onTitleClick: onOfferHoverType,
-  onOfferHover: onTitleClickType,
   offer: offerType,
   additionalClass: additionalClassType,
+  onTitleClick: onTitleClickType,
+  onOfferMouseLeave: onOfferMouseLeaveType,
+  onOfferMouseEnter: onOfferMouseEnterType
 };
 
 export default OfferCard;

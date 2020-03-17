@@ -1,17 +1,13 @@
 import React from "react";
 import {activeCityType, offersType, onTitleClickType, onCityClickType} from "../../types/index";
-import OfferList from "../offer-list/offer-list.jsx";
-import Map from "../map/map.jsx";
-import withOffer from "../../hocs/with-offers-list/with-offer-list";
-import {OfferPrefix} from "../../const";
 import CityList from "../city-list/city-list.jsx";
-import SortingOptions from "../sorting-options/sorting-options.jsx";
+import MainOffers from "../main-offers/main-offers.jsx";
+import withOffer from "../../hocs/with-offers-list/with-offer-list";
 
-const OfferListWrapped = withOffer(OfferList);
+const MainOffersWrapper = withOffer(MainOffers);
 
 const Main = (props) => {
-  const {offers, activeCity, onTitleClick, onCityClick, onSortTypeClick, activeSortType, onCityHover} = props;
-  const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
+  const {offers, activeCity, onTitleClick, onCityClick} = props;
 
   return (
     <div className="page page--gray page--main">
@@ -40,21 +36,7 @@ const Main = (props) => {
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
         <CityList activeCity={activeCity} onCityClick={onCityClick}/>
-        <div className="cities">
-          <div className="cities__places-container container">
-            <section className="cities__places places">
-              <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">{offers.length} places to stay in {activeCity}</b>
-              <SortingOptions onSortTypeClick={onSortTypeClick} activeSortType={activeSortType}/>
-              <OfferListWrapped offers={offers} onTitleClick={onTitleClick} onCityHover={onCityHover} additionalClass={additionalClass}/>
-            </section>
-            <div className="cities__right-section">
-              <section className="cities__map map">
-                <Map offers={offers}/>
-              </section>
-            </div>
-          </div>
-        </div>
+        <MainOffersWrapper offers={offers} onTitleClick={onTitleClick} activeCity={activeCity}/>
       </main>
     </div>
   );

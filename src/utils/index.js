@@ -36,7 +36,7 @@ const getLowToHighPriceOffers = (offers) => {
 
 const getHighToLowPriceOffers = (offers) => {
   return offers.slice().sort((a, b) => {
-    return  b.price - a.price;
+    return b.price - a.price;
   });
 };
 
@@ -66,4 +66,10 @@ const sortingOffers = (activeSortType, offers) => {
   return sortedOffers;
 };
 
-export {formatDate, formatDateTime, extend, getOfferList, sortingOffers};
+const getCurrentOffer = (offers, id) => {
+  return offers.find((offer) => {
+    return offer.id === id;
+  });
+};
+
+export {formatDate, formatDateTime, extend, getOfferList, sortingOffers, getCurrentOffer};

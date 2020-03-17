@@ -2,16 +2,18 @@ import {CITIES, DEFAULT_SORT_TYPE} from "./const";
 import {extend} from "./utils";
 
 const initialState = {
+  isChangeCity: false,
   activeCity: CITIES[3],
   currentOfferId: -1,
-  activeSortType: DEFAULT_SORT_TYPE,
+  activeSort: DEFAULT_SORT_TYPE,
 };
 
 const ActionType = {
   CHANGE_ACTIVE_CITY: `CHANGE_ACTIVE_CITY`,
   CHANGE_OFFER_ID: `CHANGE_OFFER_ID`,
   CHANGE_SORT_TYPE: `CHANGE_SORT_TYPE`,
-  CHANGE_HOVER_OFFER: `CHANGE_HOVER_OFFER`
+  CHANGE_HOVER_OFFER: `CHANGE_HOVER_OFFER`,
+  CHECK_NEW_CITY: ` CHECK_NEW_CITY`
 };
 
 const ActionCreator = {
@@ -23,9 +25,9 @@ const ActionCreator = {
     type: ActionType.CHANGE_OFFER_ID,
     payload: currentOfferId
   }),
-  changeSortType: (activeSortType) => ({
+  changeSortType: (activeSort) => ({
     type: ActionType.CHANGE_SORT_TYPE,
-    payload: activeSortType
+    payload: activeSort
   }),
 };
 
@@ -43,7 +45,12 @@ const reducer = (state = initialState, action) => {
 
     case ActionType.CHANGE_SORT_TYPE:
       return extend(state, {
-        activeSortType: action.payload
+        activeSort: action.payload
+      });
+
+    case ActionType.CHECK_NEW_CITY :
+      return extend(state, {
+        isChangeCity: action.payload
       });
   }
 
