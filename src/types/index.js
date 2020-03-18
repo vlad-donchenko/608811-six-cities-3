@@ -11,6 +11,10 @@ const currentOfferIdType = PropTypes.number.isRequired;
 const activeCityType = PropTypes.string.isRequired;
 const activeSortType = PropTypes.string.isRequired;
 
+const isOpenType = PropTypes.bool.isRequired;
+const onToggleClickType = PropTypes.func.isRequired;
+const onToggleKeyPressType = PropTypes.func.isRequired;
+
 const hostType = PropTypes.shape({
   avatarUrl: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
@@ -75,5 +79,8 @@ export {
   onOfferMouseLeaveType,
   onOfferMouseEnterType,
   activeSortType,
-  hoveredOfferType
+  hoveredOfferType,
+  isOpenType,
+  onToggleClickType,
+  onToggleKeyPressType
 };

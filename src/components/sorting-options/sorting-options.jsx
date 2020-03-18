@@ -1,7 +1,7 @@
 import React from "react";
 import {sortTypeMap, sortType} from "../../const";
 import withSortingOptions from "../../hocs/with-sorting-options/with-sorting-options";
-import {onSortTypeClickType} from "../../types";
+import {onSortTypeClickType, isOpenType, onToggleClickType, onToggleKeyPressType, activeSortType} from "../../types";
 
 const SortingOptions = ({isOpen, onToggleClick, onToggleKeyPress, onSortTypeClick, activeSort}) => {
   const sortTypeValues = Object.values(sortType);
@@ -35,7 +35,11 @@ const SortingOptions = ({isOpen, onToggleClick, onToggleKeyPress, onSortTypeClic
 };
 
 SortingOptions.propTypes = {
-  onSortTypeClick: onSortTypeClickType
+  isOpen: isOpenType,
+  onSortTypeClick: onSortTypeClickType,
+  onToggleClick: onToggleClickType,
+  onToggleKeyPress: onToggleKeyPressType,
+  activeSort: activeSortType
 };
 
 export default withSortingOptions(SortingOptions);

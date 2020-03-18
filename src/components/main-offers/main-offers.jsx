@@ -10,6 +10,7 @@ import {offersType, onTitleClickType, onSortTypeClickType, activeCityType, activ
 
 const MainOffers = ({offers, onSortTypeClick, hoveredOffer, activeSort, onTitleClick, activeCity, onOfferMouseLeave, onOfferMouseEnter}) => {
   const offerCount = offers.length;
+  console.log(activeSort);
   const offersList = sortingOffers(activeSort, offers);
   const additionalClass = OfferPrefix.CITIES_PLACE_CARD;
 

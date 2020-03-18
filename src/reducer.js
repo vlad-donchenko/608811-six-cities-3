@@ -12,8 +12,6 @@ const ActionType = {
   CHANGE_ACTIVE_CITY: `CHANGE_ACTIVE_CITY`,
   CHANGE_OFFER_ID: `CHANGE_OFFER_ID`,
   CHANGE_SORT_TYPE: `CHANGE_SORT_TYPE`,
-  CHANGE_HOVER_OFFER: `CHANGE_HOVER_OFFER`,
-  CHECK_NEW_CITY: ` CHECK_NEW_CITY`
 };
 
 const ActionCreator = {
@@ -46,11 +44,6 @@ const reducer = (state = initialState, action) => {
     case ActionType.CHANGE_SORT_TYPE:
       return extend(state, {
         activeSort: action.payload
-      });
-
-    case ActionType.CHECK_NEW_CITY :
-      return extend(state, {
-        isChangeCity: action.payload
       });
   }
 
