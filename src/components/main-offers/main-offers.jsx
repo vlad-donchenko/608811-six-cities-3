@@ -9,23 +9,21 @@ import {OfferPrefix} from "../../const";
 import {offersType, onTitleClickType, onSortTypeClickType, activeCityType, activeSortType, onOfferMouseLeaveType, onOfferMouseEnterType, hoveredOfferType} from "../../types/index";
 
 const MainOffers = ({offers, onSortTypeClick, hoveredOffer, activeSort, onTitleClick, activeCity, onOfferMouseLeave, onOfferMouseEnter}) => {
+
   const offerCount = offers.length;
-  console.log(activeSort);
   const offersList = sortingOffers(activeSort, offers);
   const additionalClass = OfferPrefix.CITIES_PLACE_CARD;
 
   return (
-    <div className="cities">
-      <div className="cities__places-container container">
-        <section className="cities__places places">
-          <h2 className="visually-hidden">Places</h2>
-          <b className="places__found">{offerCount} places to stay in {activeCity}</b>
-          <SortingOptions onSortTypeClick={onSortTypeClick} activeSort={activeSort}/>
-          <OfferMainList offers={offersList} onTitleClick={onTitleClick} onOfferMouseLeave={onOfferMouseLeave} onOfferMouseEnter={onOfferMouseEnter} additionalClass={additionalClass}/>
-        </section>
-        <div className="cities__right-section">
-          <Map offers={offers} hoveredOffer={hoveredOffer}/>
-        </div>
+    <div className="cities__places-container container">
+      <section className="cities__places places">
+        <h2 className="visually-hidden">Places</h2>
+        <b className="places__found">{offerCount} places to stay in {activeCity}</b>
+        <SortingOptions onSortTypeClick={onSortTypeClick} activeSort={activeSort} />
+        <OfferMainList offers={offersList} onTitleClick={onTitleClick} onOfferMouseLeave={onOfferMouseLeave} onOfferMouseEnter={onOfferMouseEnter} additionalClass={additionalClass}/>
+      </section>
+      <div className="cities__right-section">
+        <Map offers={offers} hoveredOffer={hoveredOffer}/>
       </div>
     </div>
   );

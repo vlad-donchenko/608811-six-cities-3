@@ -3,12 +3,14 @@ import {activeCityType, offersType, onTitleClickType, onCityClickType} from "../
 import CityList from "../city-list/city-list.jsx";
 import MainOffers from "../main-offers/main-offers.jsx";
 import withOffer from "../../hocs/with-offers-list/with-offer-list";
+import MainEmpty from "../main-empty/main-empty.jsx";
 
 const MainOffersWrapper = withOffer(MainOffers);
 
 const Main = (props) => {
   const {offers, activeCity, onTitleClick, onCityClick} = props;
-
+  const isOffers = offers.length !== 0;
+  console.log(offers);
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -33,10 +35,12 @@ const Main = (props) => {
           </div>
         </div>
       </header>
-      <main className="page__main page__main--index">
+      <main className={`page__main page__main--index ${isOffers ? `` : `page__main--index-empty`}`}>
         <h1 className="visually-hidden">Cities</h1>
         <CityList activeCity={activeCity} onCityClick={onCityClick}/>
-        <MainOffersWrapper offers={offers} onTitleClick={onTitleClick} activeCity={activeCity}/>
+        <div className="cities">
+          {isOffers ? <MainOffersWrapper offers={offers} onTitleClick={onTitleClick} activeCity={activeCity}/> : <MainEmpty activeCity={activeCity}/>}
+        </div>
       </main>
     </div>
   );

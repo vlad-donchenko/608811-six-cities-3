@@ -6,6 +6,7 @@ const initialState = {
   activeCity: CITIES[3],
   currentOfferId: -1,
   activeSort: DEFAULT_SORT_TYPE,
+  isResetSort: false,
 };
 
 const ActionType = {
