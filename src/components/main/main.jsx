@@ -10,7 +10,7 @@ const MainOffersWrapper = withOffer(MainOffers);
 const Main = (props) => {
   const {offers, activeCity, onTitleClick, onCityClick} = props;
   const isOffers = offers.length !== 0;
-  console.log(offers);
+
   return (
     <div className="page page--gray page--main">
       <header className="header">
