@@ -11,12 +11,11 @@ const withSortingOptions = (Component) => {
 
       this._handleToggleClick = this._handleToggleClick.bind(this);
       this._handleOutsideClick = this._handleOutsideClick.bind(this);
-      this._handleToggleKeyPress = this._handleToggleKeyPress.bind(this);
     }
 
     render() {
       return (
-        <Component {...this.props} onToggleClick={this._handleToggleClick} onToggleKeyPress={this._handleToggleKeyPress} isOpen={this.state.isOpen}/>
+        <Component {...this.props} onToggleClick={this._handleToggleClick} isOpen={this.state.isOpen}/>
       );
     }
 
@@ -41,14 +40,6 @@ const withSortingOptions = (Component) => {
     _handleOutsideClick() {
       this._closeDropDown();
       document.removeEventListener(`click`, this._handleOutsideClick);
-    }
-
-    _handleToggleKeyPress(evt) {
-      const isEnter = evt.key === `Enter`;
-
-      if (isEnter) {
-        this._openDropDown();
-      }
     }
   }
 

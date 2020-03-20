@@ -2,11 +2,9 @@ import {CITIES, DEFAULT_SORT_TYPE} from "./const";
 import {extend} from "./utils";
 
 const initialState = {
-  isChangeCity: false,
   activeCity: CITIES[3],
   currentOfferId: -1,
   activeSort: DEFAULT_SORT_TYPE,
-  isResetSort: false,
 };
 
 const ActionType = {

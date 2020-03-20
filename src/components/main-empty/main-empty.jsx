@@ -1,4 +1,5 @@
 import React from "react";
+import {activeCityType} from "../../types";
 
 const MainEmpty = ({activeCity}) => {
   return (
@@ -14,6 +15,10 @@ const MainEmpty = ({activeCity}) => {
       <div className="cities__right-section"></div>
     </div>
   );
+};
+
+MainEmpty.propTypes = {
+  activeCity: activeCityType
 };
 
 export default MainEmpty;

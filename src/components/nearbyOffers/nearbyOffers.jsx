@@ -2,15 +2,15 @@ import React from "react";
 import OffersNearbyList from "../offers-nearby-list/offers-nearby-list.jsx";
 import Map from "../map/map.jsx";
 import {OfferPrefix} from "../../const";
-import {offersType, onTitleClickType, onOfferMouseLeaveType, onOfferMouseEnterType, hoveredOfferType} from "../../types/index";
+import {offersType, onTitleClickType, onOfferMouseLeaveType, onOfferMouseEnterType, hoveredOfferIdType} from "../../types/index";
 
-const NearbyOffers = ({offers, onTitleClick, onOfferMouseLeave, onOfferMouseEnter, hoveredOffer}) => {
+const NearbyOffers = ({offers, onTitleClick, onOfferMouseLeave, onOfferMouseEnter, hoveredOfferId}) => {
   const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
 
   return (
     <React.Fragment>
       <section className="property__map map">
-        <Map offers={offers} hoveredOffer={hoveredOffer}/>
+        <Map offers={offers} hoveredOfferId={hoveredOfferId}/>
       </section>
       <div className="container">
         <OffersNearbyList offers={offers} onTitleClick={onTitleClick} onOfferMouseLeave={onOfferMouseLeave} onOfferMouseEnter={onOfferMouseEnter} additionalClass={additionalClass}/>
@@ -20,7 +20,7 @@ const NearbyOffers = ({offers, onTitleClick, onOfferMouseLeave, onOfferMouseEnte
 };
 
 NearbyOffers.defaultProps = {
-  hoveredOffer: undefined
+  hoveredOfferId: -1
 };
 
 NearbyOffers.propTypes = {
@@ -28,7 +28,7 @@ NearbyOffers.propTypes = {
   onTitleClick: onTitleClickType,
   onOfferMouseLeave: onOfferMouseLeaveType,
   onOfferMouseEnter: onOfferMouseEnterType,
-  hoveredOffer: hoveredOfferType
+  hoveredOfferId: hoveredOfferIdType
 };
 
 export default NearbyOffers;

@@ -1,15 +1,15 @@
 import React from "react";
 import {sortTypeMap, sortType} from "../../const";
 import withSortingOptions from "../../hocs/with-sorting-options/with-sorting-options";
-import {onSortTypeClickType, isOpenType, onToggleClickType, onToggleKeyPressType, activeSortType} from "../../types";
+import {onSortTypeClickType, isOpenType, onToggleClickType, activeSortType} from "../../types";
 
-const SortingOptions = ({isOpen, onToggleClick, onToggleKeyPress, onSortTypeClick, activeSort}) => {
+const SortingOptions = ({isOpen, onToggleClick, onSortTypeClick, activeSort}) => {
   const sortTypeValues = Object.values(sortType);
-
+  console.log(isOpen, onToggleClick, onSortTypeClick, activeSort);
   return (
     <form className="places__sorting" action="#" method="get">
       <span className="places__sorting-caption">Sort by</span>
-      <span className="places__sorting-type" tabIndex="0" onClick={onToggleClick} onKeyDown={onToggleKeyPress}>
+      <span className="places__sorting-type" id="places-sorting-toggle" tabIndex="0" onClick={onToggleClick}>
         {sortTypeMap[activeSort]}
         <svg className="places__sorting-arrow" width="7" height="4">
           <use xlinkHref="#icon-arrow-select"></use>
@@ -38,8 +38,7 @@ SortingOptions.propTypes = {
   isOpen: isOpenType,
   onSortTypeClick: onSortTypeClickType,
   onToggleClick: onToggleClickType,
-  onToggleKeyPress: onToggleKeyPressType,
   activeSort: activeSortType
 };
-
+export {SortingOptions};
 export default withSortingOptions(SortingOptions);

@@ -13,7 +13,6 @@ const activeSortType = PropTypes.string.isRequired;
 
 const isOpenType = PropTypes.bool.isRequired;
 const onToggleClickType = PropTypes.func.isRequired;
-const onToggleKeyPressType = PropTypes.func.isRequired;
 
 const hostType = PropTypes.shape({
   avatarUrl: PropTypes.string.isRequired,
@@ -52,7 +51,7 @@ const offerType = PropTypes.shape({
   type: PropTypes.string.isRequired
 });
 
-const hoveredOfferType = PropTypes.object;
+const hoveredOfferIdType = PropTypes.number;
 
 const reviewType = PropTypes.shape({
   comment: PropTypes.string.isRequired,
@@ -79,8 +78,7 @@ export {
   onOfferMouseLeaveType,
   onOfferMouseEnterType,
   activeSortType,
-  hoveredOfferType,
   isOpenType,
   onToggleClickType,
-  onToggleKeyPressType
+  hoveredOfferIdType
 };

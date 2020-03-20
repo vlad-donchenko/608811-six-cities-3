@@ -1,25 +1,22 @@
 import React, {PureComponent} from 'react';
 import {offersType} from "../../types/index";
-import {getCurrentOffer} from "../../utils";
 
 const withOffer = (Component) => {
   class WithOffer extends PureComponent {
     constructor(props) {
       super(props);
       this.state = {
-        hoveredOfferId: null,
+        hoveredOfferId: -1,
       };
       this._handleOfferMouseEnter = this._handleOfferMouseEnter.bind(this);
       this._handleOfferLeave = this._handleOfferLeave.bind(this);
     }
 
     render() {
-      const id = this.state.hoveredOfferId;
-      const {offers} = this.props;
-      const hoveredOffer = getCurrentOffer(offers, id);
+      const hoveredOfferId = this.state.hoveredOfferId;
 
       return (
-        <Component {...this.props} hoveredOffer={hoveredOffer} onOfferMouseEnter={ this._handleOfferMouseEnter} onOfferMouseLeave={this._handleOfferLeave}/>
+        <Component {...this.props} hoveredOfferId={hoveredOfferId} onOfferMouseEnter={ this._handleOfferMouseEnter} onOfferMouseLeave={this._handleOfferLeave}/>
       );
     }
 

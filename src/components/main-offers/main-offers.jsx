@@ -6,9 +6,9 @@ import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer";
 import {sortingOffers} from "../../utils";
 import {OfferPrefix} from "../../const";
-import {offersType, onTitleClickType, onSortTypeClickType, activeCityType, activeSortType, onOfferMouseLeaveType, onOfferMouseEnterType, hoveredOfferType} from "../../types/index";
+import {offersType, onTitleClickType, onSortTypeClickType, activeCityType, activeSortType, onOfferMouseLeaveType, onOfferMouseEnterType, hoveredOfferIdType} from "../../types/index";
 
-const MainOffers = ({offers, onSortTypeClick, hoveredOffer, activeSort, onTitleClick, activeCity, onOfferMouseLeave, onOfferMouseEnter}) => {
+const MainOffers = ({offers, onSortTypeClick, hoveredOfferId, activeSort, onTitleClick, activeCity, onOfferMouseLeave, onOfferMouseEnter}) => {
 
   const offerCount = offers.length;
   const offersList = sortingOffers(activeSort, offers);
@@ -23,7 +23,7 @@ const MainOffers = ({offers, onSortTypeClick, hoveredOffer, activeSort, onTitleC
         <OfferMainList offers={offersList} onTitleClick={onTitleClick} onOfferMouseLeave={onOfferMouseLeave} onOfferMouseEnter={onOfferMouseEnter} additionalClass={additionalClass}/>
       </section>
       <div className="cities__right-section">
-        <Map offers={offers} hoveredOffer={hoveredOffer}/>
+        <Map offers={offers} hoveredOfferId={hoveredOfferId}/>
       </div>
     </div>
   );
@@ -40,7 +40,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 MainOffers.defaultProps = {
-  hoveredOffer: undefined
+  hoveredOfferId: -1
 };
 
 MainOffers.propTypes = {
@@ -51,7 +51,7 @@ MainOffers.propTypes = {
   activeSort: activeSortType,
   onOfferMouseLeave: onOfferMouseLeaveType,
   onOfferMouseEnter: onOfferMouseEnterType,
-  hoveredOffer: hoveredOfferType
+  hoveredOfferId: hoveredOfferIdType
 };
 
 export {MainOffers};

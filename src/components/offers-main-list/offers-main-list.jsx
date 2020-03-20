@@ -1,5 +1,5 @@
 import React from "react";
-import {offersType, onTitleClickType, additionalClassType} from "../../types/index";
+import {offersType, onTitleClickType, additionalClassType, onOfferMouseLeaveType, onOfferMouseEnterType} from "../../types/index";
 import OfferCard from "../offer-card/offer-card.jsx";
 import {OfferPrefix} from "../../const";
 
@@ -18,6 +18,8 @@ OfferMainList.propTypes = {
   offers: offersType,
   onTitleClick: onTitleClickType,
   additionalClass: additionalClassType,
+  onOfferMouseLeave: onOfferMouseLeaveType,
+  onOfferMouseEnter: onOfferMouseEnterType
 };
 
 export default OfferMainList;

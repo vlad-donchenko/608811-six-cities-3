@@ -6,7 +6,7 @@ import {OfferPrefix} from "../../const";
 
 
 it(`Should render <OfferMain/>`, () => {
-  const tree = renderer.create(<OfferMain additionalClass={OfferPrefix.CITIES_PLACE_CARD} renderOffer={() => {}} offers={offers} onTitleClick={() => {
+  const tree = renderer.create(<OfferMain additionalClass={OfferPrefix.CITIES_PLACE_CARD} onOfferMouseLeave={() => {}} onOfferMouseEnter={() => {}} renderOffer={() => {}} offers={offers} onTitleClick={() => {
   }}/>).toJSON();
 
   expect(tree).toMatchSnapshot();
