@@ -25,6 +25,5 @@ it(`Should be pressed on sort item`, () => {
   }} activeSort={activeSort} onSortTypeClick={onSortTypeClick} isOpen={true}/>);
 
   tree.find(`.places__option`).first().simulate(`click`);
-
-  expect(tree.prop(`activeSort`)).toEqual(`popular`);
+  expect(onSortTypeClick).toHaveBeenCalledWith(`popular`);
 });

@@ -5,7 +5,7 @@ import {onSortTypeClickType, isOpenType, onToggleClickType, activeSortType} from
 
 const SortingOptions = ({isOpen, onToggleClick, onSortTypeClick, activeSort}) => {
   const sortTypeValues = Object.values(sortType);
-  console.log(isOpen, onToggleClick, onSortTypeClick, activeSort);
+
   return (
     <form className="places__sorting" action="#" method="get">
       <span className="places__sorting-caption">Sort by</span>

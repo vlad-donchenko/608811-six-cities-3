@@ -207,7 +207,6 @@ exports[`Should render <Main/> 1`] = `
             >
               <li
                 className="places__option  places__option--active"
-                data-sort="popular"
                 onClick={[Function]}
                 tabIndex="0"
               >
@@ -215,7 +214,6 @@ exports[`Should render <Main/> 1`] = `
               </li>
               <li
                 className="places__option "
-                data-sort="to-high"
                 onClick={[Function]}
                 tabIndex="0"
               >
@@ -223,7 +221,6 @@ exports[`Should render <Main/> 1`] = `
               </li>
               <li
                 className="places__option "
-                data-sort="to-low"
                 onClick={[Function]}
                 tabIndex="0"
               >
@@ -231,7 +228,6 @@ exports[`Should render <Main/> 1`] = `
               </li>
               <li
                 className="places__option "
-                data-sort="top-rated"
                 onClick={[Function]}
                 tabIndex="0"
               >
