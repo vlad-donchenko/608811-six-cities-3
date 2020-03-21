@@ -19,26 +19,26 @@ const withSortingOptions = (Component) => {
       );
     }
 
-    _openDropDown() {
+    _handleOpenDropDown() {
       this.setState((prevState) => ({
         isOpen: !prevState.isOpen
       }));
     }
 
-    _closeDropDown() {
+    _handleCloseDropDown() {
       this.setState({
         isOpen: false
       });
     }
 
     _handleToggleClick() {
-      this._openDropDown();
+      this._handleOpenDropDown();
 
       document.addEventListener(`click`, this._handleOutsideClick);
     }
 
     _handleOutsideClick() {
-      this._closeDropDown();
+      this._handleCloseDropDown();
       document.removeEventListener(`click`, this._handleOutsideClick);
     }
   }
