@@ -2,7 +2,7 @@ import {CITIES, DEFAULT_SORT_TYPE} from "./const";
 import {extend} from "./utils";
 
 const initialState = {
-  activeCity: CITIES[3],
+  activeCity: CITIES[0],
   currentOfferId: -1,
   activeSort: DEFAULT_SORT_TYPE,
 };
