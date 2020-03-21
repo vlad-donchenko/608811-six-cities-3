@@ -1,6 +1,6 @@
 import {formatDate, getOfferList, extend, formatDateTime, getCurrentOffer, sortingOffers} from "./index";
 import {offers} from "../mocks/test-offer";
-import {CITIES, sortType} from "../const";
+import {CITIES, SortType} from "../const";
 
 
 const sortedArray = [
@@ -132,5 +132,5 @@ it(`getCurrentOffer should get array`, () => {
 });
 
 it(`sortingOffers should get array`, () => {
-  expect(sortingOffers(sortType.topRated, offers.slice(0, 3))).toEqual(sortedArray);
+  expect(sortingOffers(SortType.TOP_RATED, offers.slice(0, 3))).toEqual(sortedArray);
 });
