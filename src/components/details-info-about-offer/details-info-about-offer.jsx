@@ -1,21 +1,18 @@
 import React from "react";
 import {offerType, onTitleClickType} from "../../types/index";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
-import OfferNeighbourhood from "../offer-neighbourhood/offer-neighbourhood.jsx";
-import Map from "../map/map.jsx";
-import withOffer from "../hocs/with-offers-list/with-offer-list";
-import {OfferPrefix} from "../../const";
+import NearbyOffers from "../nearbyOffers/nearbyOffers.jsx";
+import withOffer from "../../hocs/with-offers-list/with-offer-list";
 import {offers} from "../../mocks/offers";
 import {reviews} from "../../mocks/reviews";
 import {MAX_NEIGHBOURHOOD_OFFERS} from "../../const";
 
-const OfferNeighbourhoodWrapped = withOffer(OfferNeighbourhood);
+const NearbyOffersWrapper = withOffer(NearbyOffers);
 
 const DetailsInfoAboutOffer = (props) => {
   const {offer, onTitleClick} = props;
   const {title, images, price, type, rating, bedrooms, maxAdults, goods: items, isFavorite, isPremium, host, description} = offer;
   const {avatarUrl, name} = host;
-  const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
   const nearbyOffers = offers.slice(0, MAX_NEIGHBOURHOOD_OFFERS);
   const isNearbyOffers = nearbyOffers.length !== 0;
 
@@ -135,15 +132,9 @@ const DetailsInfoAboutOffer = (props) => {
             </div>
           </div>
           {(isNearbyOffers) && (
-            <section className="property__map map">
-              <Map offers={nearbyOffers}/>
-            </section>
+            <NearbyOffersWrapper onTitleClick={onTitleClick} offers={nearbyOffers}/>
           )}
         </section>
-        <div className="container">
-          {(isNearbyOffers) && (
-            <OfferNeighbourhoodWrapped offers={nearbyOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>)}
-        </div>
       </main>
     </div>
   );

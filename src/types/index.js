@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
 
 const onTitleClickType = PropTypes.func.isRequired;
-const onOfferHoverType = PropTypes.func.isRequired;
 const onCityClickType = PropTypes.func.isRequired;
-const renderOfferType = PropTypes.func.isRequired;
+const onSortTypeClickType = PropTypes.func.isRequired;
+const onOfferMouseLeaveType = PropTypes.func.isRequired;
+const onOfferMouseEnterType = PropTypes.func.isRequired;
 
 const additionalClassType = PropTypes.string.isRequired;
 const currentOfferIdType = PropTypes.number.isRequired;
 const activeCityType = PropTypes.string.isRequired;
+const activeSortType = PropTypes.string.isRequired;
+
+const isOpenType = PropTypes.bool.isRequired;
+const onToggleClickType = PropTypes.func.isRequired;
 
 const hostType = PropTypes.shape({
   avatarUrl: PropTypes.string.isRequired,
@@ -46,6 +51,8 @@ const offerType = PropTypes.shape({
   type: PropTypes.string.isRequired
 });
 
+const hoveredOfferIdType = PropTypes.number;
+
 const reviewType = PropTypes.shape({
   comment: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
@@ -63,10 +70,15 @@ export {
   reviewType,
   reviewsType,
   onTitleClickType,
-  onOfferHoverType,
   additionalClassType,
-  renderOfferType,
   onCityClickType,
   currentOfferIdType,
-  activeCityType
+  activeCityType,
+  onSortTypeClickType,
+  onOfferMouseLeaveType,
+  onOfferMouseEnterType,
+  activeSortType,
+  isOpenType,
+  onToggleClickType,
+  hoveredOfferIdType
 };

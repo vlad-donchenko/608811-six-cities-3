@@ -1,10 +1,15 @@
 import React, {PureComponent} from "react";
-import {offersType} from "../../types/index";
+import {hoveredOfferIdType, offersType} from "../../types/index";
 import leaflet from 'leaflet';
 
 const icon = leaflet.icon({
-  iconUrl: `img/pin.svg`,
-  iconSize: [30, 30]
+  iconSize: [30, 30],
+  iconUrl: `/img/pin.svg`
+});
+
+const activeIcon = leaflet.icon({
+  iconSize: [30, 30],
+  iconUrl: `/img/pin-active.svg`
 });
 
 class Map extends PureComponent {
@@ -35,7 +40,7 @@ class Map extends PureComponent {
   }
 
   _initMap() {
-    const {offers} = this.props;
+    const {offers, hoveredOfferId} = this.props;
     const {city} = offers[0];
     const zoom = city.location.zoom;
     if (this._map) {
@@ -59,13 +64,18 @@ class Map extends PureComponent {
 
     offers.forEach((offer) => {
       const offerCords = [offer.location.latitude, offer.location.longitude];
-      leaflet.marker(offerCords, {icon}).addTo(this._map);
+      leaflet.marker(offerCords, {icon: hoveredOfferId === offer.id ? activeIcon : icon}).addTo(this._map);
     });
   }
 }
 
+Map.defaultProps = {
+  hoveredOfferId: -1
+};
+
 Map.propTypes = {
   offers: offersType,
+  hoveredOfferId: hoveredOfferIdType
 };
 
 export default Map;

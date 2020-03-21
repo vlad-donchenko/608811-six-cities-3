@@ -1,5 +1,3 @@
-const ZOOM = 12;
-
 const MAX_NEIGHBOURHOOD_OFFERS = 3;
 
 const CITIES = [
@@ -10,6 +8,22 @@ const CITIES = [
   `Hamburg`,
   `Dusseldorf`
 ];
+
+const DEFAULT_SORT_TYPE = `popular`;
+
+const sortTypeMap = {
+  "popular": `Popular`,
+  "to-high": `Price: low to high`,
+  "to-low": `Price: high to low`,
+  "top-rated": `Top rated first`
+};
+
+const SortType = {
+  POPULAR: `popular`,
+  TO_HIGH: `to-high`,
+  TO_LOW: `to-low`,
+  TOP_RATED: `top-rated`
+};
 
 const monthMap = {
   "0": `January`,
@@ -31,4 +45,4 @@ const OfferPrefix = {
   NEAR_PLACES_CARD: `near-places__card`,
 };
 
-export {ZOOM, MAX_NEIGHBOURHOOD_OFFERS, CITIES, OfferPrefix, monthMap};
+export {MAX_NEIGHBOURHOOD_OFFERS, DEFAULT_SORT_TYPE, sortTypeMap, SortType, CITIES, OfferPrefix, monthMap};

@@ -97,7 +97,7 @@ const offers = [
     maxAdults: 2,
     previewImage: `apartment-02.jpg`,
     price: 418,
-    rating: 5,
+    rating: 4,
     title: `Canal View Prinsengracht`,
     type: `Private room`
   },
@@ -131,7 +131,7 @@ const offers = [
     maxAdults: 7,
     previewImage: `apartment-03.jpg`,
     price: 358,
-    rating: 5,
+    rating: 3,
     title: `Nice, cozy, warm big bed apartment`,
     type: `Private room`
   },
@@ -165,7 +165,7 @@ const offers = [
     maxAdults: 4,
     previewImage: `apartment-02.jpg`,
     price: 402,
-    rating: 5,
+    rating: 2,
     title: `Wood and stone place`,
     type: `Apartment`
   },
@@ -445,8 +445,8 @@ const offers = [
     bedrooms: 4,
     city: {
       location: {
-        latitude: 50.946639,
-        longitude: 6.961174,
+        latitude: 50.848587,
+        longitude: 4.342344,
         zoom: 10
       },
       name: `Brussels`
@@ -541,40 +541,6 @@ const offers = [
     price: 1660,
     rating: 5,
     title: `Holiday Inn Express Hamburg-St. Pauli Messe`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 51.227738,
-        longitude: 6.793251,
-        zoom: 10
-      },
-      name: `Dusseldorf`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 17,
-      isPro: false,
-      name: `Max`
-    },
-    id: 17,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: false,
-    isPremium: false,
-    location: {
-      latitude: 51.220447,
-      longitude: 6.789114,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `apartment-02.jpg`,
-    price: 160,
-    rating: 4,
-    title: `Hotel Düsseldorf City by Tulip Inn`,
     type: `Apartment`
   }
 ];

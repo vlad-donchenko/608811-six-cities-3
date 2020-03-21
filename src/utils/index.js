@@ -1,4 +1,4 @@
-import {monthMap} from "../const";
+import {monthMap, SortType} from "../const";
 
 const formatDate = (date) => {
   const dateFormat = new Date(date);
@@ -28,4 +28,48 @@ const getOfferList = (offers, city) => {
   });
 };
 
-export {formatDate, formatDateTime, extend, getOfferList};
+const getLowToHighPriceOffers = (offers) => {
+  return offers.slice().sort((a, b) => {
+    return a.price - b.price;
+  });
+};
+
+const getHighToLowPriceOffers = (offers) => {
+  return offers.slice().sort((a, b) => {
+    return b.price - a.price;
+  });
+};
+
+const getTopRatedOffers = (offers) => {
+  return offers.slice().sort((a, b) => {
+    return b.rating - a.rating;
+  });
+};
+
+const sortingOffers = (activeSortType, offers) => {
+  let sortedOffers = [];
+
+  switch (activeSortType) {
+    case SortType.POPULAR :
+      sortedOffers = offers;
+      break;
+    case SortType.TO_HIGH :
+      sortedOffers = getLowToHighPriceOffers(offers);
+      break;
+    case SortType.TO_LOW :
+      sortedOffers = getHighToLowPriceOffers(offers);
+      break;
+    case SortType.TOP_RATED :
+      sortedOffers = getTopRatedOffers(offers);
+  }
+
+  return sortedOffers;
+};
+
+const getCurrentOffer = (offers, id) => {
+  return offers.find((offer) => {
+    return offer.id === id;
+  });
+};
+
+export {formatDate, formatDateTime, extend, getOfferList, sortingOffers, getCurrentOffer};

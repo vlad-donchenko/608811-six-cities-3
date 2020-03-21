@@ -5,22 +5,17 @@ import {Switch, Route, BrowserRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer.js";
 import DetailsInfoAboutOffer from "../details-info-about-offer/details-info-about-offer.jsx";
-import {getOfferList} from "../../utils";
+import {getOfferList, getCurrentOffer} from "../../utils";
 
 class App extends PureComponent {
   _renderApp() {
     const {offers, currentOfferId, activeCity, onTitleClick, onCityClick} = this.props;
 
     const offersList = getOfferList(offers, activeCity);
-    const offer = this._getCurrentOffer(offers, currentOfferId);
-    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer}/> :
-      <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick}/>;
-  }
+    const offer = getCurrentOffer(offers, currentOfferId);
 
-  _getCurrentOffer(offers, id) {
-    return offers.find((offer) => {
-      return offer.id === id;
-    });
+    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer}/> :
+      <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick} />;
   }
 
   render() {
@@ -46,12 +41,12 @@ App.propTypes = {
   onTitleClick: onTitleClickType,
   onCityClick: onCityClickType,
   currentOfferId: currentOfferIdType,
-  activeCity: activeCityType
+  activeCity: activeCityType,
 };
 
 const mapStateToProps = (state) => ({
   activeCity: state.activeCity,
-  currentOfferId: state.currentOfferId
+  currentOfferId: state.currentOfferId,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -60,7 +55,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   onTitleClick(currentOfferId) {
     dispatch(ActionCreator.changeOfferId(currentOfferId));
-  }
+  },
 });
 
 export {App};
