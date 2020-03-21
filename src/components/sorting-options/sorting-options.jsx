@@ -1,6 +1,6 @@
 import React from "react";
 import {sortTypeMap, SortType} from "../../const";
-import withSortingOptions from "../../hocs/with-sorting-options/with-sorting-options";
+import withSortingOptions from "../../hocs/with-sorting-options/with-sorting-options.jsx";
 import {onSortTypeClickType, isOpenType, onToggleClickType, activeSortType} from "../../types";
 
 const SortingOptions = ({isOpen, onToggleClick, onSortTypeClick, activeSort}) => {

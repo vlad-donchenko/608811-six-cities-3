@@ -2,7 +2,7 @@ import React from "react";
 import {offerType, onTitleClickType} from "../../types/index";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
 import NearbyOffers from "../nearbyOffers/nearbyOffers.jsx";
-import withOffer from "../../hocs/with-offers-list/with-offer-list";
+import withOffer from "../../hocs/with-offers-list/with-offer-list.jsx";
 import {offers} from "../../mocks/offers";
 import {reviews} from "../../mocks/reviews";
 import {MAX_NEIGHBOURHOOD_OFFERS} from "../../const";

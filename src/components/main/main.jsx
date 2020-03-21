@@ -1,14 +1,14 @@
 import React from "react";
-import {activeCityType, offersType, onTitleClickType, onCityClickType} from "../../types/index";
+import {activeCityType, offersType, onTitleClickType, onCityClickType, onResetSortType} from "../../types/index";
 import CityList from "../city-list/city-list.jsx";
 import MainOffers from "../main-offers/main-offers.jsx";
-import withOffer from "../../hocs/with-offers-list/with-offer-list";
+import withOffer from "../../hocs/with-offers-list/with-offer-list.jsx";
 import MainEmpty from "../main-empty/main-empty.jsx";
 
 const MainOffersWrapper = withOffer(MainOffers);
 
 const Main = (props) => {
-  const {offers, activeCity, onTitleClick, onCityClick} = props;
+  const {offers, activeCity, onTitleClick, onCityClick, onResetSort} = props;
   const isOffers = offers.length !== 0;
 
   return (
@@ -37,7 +37,7 @@ const Main = (props) => {
       </header>
       <main className={`page__main page__main--index ${isOffers ? `` : `page__main--index-empty`}`}>
         <h1 className="visually-hidden">Cities</h1>
-        <CityList activeCity={activeCity} onCityClick={onCityClick}/>
+        <CityList activeCity={activeCity} onCityClick={onCityClick} onResetSort={onResetSort}/>
         <div className="cities">
           {isOffers ? <MainOffersWrapper offers={offers} onTitleClick={onTitleClick} activeCity={activeCity}/> : <MainEmpty activeCity={activeCity}/>}
         </div>
@@ -50,7 +50,8 @@ Main.propTypes = {
   offers: offersType,
   onTitleClick: onTitleClickType,
   onCityClick: onCityClickType,
-  activeCity: activeCityType
+  activeCity: activeCityType,
+  onResetSort: onResetSortType
 };
 
 export default Main;

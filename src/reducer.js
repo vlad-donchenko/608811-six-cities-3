@@ -11,6 +11,7 @@ const ActionType = {
   CHANGE_ACTIVE_CITY: `CHANGE_ACTIVE_CITY`,
   CHANGE_OFFER_ID: `CHANGE_OFFER_ID`,
   CHANGE_SORT_TYPE: `CHANGE_SORT_TYPE`,
+  RESET_SORT: `RESET_SORT`
 };
 
 const ActionCreator = {
@@ -26,6 +27,10 @@ const ActionCreator = {
     type: ActionType.CHANGE_SORT_TYPE,
     payload: activeSort
   }),
+  resetSort: () => ({
+    type: ActionType.RESET_SORT,
+    payload: DEFAULT_SORT_TYPE
+  })
 };
 
 const reducer = (state = initialState, action) => {
@@ -41,6 +46,11 @@ const reducer = (state = initialState, action) => {
       });
 
     case ActionType.CHANGE_SORT_TYPE:
+      return extend(state, {
+        activeSort: action.payload
+      });
+
+    case ActionType.RESET_SORT:
       return extend(state, {
         activeSort: action.payload
       });

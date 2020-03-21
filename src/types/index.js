@@ -5,6 +5,7 @@ const onCityClickType = PropTypes.func.isRequired;
 const onSortTypeClickType = PropTypes.func.isRequired;
 const onOfferMouseLeaveType = PropTypes.func.isRequired;
 const onOfferMouseEnterType = PropTypes.func.isRequired;
+const onResetSortType = PropTypes.func.isRequired;
 
 const additionalClassType = PropTypes.string.isRequired;
 const currentOfferIdType = PropTypes.number.isRequired;
@@ -80,5 +81,6 @@ export {
   activeSortType,
   isOpenType,
   onToggleClickType,
-  hoveredOfferIdType
+  hoveredOfferIdType,
+  onResetSortType
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import {CITIES} from "../../const";
-import {activeCityType, onCityClickType} from "../../types";
+import {activeCityType, onCityClickType, onResetSortType} from "../../types";
 
-const CityList = ({activeCity, onCityClick}) => {
+const CityList = ({activeCity, onCityClick, onResetSort}) => {
   const cities = CITIES;
 
   return (
@@ -13,6 +13,7 @@ const CityList = ({activeCity, onCityClick}) => {
             return (
               <li key={city} className="locations__item">
                 <a className={`locations__item-link tabs__item ${city === activeCity ? `tabs__item--active` : ``}`} href="#" onClick={() => {
+                  onResetSort();
                   onCityClick(city);
                 }}>
                   <span>{city}</span>
@@ -28,7 +29,8 @@ const CityList = ({activeCity, onCityClick}) => {
 
 CityList.propTypes = {
   onCityClick: onCityClickType,
-  activeCity: activeCityType
+  activeCity: activeCityType,
+  onResetSort: onResetSortType
 };
 
 export default CityList;
