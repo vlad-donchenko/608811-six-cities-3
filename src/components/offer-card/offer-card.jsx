@@ -14,7 +14,7 @@ const OfferCard = (props) => {
   const premiumStatusElement = isPremium ? markTemplate : ``;
 
   return (
-    <article className={`${additionalClass} place-card`} onMouseLeave={() => (onOfferMouseLeave())} onMouseEnter={() => (onOfferMouseEnter(id))}>
+    <article className={`${additionalClass} place-card`} onMouseLeave={onOfferMouseLeave} onMouseEnter={() => (onOfferMouseEnter(id))}>
       {premiumStatusElement}
       <div className={`${additionalClass}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
