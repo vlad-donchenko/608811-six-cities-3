@@ -18,11 +18,11 @@ const sortTypeMap = {
   "top-rated": `Top rated first`
 };
 
-const sortType = {
-  popular: `popular`,
-  toHigh: `to-high`,
-  toLow: `to-low`,
-  topRated: `top-rated`
+const SortType = {
+  POPULAR: `popular`,
+  TO_HIGH: `to-high`,
+  TO_LOW: `to-low`,
+  TOP_RATED: `top-rated`
 };
 
 const monthMap = {
@@ -45,4 +45,4 @@ const OfferPrefix = {
   NEAR_PLACES_CARD: `near-places__card`,
 };
 
-export {MAX_NEIGHBOURHOOD_OFFERS, DEFAULT_SORT_TYPE, sortTypeMap, sortType, CITIES, OfferPrefix, monthMap};
+export {MAX_NEIGHBOURHOOD_OFFERS, DEFAULT_SORT_TYPE, sortTypeMap, SortType, CITIES, OfferPrefix, monthMap};

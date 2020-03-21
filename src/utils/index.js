@@ -1,4 +1,4 @@
-import {monthMap, sortType} from "../const";
+import {monthMap, SortType} from "../const";
 
 const formatDate = (date) => {
   const dateFormat = new Date(date);
@@ -50,16 +50,16 @@ const sortingOffers = (activeSortType, offers) => {
   let sortedOffers = [];
 
   switch (activeSortType) {
-    case sortType.popular :
+    case SortType.POPULAR :
       sortedOffers = offers;
       break;
-    case sortType.toHigh :
+    case SortType.TO_HIGH :
       sortedOffers = getLowToHighPriceOffers(offers);
       break;
-    case sortType.toLow :
+    case SortType.TO_LOW :
       sortedOffers = getHighToLowPriceOffers(offers);
       break;
-    case sortType.topRated :
+    case SortType.TOP_RATED :
       sortedOffers = getTopRatedOffers(offers);
   }
 

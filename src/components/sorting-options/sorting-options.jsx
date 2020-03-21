@@ -1,10 +1,10 @@
 import React from "react";
-import {sortTypeMap, sortType} from "../../const";
+import {sortTypeMap, SortType} from "../../const";
 import withSortingOptions from "../../hocs/with-sorting-options/with-sorting-options";
 import {onSortTypeClickType, isOpenType, onToggleClickType, activeSortType} from "../../types";
 
 const SortingOptions = ({isOpen, onToggleClick, onSortTypeClick, activeSort}) => {
-  const sortTypeValues = Object.values(sortType);
+  const sortTypeValues = Object.values(SortType);
 
   return (
     <form className="places__sorting" action="#" method="get">
