@@ -1,9 +1,12 @@
 import React from "react";
-import {offerType, additionalClassType, onTitleClickType, onOfferMouseLeaveType, onOfferMouseEnterType} from "../../types/index";
+import {offerType, additionalClassType, onTitleClickType, onOfferHoverType, isNearbyType} from "../../types/index";
+import {connect} from "react-redux";
+import {ActionCreator} from "../../reducer";
 
-const OfferCard = (props) => {
-  const {offer, onTitleClick, additionalClass, onOfferMouseLeave, onOfferMouseEnter} = props;
+const OfferCard = ({offer, onTitleClick, additionalClass, onOfferHover, isNearby}) => {
+
   const {title, id, previewImage, price, type, rating, isFavorite, isPremium} = offer;
+  const onHover = isNearby ? () => {} : onOfferHover;
 
   const markTemplate = (
     <div className="place-card__mark">
@@ -14,7 +17,11 @@ const OfferCard = (props) => {
   const premiumStatusElement = isPremium ? markTemplate : ``;
 
   return (
-    <article className={`${additionalClass} place-card`} onMouseLeave={onOfferMouseLeave} onMouseEnter={() => (onOfferMouseEnter(id))}>
+    <article className={`${additionalClass} place-card`} onMouseLeave={() => {
+      onHover(null);
+    }} onMouseEnter={() => {
+      onHover(id);
+    }}>
       {premiumStatusElement}
       <div className={`${additionalClass}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
@@ -51,12 +58,23 @@ const OfferCard = (props) => {
   );
 };
 
-OfferCard.propTypes = {
-  offer: offerType,
-  additionalClass: additionalClassType,
-  onTitleClick: onTitleClickType,
-  onOfferMouseLeave: onOfferMouseLeaveType,
-  onOfferMouseEnter: onOfferMouseEnterType
+OfferCard.defaultProps = {
+  isNearby: false
 };
 
-export default OfferCard;
+OfferCard.propTypes = {
+  offer: offerType,
+  isNearby: isNearbyType,
+  additionalClass: additionalClassType,
+  onTitleClick: onTitleClickType,
+  onOfferHover: onOfferHoverType
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  onOfferHover(hoveredOfferId) {
+    dispatch(ActionCreator.changeHoveredOffer(hoveredOfferId));
+  }
+});
+
+export {OfferCard};
+export default connect(null, mapDispatchToProps)(OfferCard);

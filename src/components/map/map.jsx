@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
-import {hoveredOfferIdType, offersType} from "../../types/index";
+import {hoveredOfferIdType, offersType, focusedOfferType} from "../../types/index";
 import leaflet from 'leaflet';
+import {connect} from "react-redux";
 
 const icon = leaflet.icon({
   iconSize: [30, 30],
@@ -21,7 +22,7 @@ class Map extends PureComponent {
   }
 
   componentDidUpdate() {
-    const {offers, hoveredOfferId} = this.props;
+    const {offers, hoveredOfferId, focusedOffer} = this.props;
     const {city} = offers[0];
     const zoom = city.location.zoom;
     const mapView = [city.location.latitude, city.location.longitude];
@@ -30,7 +31,7 @@ class Map extends PureComponent {
 
     offers.forEach((offer) => {
       const offerCords = [offer.location.latitude, offer.location.longitude];
-      leaflet.marker(offerCords, {icon: hoveredOfferId === offer.id ? activeIcon : icon}).addTo(this._pinGroupe);
+      leaflet.marker(offerCords, {icon: (focusedOffer || hoveredOfferId) === offer.id ? activeIcon : icon}).addTo(this._pinGroupe);
     });
 
   }
@@ -45,7 +46,7 @@ class Map extends PureComponent {
   }
 
   _initMap() {
-    const {offers, hoveredOfferId} = this.props;
+    const {offers, hoveredOfferId, focusedOffer} = this.props;
     const {city} = offers[0];
     const zoom = city.location.zoom;
 
@@ -68,7 +69,7 @@ class Map extends PureComponent {
 
     offers.forEach((offer) => {
       const offerCords = [offer.location.latitude, offer.location.longitude];
-      leaflet.marker(offerCords, {icon: hoveredOfferId === offer.id ? activeIcon : icon}).addTo(this._pinGroupe);
+      leaflet.marker(offerCords, {icon: (focusedOffer || hoveredOfferId) === offer.id ? activeIcon : icon}).addTo(this._pinGroupe);
     });
   }
 
@@ -80,12 +81,20 @@ class Map extends PureComponent {
 }
 
 Map.defaultProps = {
-  hoveredOfferId: -1
+  offers: null,
+  focusedOffer: null,
 };
 
 Map.propTypes = {
   offers: offersType,
+  focusedOffer: focusedOfferType,
   hoveredOfferId: hoveredOfferIdType
 };
 
-export default Map;
+const mapStateToProps = (state) => ({
+  hoveredOfferId: state.hoveredOfferId
+});
+
+
+export {Map};
+export default connect(mapStateToProps)(Map);

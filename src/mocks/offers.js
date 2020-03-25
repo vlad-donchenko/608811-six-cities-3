@@ -238,309 +238,71 @@ const offers = [
     type: `Apartment`
   },
   {
-    bedrooms: 4,
+    bedrooms: 3,
     city: {
       location: {
-        latitude: 50.946639,
-        longitude: 6.961174,
-        zoom: 13
+        latitude: 48.866411,
+        longitude: 2.331896,
+        zoom: 15
       },
-      name: `Cologne`
+      name: `Paris`
     },
     description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    goods: [`Wi-Fi`, `Kitchen`, `Towels`, `Baby seat`],
     host: {
       avatarUrl: `avatar-max.jpg`,
       id: 7,
-      isPro: false,
-      name: `Sam`
+      isPro: true,
+      name: `Max`
     },
     id: 7,
     images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: true,
+    isFavorite: false,
     isPremium: false,
     location: {
-      latitude: 48.864413,
-      longitude: 2.330791,
+      latitude: 48.867186,
+      longitude: 2.329262,
       zoom: 8
     },
-    maxAdults: 8,
-    previewImage: `apartment-02.jpg`,
-    price: 700,
-    rating: 4,
-    title: `DJH Youth Hostel Cologne Pathpoint`,
+    maxAdults: 10,
+    previewImage: `apartment-03.jpg`,
+    price: 200,
+    rating: 2,
+    title: `Mandarin Oriental, Paris`,
     type: `Apartment`
   },
   {
-    bedrooms: 4,
+    bedrooms: 3,
     city: {
       location: {
-        latitude: 50.946639,
-        longitude: 6.961174,
-        zoom: 13
+        latitude: 48.866411,
+        longitude: 2.331896,
+        zoom: 15
       },
-      name: `Cologne`
+      name: `Paris`
     },
     description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
+    goods: [`Wi-Fi`, `Kitchen`, `Towels`, `Baby seat`],
     host: {
       avatarUrl: `avatar-max.jpg`,
       id: 8,
       isPro: true,
-      name: `Sam`
+      name: `Max`
     },
     id: 8,
     images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: true,
-    isPremium: true,
-    location: {
-      latitude: 50.945373,
-      longitude: 6.958623,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `apartment-01.jpg`,
-    price: 900,
-    rating: 4,
-    title: `Hotel Domspitzen`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 50.946639,
-        longitude: 6.961174,
-        zoom: 13
-      },
-      name: `Cologne`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 9,
-      isPro: false,
-      name: `Sam`
-    },
-    id: 9,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
     isFavorite: false,
     isPremium: false,
     location: {
-      latitude: 50.945900,
-      longitude: 6.957892,
+      latitude: 48.869148,
+      longitude: 2.323673,
       zoom: 8
     },
-    maxAdults: 8,
-    previewImage: `apartment-01.jpg`,
-    price: 1100,
-    rating: 4,
-    title: `Hotel Merian`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 50.946639,
-        longitude: 6.961174,
-        zoom: 13
-      },
-      name: `Cologne`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 11,
-      isPro: true,
-      name: `Max`
-    },
-    id: 11,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: false,
-    isPremium: true,
-    location: {
-      latitude: 50.945450,
-      longitude: 6.955685,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `apartment-01.jpg`,
-    price: 100,
-    rating: 4,
-    title: `a&o Hostel Köln Hauptbahnhof`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 50.848587,
-        longitude: 4.342344,
-        zoom: 10
-      },
-      name: `Brussels`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 12,
-      isPro: true,
-      name: `Max`
-    },
-    id: 12,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: false,
-    isPremium: true,
-    location: {
-      latitude: 50.833595,
-      longitude: 4.354622,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `apartment-01.jpg`,
-    price: 570,
-    rating: 4,
-    title: `a&o Hostel Köln Hauptbahnhof`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 50.848587,
-        longitude: 4.342344,
-        zoom: 10
-      },
-      name: `Brussels`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 13,
-      isPro: true,
-      name: `Max`
-    },
-    id: 13,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: false,
-    isPremium: true,
-    location: {
-      latitude: 50.848587,
-      longitude: 4.342344,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `apartment-03.jpg`,
-    price: 570,
-    rating: 4,
-    title: `Citadines Toison d'Or Brussels (Apart Hotel Brussels)`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 50.848587,
-        longitude: 4.342344,
-        zoom: 10
-      },
-      name: `Brussels`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 14,
-      isPro: false,
-      name: `Max`
-    },
-    id: 14,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: true,
-    isPremium: false,
-    location: {
-      latitude: 50.833025,
-      longitude: 4.356767,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `room.jpg`,
-    price: 270,
-    rating: 5,
-    title: `Hotel NH Brussels Louise`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 53.551059,
-        longitude: 9.977448,
-        zoom: 13
-      },
-      name: `Hamburg`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 15,
-      isPro: false,
-      name: `Max`
-    },
-    id: 15,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: false,
-    isPremium: true,
-    location: {
-      latitude: 53.549422,
-      longitude: 9.967592,
-      zoom: 8
-    },
-    maxAdults: 8,
-    previewImage: `room.jpg`,
-    price: 3660,
-    rating: 5,
-    title: `ARCOTEL Onyx Hamburg`,
-    type: `Apartment`
-  },
-  {
-    bedrooms: 4,
-    city: {
-      location: {
-        latitude: 53.551059,
-        longitude: 9.977448,
-        zoom: 13
-      },
-      name: `Hamburg`
-    },
-    description: `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
-    goods: [`Heating`, `Dishwasher`, `Towels`, `Baby seat`, `Cabel TV`],
-    host: {
-      avatarUrl: `avatar-max.jpg`,
-      id: 16,
-      isPro: false,
-      name: `Max`
-    },
-    id: 16,
-    images: [`room.jpg`, `apartment-02.jpg`, `apartment-03.jpg`, `apartment-01.jpg`, `apartment-01.jpg`],
-    isFavorite: false,
-    isPremium: false,
-    location: {
-      latitude: 53.551360,
-      longitude: 9.966766,
-      zoom: 8
-    },
-    maxAdults: 8,
+    maxAdults: 4,
     previewImage: `apartment-02.jpg`,
-    price: 1660,
-    rating: 5,
-    title: `Holiday Inn Express Hamburg-St. Pauli Messe`,
+    price: 1500,
+    rating: 1,
+    title: `Sofitel Paris Le Faubourg`,
     type: `Apartment`
   }
 ];

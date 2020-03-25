@@ -1,20 +1,20 @@
 import React from "react";
-import {offerType, onTitleClickType} from "../../types/index";
+import {nearbyActiveCityType, offerType, onTitleClickType} from "../../types/index";
 import ReviewsList from "../reviews-list/reviews-list.jsx";
-import NearbyOffers from "../nearbyOffers/nearbyOffers.jsx";
-import withOffer from "../../hocs/with-offers-list/with-offer-list.jsx";
-import {offers} from "../../mocks/offers";
+import nearbyOffers from "../../mocks/nearby-offers";
 import {reviews} from "../../mocks/reviews";
-import {MAX_NEIGHBOURHOOD_OFFERS} from "../../const";
-
-const NearbyOffersWrapper = withOffer(NearbyOffers);
+import {MAX_NEIGHBOURHOOD_OFFERS, OfferPrefix} from "../../const";
+import Map from "../map/map.jsx";
+import OffersNearbyList from "../offers-nearby-list/offers-nearby-list.jsx";
+import {getOfferList} from "../../utils";
 
 const DetailsInfoAboutOffer = (props) => {
-  const {offer, onTitleClick} = props;
-  const {title, images, price, type, rating, bedrooms, maxAdults, goods: items, isFavorite, isPremium, host, description} = offer;
+  const {offer, onTitleClick, nearbyActiveCity} = props;
+  const {title, images, price, type, id, rating, bedrooms, maxAdults, goods: items, isFavorite, isPremium, host, description} = offer;
   const {avatarUrl, name} = host;
-  const nearbyOffers = offers.slice(0, MAX_NEIGHBOURHOOD_OFFERS);
+  const currentNearbyOffers = (getOfferList(nearbyOffers, nearbyActiveCity)).slice(0, MAX_NEIGHBOURHOOD_OFFERS);
   const isNearbyOffers = nearbyOffers.length !== 0;
+  const additionalClass = OfferPrefix.NEAR_PLACES_CARD;
 
   const markTemplate = (
     <div className="property__mark">
@@ -132,7 +132,14 @@ const DetailsInfoAboutOffer = (props) => {
             </div>
           </div>
           {(isNearbyOffers) && (
-            <NearbyOffersWrapper onTitleClick={onTitleClick} offers={nearbyOffers}/>
+            <React.Fragment>
+              <section className="property__map map">
+                <Map offers={[...currentNearbyOffers, offer]} focusedOffer={id}/>
+              </section>
+              <div className="container">
+                <OffersNearbyList offers={currentNearbyOffers} onTitleClick={onTitleClick} additionalClass={additionalClass}/>
+              </div>
+            </React.Fragment>
           )}
         </section>
       </main>
@@ -140,8 +147,13 @@ const DetailsInfoAboutOffer = (props) => {
   );
 };
 
+DetailsInfoAboutOffer.defaultProps = {
+  nearbyActiveCity: ``
+};
+
 DetailsInfoAboutOffer.propTypes = {
   offer: offerType,
+  nearbyActiveCity: nearbyActiveCityType,
   onTitleClick: onTitleClickType
 };
 

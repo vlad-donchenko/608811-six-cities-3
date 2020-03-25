@@ -14,7 +14,7 @@ class App extends PureComponent {
     const offersList = getOfferList(offers, activeCity);
     const offer = getCurrentOffer(offers, currentOfferId);
 
-    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer}/> :
+    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer} nearbyActiveCity={activeCity}/> :
       <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick} onResetSort={onResetSort} />;
   }
 
