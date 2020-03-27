@@ -5,7 +5,7 @@ import CityList from "./city-list";
 
 it(`Should links be pressed`, () => {
   const onCityClick = jest.fn();
-  const main = shallow(<CityList activeCity={CITIES[3]} onCityClick={onCityClick}/>);
+  const main = shallow(<CityList activeCity={CITIES[3]} onResetSort={() => {}} onCityClick={onCityClick}/>);
   const link = main.find(`.locations__item-link`);
 
   link.forEach((node) => {

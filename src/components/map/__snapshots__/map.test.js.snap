@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should render <Map/> 1`] = `
-<div
-  className="map__content"
-  id="map"
-/>
-`;
