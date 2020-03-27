@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import Main from "../main/main.jsx";
-import {offersType, onTitleClickType, onCityClickType, currentOfferIdType, activeCityType} from "../../types/index";
+import {offersType, onTitleClickType, onCityClickType, currentOfferIdType, activeCityType, onResetSortType} from "../../types/index";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer.js";
@@ -9,13 +9,13 @@ import {getOfferList, getCurrentOffer} from "../../utils";
 
 class App extends PureComponent {
   _renderApp() {
-    const {offers, currentOfferId, activeCity, onTitleClick, onCityClick} = this.props;
+    const {offers, currentOfferId, activeCity, onTitleClick, onCityClick, onResetSort} = this.props;
 
     const offersList = getOfferList(offers, activeCity);
     const offer = getCurrentOffer(offers, currentOfferId);
 
-    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer}/> :
-      <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick} />;
+    return offer ? <DetailsInfoAboutOffer onTitleClick={onTitleClick} offer={offer} nearbyActiveCity={activeCity}/> :
+      <Main offers={offersList} activeCity={activeCity} onTitleClick={onTitleClick} onCityClick={onCityClick} onResetSort={onResetSort} />;
   }
 
   render() {
@@ -42,6 +42,7 @@ App.propTypes = {
   onCityClick: onCityClickType,
   currentOfferId: currentOfferIdType,
   activeCity: activeCityType,
+  onResetSort: onResetSortType
 };
 
 const mapStateToProps = (state) => ({
@@ -56,6 +57,9 @@ const mapDispatchToProps = (dispatch) => ({
   onTitleClick(currentOfferId) {
     dispatch(ActionCreator.changeOfferId(currentOfferId));
   },
+  onResetSort() {
+    dispatch(ActionCreator.resetSort());
+  }
 });
 
 export {App};

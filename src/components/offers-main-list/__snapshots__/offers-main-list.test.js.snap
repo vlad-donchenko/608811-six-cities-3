@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render <OfferMain/> 1`] = `
+exports[`Should render <OfferMainList/> 1`] = `
 <div
   className="cities__places-list places__list tabs__content"
 >

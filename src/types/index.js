@@ -3,14 +3,16 @@ import PropTypes from "prop-types";
 const onTitleClickType = PropTypes.func.isRequired;
 const onCityClickType = PropTypes.func.isRequired;
 const onSortTypeClickType = PropTypes.func.isRequired;
-const onOfferMouseLeaveType = PropTypes.func.isRequired;
-const onOfferMouseEnterType = PropTypes.func.isRequired;
+const onResetSortType = PropTypes.func.isRequired;
+const onOfferHoverType = PropTypes.func.isRequired;
 
 const additionalClassType = PropTypes.string.isRequired;
 const currentOfferIdType = PropTypes.number.isRequired;
 const activeCityType = PropTypes.string.isRequired;
 const activeSortType = PropTypes.string.isRequired;
+const nearbyActiveCityType = PropTypes.string;
 
+const isNearbyType = PropTypes.bool;
 const isOpenType = PropTypes.bool.isRequired;
 const onToggleClickType = PropTypes.func.isRequired;
 
@@ -52,6 +54,7 @@ const offerType = PropTypes.shape({
 });
 
 const hoveredOfferIdType = PropTypes.number;
+const focusedOfferType = PropTypes.number;
 
 const reviewType = PropTypes.shape({
   comment: PropTypes.string.isRequired,
@@ -75,10 +78,13 @@ export {
   currentOfferIdType,
   activeCityType,
   onSortTypeClickType,
-  onOfferMouseLeaveType,
-  onOfferMouseEnterType,
   activeSortType,
   isOpenType,
   onToggleClickType,
-  hoveredOfferIdType
+  hoveredOfferIdType,
+  onResetSortType,
+  onOfferHoverType,
+  isNearbyType,
+  focusedOfferType,
+  nearbyActiveCityType
 };

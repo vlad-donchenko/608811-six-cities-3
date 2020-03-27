@@ -6,9 +6,9 @@ import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer";
 import {sortingOffers} from "../../utils";
 import {OfferPrefix} from "../../const";
-import {offersType, onTitleClickType, onSortTypeClickType, activeCityType, activeSortType, onOfferMouseLeaveType, onOfferMouseEnterType, hoveredOfferIdType} from "../../types/index";
+import {offersType, onTitleClickType, onSortTypeClickType, activeCityType, activeSortType} from "../../types/index";
 
-const MainOffers = ({offers, onSortTypeClick, hoveredOfferId, activeSort, onTitleClick, activeCity, onOfferMouseLeave, onOfferMouseEnter}) => {
+const MainOffers = ({offers, onSortTypeClick, activeSort, onTitleClick, activeCity}) => {
 
   const offerCount = offers.length;
   const offersList = sortingOffers(activeSort, offers);
@@ -20,10 +20,10 @@ const MainOffers = ({offers, onSortTypeClick, hoveredOfferId, activeSort, onTitl
         <h2 className="visually-hidden">Places</h2>
         <b className="places__found">{offerCount} places to stay in {activeCity}</b>
         <SortingOptions onSortTypeClick={onSortTypeClick} activeSort={activeSort} />
-        <OfferMainList offers={offersList} onTitleClick={onTitleClick} onOfferMouseLeave={onOfferMouseLeave} onOfferMouseEnter={onOfferMouseEnter} additionalClass={additionalClass}/>
+        <OfferMainList offers={offersList} onTitleClick={onTitleClick} additionalClass={additionalClass}/>
       </section>
       <div className="cities__right-section">
-        <Map offers={offers} hoveredOfferId={hoveredOfferId}/>
+        <Map offers={offers}/>
       </div>
     </div>
   );
@@ -36,11 +36,11 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onSortTypeClick(activeSort) {
     dispatch(ActionCreator.changeSortType(activeSort));
-  },
+  }
 });
 
 MainOffers.defaultProps = {
-  hoveredOfferId: -1
+  hoveredOfferId: null
 };
 
 MainOffers.propTypes = {
@@ -49,9 +49,6 @@ MainOffers.propTypes = {
   onSortTypeClick: onSortTypeClickType,
   activeCity: activeCityType,
   activeSort: activeSortType,
-  onOfferMouseLeave: onOfferMouseLeaveType,
-  onOfferMouseEnter: onOfferMouseEnterType,
-  hoveredOfferId: hoveredOfferIdType
 };
 
 export {MainOffers};
